@@ -1,24 +1,12 @@
 import { DataTypes, Model } from 'sequelize';
 import sequelize from '../config/MySQLProvider'; // Usar la instancia de Sequelize para la conexión
 
-// Interfaz IUser para tipos de datos del modelo
-export interface IUser {
-  id?: number;
-  nombre: string;
-  email: string;
-  password_hash: string;
-  password?: string;
-}
-
-class User extends Model<IUser> {
+class User extends Model {
   public id!: number;
   public nombre!: string;
   public email!: string;
   public password_hash!: string;
-  public password?: string;
-
-  public readonly createdAt!: Date;
-  public readonly updatedAt!: Date;
+  public fecha_registro!: Date;
 }
 
 User.init(
@@ -41,19 +29,17 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    password: {
-      type: DataTypes.VIRTUAL, // El campo password no se guarda en la base de datos
-      set(value: string) {
-        // Usamos este campo solo para la comparación en login, no se guarda
-        this.setDataValue('password', value);
-      }
+    fecha_registro: {
+      type: DataTypes.DATE,
+      allowNull: true,
+      defaultValue: DataTypes.NOW,
     }
   },
   {
-    sequelize, // Usar la instancia correcta de Sequelize
+    sequelize,
     modelName: 'User',
     tableName: 'usuarios',
-    timestamps: true,
+    timestamps: false,  // No utilizamos createdAt ni updatedAt en este caso
   }
 );
 
