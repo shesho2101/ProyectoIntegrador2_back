@@ -113,6 +113,18 @@ class ReservationService {
       throw new Error('Error al obtener las reservas por usuario y tipo');
     }
   }
+
+   // Obtener el historial de reservas de un usuario
+   public static async getReservationHistoryByUser(usuario_id: number) {
+    try {
+      return await Reservation.findAll({
+        where: { usuario_id },
+        order: [['fecha_reserva', 'DESC']]  // Ordenar por fecha de reserva descendente
+      });
+    } catch (error) {
+      throw new Error('Error al obtener el historial de reservas');
+    }
+  }
 }
 
 export default ReservationService;
