@@ -5,6 +5,7 @@ import { validateFields } from '../middlewares/ValidateFields';
 
 const router = Router();
 
+// Ruta para registrar un usuario
 router.post(
   '/register',
   [
@@ -16,6 +17,7 @@ router.post(
   registerController
 );
 
+// Ruta para login de un usuario
 router.post(
   '/login',
   [
