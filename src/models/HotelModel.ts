@@ -8,6 +8,8 @@ export interface IHotel extends Document {
   descripcion: string;
   ubicacion: string;
   facilidades: string[];
+
+  [key: string]: any;  // Esto permite acceder dinámicamente a las propiedades de IBus
 }
 
 // Esquema para el Hotel

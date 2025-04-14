@@ -1,20 +1,18 @@
 import { Router } from 'express';
 import {
-  getHotels,
+  getAllHotels,
   getHotelById,
   createHotel,
   updateHotel,
   deleteHotel,
   getHotelsByCity,
-  getHotelsByPrice,
-  searchHotelsByName,
-  getTopRatedHotels
+  getHotelsByPrice
 } from '../controllers/HotelController';
 
 const router = Router();
 
 // Obtener todos los hoteles
-router.get('/', getHotels);
+router.get('/', getAllHotels);
 
 // Obtener un hotel por ID
 router.get('/:id', getHotelById);
@@ -33,11 +31,5 @@ router.get('/city', getHotelsByCity);
 
 // Filtrar hoteles por precio
 router.get('/price', getHotelsByPrice);
-
-// Buscar hoteles por nombre
-router.get('/search', searchHotelsByName);
-
-// Obtener hoteles con mejores valoraciones
-router.get('/top-rated', getTopRatedHotels);
 
 export default router;

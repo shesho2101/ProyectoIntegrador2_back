@@ -7,7 +7,7 @@ export const getAllHotels = async (req: Request, res: Response) => {
     const hotels = await HotelService.getAllHotels();
     res.json(hotels);
   } catch (error) {
-    res.status(500).json({ error: `Error al obtener los hoteles: ${error.message || error}` });
+    res.status(500).json({ error: `Error al obtener los hoteles`});
   }
 };
 
@@ -18,7 +18,7 @@ export const getHotelById = async (req: Request, res: Response) => {
     const hotel = await HotelService.getHotelById(id);
     res.json(hotel);
   } catch (error) {
-    res.status(500).json({ error: `Error al obtener el hotel: ${error.message || error}` });
+    res.status(500).json({ error: `Error al obtener el hotel` });
   }
 };
 
@@ -29,7 +29,7 @@ export const createHotel = async (req: Request, res: Response) => {
     const newHotel = await HotelService.createHotel(hotelData);
     res.status(201).json(newHotel);
   } catch (error) {
-    res.status(500).json({ error: `Error al crear el hotel: ${error.message || error}` });
+    res.status(500).json({ error: `Error al crear el hotel` });
   }
 };
 
@@ -41,7 +41,7 @@ export const updateHotel = async (req: Request, res: Response) => {
     const updatedHotel = await HotelService.updateHotel(id, hotelData);
     res.json(updatedHotel);
   } catch (error) {
-    res.status(500).json({ error: `Error al actualizar el hotel: ${error.message || error}` });
+    res.status(500).json({ error: `Error al actualizar el hotel` });
   }
 };
 
@@ -52,7 +52,7 @@ export const deleteHotel = async (req: Request, res: Response) => {
     await HotelService.deleteHotel(id);
     res.json({ message: 'Hotel eliminado' });
   } catch (error) {
-    res.status(500).json({ error: `Error al eliminar el hotel: ${error.message || error}` });
+    res.status(500).json({ error: `Error al eliminar el hotel` });
   }
 };
 
@@ -63,7 +63,7 @@ export const getHotelsByCity = async (req: Request, res: Response) => {
     const hotels = await HotelService.getHotelsByCity(ciudad);
     res.json(hotels);
   } catch (error) {
-    res.status(500).json({ error: `Error al obtener hoteles por ciudad: ${error.message || error}` });
+    res.status(500).json({ error: `Error al obtener hoteles por ciudad` });
   }
 };
 
@@ -74,28 +74,7 @@ export const getHotelsByPrice = async (req: Request, res: Response) => {
     const hotels = await HotelService.getHotelsByPrice(Number(minPrice), Number(maxPrice));
     res.json(hotels);
   } catch (error) {
-    res.status(500).json({ error: `Error al obtener hoteles por precio: ${error.message || error}` });
+    res.status(500).json({ error: `Error al obtener hoteles por precio` });
   }
 };
 
-// Filtrar hoteles por rating
-export const getHotelsByRating = async (req: Request, res: Response) => {
-  const { rating } = req.params;
-  try {
-    const hotels = await HotelService.getHotelsByRating(Number(rating));
-    res.json(hotels);
-  } catch (error) {
-    res.status(500).json({ error: `Error al obtener hoteles por rating: ${error.message || error}` });
-  }
-};
-
-// Filtrar hoteles por disponibilidad
-export const getHotelsByAvailability = async (req: Request, res: Response) => {
-  const { disponibilidad } = req.params;
-  try {
-    const hotels = await HotelService.getHotelsByAvailability(disponibilidad === 'true');
-    res.json(hotels);
-  } catch (error) {
-    res.status(500).json({ error: `Error al obtener hoteles por disponibilidad: ${error.message || error}` });
-  }
-};

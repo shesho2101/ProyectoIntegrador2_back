@@ -5,8 +5,6 @@ import morgan from 'morgan';
 import connectMongo from './config/MongoProvider';
 import { errorHandler } from './middlewares/ErrorMiddleware';
 import authRoutes from './routes/AuthRoutes';
-import userRoutes from './routes/UserRoutes';
-import reservationRoutes from './routes/ReservationRoutes';
 import busRoutes from './routes/BusRoutes';  // Importa las rutas de buses
 import hotelRoutes from './routes/HotelRoutes';  // Importa las rutas de hoteles
 import flightRoutes from './routes/FlightRoutes';  // Importa las rutas de vuelos
@@ -28,8 +26,6 @@ connectMongo();
 
 // Rutas
 app.use('/api/auth', authRoutes);
-app.use('/api/users', userRoutes);
-app.use('/api/reservations', reservationRoutes);
 app.use('/api/buses', busRoutes);  
 app.use('/api/hotels', hotelRoutes);
 app.use('/api/flights', flightRoutes);
