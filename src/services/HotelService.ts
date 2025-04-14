@@ -7,7 +7,7 @@ class HotelService {
       const hotels = await Hotel.find();
       return hotels;
     } catch (error) {
-      throw new Error(`Error al obtener los hoteles: ${error.message || error}`);
+      throw new Error(`Error al obtener los hoteles`);
     }
   }
 
@@ -20,7 +20,7 @@ class HotelService {
       }
       return hotel;
     } catch (error) {
-      throw new Error(`Error al obtener el hotel: ${error.message || error}`);
+      throw new Error(`Error al obtener el hotel`);
     }
   }
 
@@ -31,7 +31,7 @@ class HotelService {
       await newHotel.save();
       return newHotel;
     } catch (error) {
-      throw new Error(`Error al crear el hotel: ${error.message || error}`);
+      throw new Error(`Error al crear el hotel`);
     }
   }
 
@@ -53,7 +53,7 @@ class HotelService {
       await hotel.save();
       return hotel;
     } catch (error) {
-      throw new Error(`Error al actualizar el hotel: ${error.message || error}`);
+      throw new Error(`Error al actualizar el hotel`);
     }
   }
 
@@ -67,7 +67,7 @@ class HotelService {
       await hotel.remove();
       return { message: 'Hotel eliminado' };
     } catch (error) {
-      throw new Error(`Error al eliminar el hotel: ${error.message || error}`);
+      throw new Error(`Error al eliminar el hotel`);
     }
   }
 
@@ -77,7 +77,7 @@ class HotelService {
       const hotels = await Hotel.find({ ciudad });
       return hotels;
     } catch (error) {
-      throw new Error(`Error al filtrar hoteles por ciudad: ${error.message || error}`);
+      throw new Error(`Error al filtrar hoteles por ciudad`);
     }
   }
 
@@ -87,27 +87,7 @@ class HotelService {
       const hotels = await Hotel.find({ precio: { $gte: minPrice, $lte: maxPrice } });
       return hotels;
     } catch (error) {
-      throw new Error(`Error al filtrar hoteles por precio: ${error.message || error}`);
-    }
-  }
-
-  // Filtrar hoteles por rating
-  public static async getHotelsByRating(rating: number): Promise<IHotel[]> {
-    try {
-      const hotels = await Hotel.find({ rating: { $gte: rating } });
-      return hotels;
-    } catch (error) {
-      throw new Error(`Error al filtrar hoteles por rating: ${error.message || error}`);
-    }
-  }
-
-  // Filtrar hoteles por disponibilidad
-  public static async getHotelsByAvailability(disponibilidad: boolean): Promise<IHotel[]> {
-    try {
-      const hotels = await Hotel.find({ disponibilidad });
-      return hotels;
-    } catch (error) {
-      throw new Error(`Error al filtrar hoteles por disponibilidad: ${error.message || error}`);
+      throw new Error(`Error al filtrar hoteles por precio`);
     }
   }
 }
