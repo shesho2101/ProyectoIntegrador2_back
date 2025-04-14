@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import ReservationService from '../services/ReservationService';
+import Reservation from '../models/ReservationModel';
 
 // Crear una nueva reserva
 export const createReservation = async (req: Request, res: Response) => {
@@ -136,5 +137,17 @@ export const getReservationsByUserAndType = async (req: Request, res: Response) 
     res.json(reservations);
   } catch (error) {
     res.status(500).json({ error: `Error al obtener las reservas del usuario ${usuario_id} y tipo ${tipo_reserva}` });
+  }
+};
+
+// Obtener el historial de reservas de un usuario
+export const getReservationHistoryByUser = async (req: Request, res: Response) => {
+  const { usuario_id } = req.params;  // Obtiene el ID del usuario desde la URL
+
+  try {
+    const reservations = await ReservationService.getReservationHistoryByUser(Number(usuario_id));
+    res.json(reservations);
+  } catch (error) {
+    res.status(500).json({ error: 'Error al obtener el historial de reservas' });
   }
 };

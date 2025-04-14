@@ -10,6 +10,7 @@ import {
   getReservationsByType,
   getReservationsByDate,
   getReservationsByUserAndType,
+  getReservationHistoryByUser,
 } from '../controllers/ReservationController';
 
 const router = Router();
@@ -43,5 +44,8 @@ router.get('/date/:fecha_reserva', getReservationsByDate);
 
 // Filtrar reservas por usuario y tipo
 router.get('/user/:usuario_id/type/:tipo_reserva', getReservationsByUserAndType);
+
+// Obtener el historial de reservas de un usuario
+router.get('/history/:usuario_id', getReservationHistoryByUser);
 
 export default router;
