@@ -1,4 +1,5 @@
 import mongoose, { Schema, Document } from 'mongoose';
+import { IOpinion } from './OpinionModel'; // Importamos la interfaz de Opinión
 
 export interface IHotel extends Document {
   nombre: string;
@@ -8,6 +9,8 @@ export interface IHotel extends Document {
   descripcion: string;
   ubicacion: string;
   facilidades: string[];
+  opiniones: IOpinion[];
+
 
   [key: string]: any;  // Esto permite acceder dinámicamente a las propiedades de IBus
 }
@@ -21,6 +24,7 @@ const HotelSchema: Schema = new Schema({
   descripcion: { type: String, required: true },
   ubicacion: { type: String, required: true },
   facilidades: { type: [String], required: true },  // Facilidades como un array de strings
+  opiniones: [{ type: Schema.Types.ObjectId, ref: 'Opinion' }]
 });
 
 // Crear el modelo de Hotel

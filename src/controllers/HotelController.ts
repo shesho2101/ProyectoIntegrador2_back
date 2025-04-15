@@ -15,12 +15,22 @@ export const getAllHotels = async (req: Request, res: Response) => {
 export const getHotelById = async (req: Request, res: Response) => {
   const { id } = req.params;
   try {
+    // Buscar el hotel por ID
     const hotel = await HotelService.getHotelById(id);
-    res.json(hotel);
+
+    // Verificar que el hotel existe
+    if (!hotel) {
+      return res.status(404).json({ error: 'Hotel no encontrado' });
+    }
+
+    // Si el hotel existe, cargar las opiniones
+    const hotelWithOpinions = await hotel.populate('opiniones');  // Cargar las opiniones
+    res.json(hotelWithOpinions);
   } catch (error) {
     res.status(500).json({ error: `Error al obtener el hotel` });
   }
 };
+
 
 // Crear un nuevo hotel
 export const createHotel = async (req: Request, res: Response) => {
