@@ -17,7 +17,7 @@ export const getFlightById = async (req: Request, res: Response) => {
   const { id } = req.params;
   try {
     const flight = await FlightService.getFlightById(id);
-    const flightWithOpinions = await flight.populate('opiniones');  // Cargar las opiniones
+    const flightWithOpinions = await flight.populate('opiniones');  
     res.json(flightWithOpinions);
   } catch (error) {
     res.status(500).json({ error: 'Error al obtener el vuelo' });

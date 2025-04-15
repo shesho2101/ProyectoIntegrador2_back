@@ -1,5 +1,5 @@
 import mongoose, { Schema, Document } from 'mongoose';
-import { IOpinion } from './OpinionModel'; // Importamos la interfaz de Opinión
+import { IOpinion } from './OpinionModel'; 
 
 
 export interface IFlight extends Document {

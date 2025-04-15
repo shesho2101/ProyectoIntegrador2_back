@@ -1,5 +1,5 @@
 import { DataTypes, Model } from 'sequelize';
-import sequelize from '../config/MySQLProvider'; // Usar la instancia de Sequelize para la conexión
+import sequelize from '../config/MySQLProvider'; 
 
 class Reservation extends Model {
   public id!: number;
@@ -7,7 +7,7 @@ class Reservation extends Model {
   public tipo_reserva!: string;
   public referencia_mongo_id!: string;
   public fecha_reserva!: Date;
-  public estado!: string;  // Agregado el estado
+  public estado!: string;  
 }
 
 Reservation.init(
@@ -38,7 +38,7 @@ Reservation.init(
     sequelize,
     modelName: 'Reserva',
     tableName: 'reservas',
-    timestamps: false,  // Si no usas las fechas createdAt y updatedAt
+    timestamps: false,  
   }
 );
 

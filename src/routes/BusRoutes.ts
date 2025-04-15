@@ -15,7 +15,7 @@ import {
 const router = Router();
 
 // Obtener todos los buses
-router.get('/', getBuses);  // Sin /buses
+router.get('/', getBuses);
 
 // Obtener un bus por ID
 router.get('/:id', getBusById);
