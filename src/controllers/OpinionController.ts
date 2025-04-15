@@ -14,12 +14,10 @@ export const createOpinion = async (req: Request, res: Response) => {
       return res.status(400).json({ error: 'Faltan datos requeridos' });
     }
 
-    // Validar que la calificación esté entre 1 y 5
     if (calificacion < 1 || calificacion > 5) {
       return res.status(400).json({ error: 'La calificación debe estar entre 1 y 5' });
     }
 
-    // Crear la opinión
     const newOpinion = new Opinion({
       usuario_id,
       tipo_opinion,
@@ -28,9 +26,8 @@ export const createOpinion = async (req: Request, res: Response) => {
       comentario,
     });
 
-    await newOpinion.save();  // Guardar la opinión
+    await newOpinion.save();  
 
-    // Actualizar el producto (hotel/vuelo/bus) con la nueva opinión
     if (tipo_opinion === 'hotel') {
       const hotel = await Hotel.findById(referencia_mongo_id);
       if (!hotel) {
@@ -57,8 +54,7 @@ export const createOpinion = async (req: Request, res: Response) => {
 
     res.status(201).json(newOpinion);
   } catch (error) {
-    // Agregar más detalles de la excepción para depuración
-    console.error(error);  // Mostrar el error completo en la consola
+    console.error(error);  
     res.status(500).json({ error: `Error al crear la opinión` });
   }
 };
@@ -88,14 +84,14 @@ export const deleteOpinion = async (req: Request, res: Response) => {
 
 // Obtener una opinión por ID
 export const getOpinionById = async (req: Request, res: Response) => {
-  const { id } = req.params; // Obtener el ID de la URL
+  const { id } = req.params; 
   try {
-    const opinion = await OpinionService.getOpinionById(id); // Llamar al servicio para obtener la opinión por ID
+    const opinion = await OpinionService.getOpinionById(id); 
     if (!opinion) {
-      return res.status(404).json({ message: 'Opinión no encontrada' }); // Si no se encuentra la opinión, enviar un error 404
+      return res.status(404).json({ message: 'Opinión no encontrada' }); 
     }
-    res.json(opinion); // Enviar la opinión en la respuesta
+    res.json(opinion); 
   } catch (error) {
-    res.status(500).json({ error: `Error al obtener la opinión` }); // Si hay un error, enviar un error 500
+    res.status(500).json({ error: `Error al obtener la opinión` }); 
   }
 };

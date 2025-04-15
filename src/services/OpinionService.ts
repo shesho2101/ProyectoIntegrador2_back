@@ -6,11 +6,9 @@ import Flight from '../models/FlightModel';
 // Crear una nueva opinión
 export const createOpinion = async (opinionData: any) => {
   try {
-    // Crear una nueva opinión
     const newOpinion = new Opinion(opinionData);
     await newOpinion.save();
 
-    // Asociar la opinión con el hotel, bus o vuelo correspondiente
     let entity;
     if (opinionData.tipo_opinion === 'hotel') {
       entity = await Hotel.findById(opinionData.referencia_mongo_id);
@@ -21,7 +19,6 @@ export const createOpinion = async (opinionData: any) => {
     }
 
     if (entity) {
-      // Agregar la referencia de la opinión al respectivo producto (hotel, bus o vuelo)
       entity.opiniones.push(newOpinion._id);
       await entity.save();
     }

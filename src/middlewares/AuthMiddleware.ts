@@ -1,4 +1,4 @@
-// AuthMiddleware.ts - Middleware de verificación de JWT
+// src/middlewares/AuthMiddleware.ts
 import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
 

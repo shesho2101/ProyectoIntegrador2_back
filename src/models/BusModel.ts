@@ -1,7 +1,6 @@
 import mongoose, { Schema, Document } from 'mongoose';
-import { IOpinion } from './OpinionModel'; // Importamos la interfaz de Opinión
+import { IOpinion } from './OpinionModel'; 
 
-// Definimos el tipo IBus
 export interface IBus extends Document {
   origen: string;
   destino: string;

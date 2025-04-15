@@ -119,7 +119,7 @@ class ReservationService {
     try {
       return await Reservation.findAll({
         where: { usuario_id },
-        order: [['fecha_reserva', 'DESC']]  // Ordenar por fecha de reserva descendente
+        order: [['fecha_reserva', 'DESC']]
       });
     } catch (error) {
       throw new Error('Error al obtener el historial de reservas');
