@@ -1,4 +1,5 @@
 import mongoose, { Schema, Document } from 'mongoose';
+import { IOpinion } from './OpinionModel'; // Importamos la interfaz de Opinión
 
 // Definimos el tipo IBus
 export interface IBus extends Document {
@@ -10,9 +11,9 @@ export interface IBus extends Document {
   compania: string;
   duracion: number;
   tipo_bus: string;
+  opiniones: IOpinion[];
 
-  // Firma de índice: cualquier clave de tipo string puede acceder a propiedades de tipo string
-  [key: string]: any;  // Esto permite acceder dinámicamente a las propiedades de IBus
+  [key: string]: any; 
 }
 
 // Esquema para el Bus
@@ -25,6 +26,8 @@ const BusSchema: Schema = new Schema({
   compania: { type: String, required: true },
   duracion: { type: Number, required: true },
   tipo_bus: { type: String, required: true },
+  opiniones: [{ type: Schema.Types.ObjectId, ref: 'Opinion' }] 
+
 });
 
 // Crear el modelo de Bus

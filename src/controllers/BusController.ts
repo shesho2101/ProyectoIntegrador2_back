@@ -13,9 +13,11 @@ export const getBuses = async (req: Request, res: Response) => {
 
 // Obtener un bus por ID
 export const getBusById = async (req: Request, res: Response) => {
+  const { id } = req.params;
   try {
-    const bus = await BusService.getBusById(req.params.id);
-    res.json({ bus });
+    const bus = await BusService.getBusById(id);
+    const busWithOpinions = await bus.populate('opiniones');  // Cargar las opiniones
+    res.json(busWithOpinions);
   } catch (error) {
     res.status(500).json({ error: 'Error al obtener el bus' });
   }
