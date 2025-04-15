@@ -43,10 +43,9 @@ class HotelService {
         throw new Error('Hotel no encontrado');
       }
 
-      // Actualizamos dinámicamente las propiedades del hotel
       for (const key in hotelData) {
         if (hotelData.hasOwnProperty(key)) {
-          (hotel as any)[key] = hotelData[key];  // Acceso dinámico
+          (hotel as any)[key] = hotelData[key]; 
         }
       }
 

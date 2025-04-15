@@ -1,4 +1,4 @@
-import Flight, { IFlight } from '../models/FlightModel';  // Asegúrate de que el modelo de vuelos esté bien creado
+import Flight, { IFlight } from '../models/FlightModel';  
 
 class FlightService {
   // Obtener todos los vuelos
@@ -52,10 +52,9 @@ class FlightService {
         throw new Error('Vuelo no encontrado');
       }
 
-      // Aquí usamos keyof IFlight para asegurar que solo accedemos a propiedades válidas de IFlight
       for (const key in flightData) {
         if (flightData.hasOwnProperty(key) && key in flight) {
-          flight[key as keyof IFlight] = flightData[key]!;  // Usamos `!` para garantizar que flightData[key] no es undefined
+          flight[key as keyof IFlight] = flightData[key]!;  
         }
       }
 

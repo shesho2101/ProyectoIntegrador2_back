@@ -1,6 +1,6 @@
 // src/models/FavoriteModel.ts
 import { DataTypes, Model } from 'sequelize';
-import sequelize from '../config/MySQLProvider'; // Usar la instancia de Sequelize para la conexión
+import sequelize from '../config/MySQLProvider'; 
 
 class Favorite extends Model {
   public id!: number;

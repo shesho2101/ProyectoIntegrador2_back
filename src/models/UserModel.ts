@@ -1,5 +1,5 @@
 import { DataTypes, Model } from 'sequelize';
-import sequelize from '../config/MySQLProvider'; // Usar la instancia de Sequelize para la conexión
+import sequelize from '../config/MySQLProvider'; 
 
 class User extends Model {
   public id!: number;
@@ -39,7 +39,7 @@ User.init(
     sequelize,
     modelName: 'User',
     tableName: 'usuarios',
-    timestamps: false,  // No utilizamos createdAt ni updatedAt en este caso
+    timestamps: false,  
   }
 );
 

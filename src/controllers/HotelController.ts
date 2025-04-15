@@ -16,11 +16,18 @@ export const getHotelById = async (req: Request, res: Response) => {
   const { id } = req.params;
   try {
     const hotel = await HotelService.getHotelById(id);
-    res.json(hotel);
+
+    if (!hotel) {
+      return res.status(404).json({ error: 'Hotel no encontrado' });
+    }
+
+    const hotelWithOpinions = await hotel.populate('opiniones'); 
+    res.json(hotelWithOpinions);
   } catch (error) {
     res.status(500).json({ error: `Error al obtener el hotel` });
   }
 };
+
 
 // Crear un nuevo hotel
 export const createHotel = async (req: Request, res: Response) => {

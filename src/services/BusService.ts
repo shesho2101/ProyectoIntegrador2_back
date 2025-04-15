@@ -43,12 +43,9 @@ class BusService {
         throw new Error('Bus no encontrado');
       }
 
-      // Aquí usamos keyof IBus para asegurar que solo accedemos a propiedades válidas de IBus
-      // Cambiamos la lógica a un enfoque más seguro
       for (const key in busData) {
         if (busData.hasOwnProperty(key) && key in bus) {
-          // Tipo seguro: bus[key] es una propiedad válida de IBus
-          bus[key as keyof IBus] = busData[key]!;  // Usamos `!` para garantizar que busData[key] no es undefined
+          bus[key as keyof IBus] = busData[key]!;  
         }
       }
 

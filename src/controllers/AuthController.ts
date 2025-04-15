@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import User from '../models/UserModel';  // Asegúrate de que este modelo esté correctamente importado
+import User from '../models/UserModel';  
 
 // Registro de un nuevo usuario
 export const registerController = async (req: Request, res: Response) => {

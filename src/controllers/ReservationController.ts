@@ -142,7 +142,7 @@ export const getReservationsByUserAndType = async (req: Request, res: Response) 
 
 // Obtener el historial de reservas de un usuario
 export const getReservationHistoryByUser = async (req: Request, res: Response) => {
-  const { usuario_id } = req.params;  // Obtiene el ID del usuario desde la URL
+  const { usuario_id } = req.params;  
 
   try {
     const reservations = await ReservationService.getReservationHistoryByUser(Number(usuario_id));

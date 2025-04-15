@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
-import Flight from '../models/FlightModel';  // Modelo de MongoDB para Vuelos
+import Flight from '../models/FlightModel';
+import FlightService from '../services/FlightService';
 
 // Obtener todos los vuelos
 export const getFlights = async (req: Request, res: Response) => {
@@ -13,12 +14,11 @@ export const getFlights = async (req: Request, res: Response) => {
 
 // Obtener un vuelo por ID
 export const getFlightById = async (req: Request, res: Response) => {
+  const { id } = req.params;
   try {
-    const flight = await Flight.findById(req.params.id);
-    if (!flight) {
-      return res.status(404).json({ error: 'Vuelo no encontrado' });
-    }
-    res.json({ vuelo: flight });
+    const flight = await FlightService.getFlightById(id);
+    const flightWithOpinions = await flight.populate('opiniones');  
+    res.json(flightWithOpinions);
   } catch (error) {
     res.status(500).json({ error: 'Error al obtener el vuelo' });
   }
