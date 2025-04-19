@@ -1,18 +1,22 @@
 // src/controllers/FavoriteController.ts
 import { Request, Response } from 'express';
 import FavoriteService from '../services/FavoriteService';
+import { AuthRequest } from '../middlewares/AuthMiddleware';
 
 // Obtener todos los favoritos de un usuario
-export const getFavoritesByUser = async (req: Request, res: Response) => {
-  const { userId } = req.params;
+export const getFavoritesByUser = async (req: AuthRequest, res: Response) => {
   try {
-    const favorites = await FavoriteService.getFavoritesByUser(Number(userId));
-    if (favorites.length === 0) {
-      return res.status(404).json({ error: 'No se encontraron favoritos para este usuario' });
+    const userId = req.user?.id;  // Obtén el id del usuario del token
+    const paramId = parseInt(req.params.usuario_id);  // El id del usuario de la URL
+
+    if (userId !== paramId) {
+      return res.status(403).json({ message: 'Acceso denegado: Solo puedes acceder a tus propios datos' });
     }
+
+    const favorites = await FavoriteService.getFavoritesByUser(paramId);  // Llamar al servicio
     res.json(favorites);
   } catch (error) {
-    res.status(500).json({ error: `Error al obtener los favoritos` });
+    res.status(500).json({ error: 'Error al obtener los favoritos' });
   }
 };
 

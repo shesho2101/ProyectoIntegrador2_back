@@ -1,13 +1,7 @@
 import { Router } from 'express';
-import {
-  getAllHotels,
-  getHotelById,
-  createHotel,
-  updateHotel,
-  deleteHotel,
-  getHotelsByCity,
-  getHotelsByPrice
-} from '../controllers/HotelController';
+import { getAllHotels, getHotelById, createHotel, updateHotel, deleteHotel, getHotelsByCity, getHotelsByPrice } from '../controllers/HotelController';
+import { verifyToken } from '../middlewares/AuthMiddleware';
+import { verifyAdmin } from '../middlewares/VerifyAdminMiddleware';
 
 const router = Router();
 
@@ -17,14 +11,14 @@ router.get('/', getAllHotels);
 // Obtener un hotel por ID
 router.get('/:id', getHotelById);
 
-// Crear un nuevo hotel
-router.post('/', createHotel);
+// Crear un nuevo hotel (Solo Admin)
+router.post('/', verifyToken, verifyAdmin, createHotel);
 
-// Actualizar un hotel por ID
-router.put('/:id', updateHotel);
+// Actualizar un hotel por ID (Solo Admin)
+router.put('/:id', verifyToken, verifyAdmin, updateHotel);
 
-// Eliminar un hotel por ID
-router.delete('/:id', deleteHotel);
+// Eliminar un hotel por ID (Solo Admin)
+router.delete('/:id', verifyToken, verifyAdmin, deleteHotel);
 
 // Filtrar hoteles por ciudad
 router.get('/city', getHotelsByCity);
