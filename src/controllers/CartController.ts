@@ -1,6 +1,7 @@
 // src/controllers/CartController.ts
 import { Request, Response } from 'express';
 import * as CartService from '../services/CartService';
+import { AuthRequest } from '../middlewares/AuthMiddleware';
 
 // Agregar al carrito
 export const agregarAlCarrito = async (req: Request, res: Response) => {
@@ -14,16 +15,25 @@ export const agregarAlCarrito = async (req: Request, res: Response) => {
   }
 };
 
+
 // Obtener el carrito de un usuario
-export const obtenerCarritoPorUsuario = async (req: Request, res: Response) => {
-  const { usuario_id } = req.params;
+export const obtenerCarritoPorUsuario = async (req: AuthRequest, res: Response) => {
   try {
-    const carrito = await CartService.obtenerCarritoPorUsuario(usuario_id);
-    res.json(carrito);
+    const userId = req.user?.id;  // Obtén el id del usuario del token
+    const paramId = parseInt(req.params.usuario_id);  // El id del usuario de la URL
+
+    // Verificar que el usuario solo pueda acceder a su propio carrito
+    if (userId !== paramId) {
+      return res.status(403).json({ message: 'Acceso denegado: Solo puedes acceder a tu propio carrito' });
+    }
+
+    const cart = await CartService.obtenerCarritoPorUsuario(paramId);  // Llamar al servicio
+    res.json(cart);
   } catch (error) {
-    res.status(500).json({ error: 'Error al obtener el carrito: '});
+    res.status(500).json({ error: 'Error al obtener el carrito' });
   }
 };
+
 
 // Eliminar un producto del carrito
 export const eliminarDelCarrito = async (req: Request, res: Response) => {

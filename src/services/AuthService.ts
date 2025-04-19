@@ -1,14 +1,15 @@
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import User from '../models/UserModel';  
+import User from '../models/UserModel';
 
 // Registrar un nuevo usuario
-export const registerUser = async (nombre: string, email: string, password: string) => {
+export const registerUser = async (nombre: string, email: string, password: string, rol: string = 'usuario') => {
   try {
-    const hashedPassword = await bcrypt.hash(password, 10); // Hash de la contraseña
-    const user = await User.create({ nombre, email, password_hash: hashedPassword });
+    const hashedPassword = await bcrypt.hash(password, 10);  // Hash de la contraseña
+    const user = await User.create({ nombre, email, password_hash: hashedPassword, rol });
 
-    const token = jwt.sign({ id: user.id, email: user.email }, process.env.TOKEN_SECRET as string, { expiresIn: '1h' });
+    // Generamos el token JWT con el rol
+    const token = jwt.sign({ id: user.id, email: user.email, rol: user.rol }, process.env.TOKEN_SECRET as string, { expiresIn: '1h' });
 
     return token;
   } catch (error) {
@@ -31,7 +32,7 @@ export const loginUser = async (email: string, password: string) => {
       throw new Error('Contraseña incorrecta');
     }
 
-    const token = jwt.sign({ id: user.id, email: user.email }, process.env.TOKEN_SECRET as string, { expiresIn: '1h' });
+    const token = jwt.sign({ id: user.id, email: user.email, rol: user.rol }, process.env.TOKEN_SECRET as string, { expiresIn: '1h' });
 
     return token;
   } catch (error) {

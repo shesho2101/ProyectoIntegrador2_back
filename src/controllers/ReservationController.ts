@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import ReservationService from '../services/ReservationService';
 import Reservation from '../models/ReservationModel';
+import { AuthRequest } from '../middlewares/AuthMiddleware';
 
 // Crear una nueva reserva
 export const createReservation = async (req: Request, res: Response) => {
@@ -92,15 +93,20 @@ export const getReservationsByStatus = async (req: Request, res: Response) => {
   }
 };
 
-// Filtrar reservas por usuario
-export const getReservationsByUser = async (req: Request, res: Response) => {
-  const { usuario_id } = req.params;
-
+// Obtener las reservas de un usuario
+export const getReservationsByUser = async (req: AuthRequest, res: Response) => {
   try {
-    const reservations = await ReservationService.getReservationsByUser(usuario_id);
+    const userId = req.user?.id;  // Obtén el id del usuario del token
+    const paramId = parseInt(req.params.usuario_id);  // El id del usuario de la URL
+    
+    if (userId !== paramId) {
+      return res.status(403).json({ message: 'Acceso denegado: Solo puedes acceder a tus propias reservas' });
+    }
+
+    const reservations = await ReservationService.getReservationsByUser(paramId);  // Llamar al servicio
     res.json(reservations);
   } catch (error) {
-    res.status(500).json({ error: `Error al obtener las reservas del usuario ${usuario_id}` });
+    res.status(500).json({ error: 'Error al obtener las reservas' });
   }
 };
 

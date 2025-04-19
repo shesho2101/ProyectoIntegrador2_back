@@ -7,6 +7,7 @@ class User extends Model {
   public email!: string;
   public password_hash!: string;
   public fecha_registro!: Date;
+  public rol!: string;  
 }
 
 User.init(
@@ -33,13 +34,18 @@ User.init(
       type: DataTypes.DATE,
       allowNull: true,
       defaultValue: DataTypes.NOW,
-    }
+    },
+    rol: {
+      type: DataTypes.ENUM('usuario', 'admin'),
+      defaultValue: 'usuario',  
+      allowNull: false,
+    },
   },
   {
     sequelize,
     modelName: 'User',
     tableName: 'usuarios',
-    timestamps: false,  
+    timestamps: false,
   }
 );
 

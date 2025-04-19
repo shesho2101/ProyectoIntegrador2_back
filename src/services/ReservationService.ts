@@ -73,9 +73,9 @@ class ReservationService {
   }
 
   // Filtrar reservas por usuario
-  public static async getReservationsByUser(usuario_id: string) {
+  public static async getReservationsByUser(userId: number) {
     try {
-      const reservations = await Reservation.findAll({ where: { usuario_id } });
+      const reservations = await Reservation.findAll({ where: { usuario_id: userId } });
       return reservations;
     } catch (error) {
       throw new Error('Error al obtener las reservas por usuario');
