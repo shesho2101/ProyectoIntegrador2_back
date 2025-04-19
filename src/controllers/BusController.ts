@@ -58,9 +58,10 @@ export const deleteBus = async (req: Request, res: Response) => {
 // Filtrar buses por origen
 export const getBusesByOrigin = async (req: Request, res: Response) => {
   try {
-    const buses = await BusService.getBusesByOrigin(req.query.origen as string);
-    res.json({ buses });
-  } catch (error) {
+    const { origen } = req.params;
+    const buses = await BusService.getBusesByOrigin(origen);
+    res.json(buses);
+  } catch (err) {
     res.status(500).json({ error: 'Error al filtrar buses por origen' });
   }
 };
@@ -68,20 +69,22 @@ export const getBusesByOrigin = async (req: Request, res: Response) => {
 // Filtrar buses por destino
 export const getBusesByDestination = async (req: Request, res: Response) => {
   try {
-    const buses = await BusService.getBusesByDestination(req.query.destino as string);
-    res.json({ buses });
-  } catch (error) {
+    const { destino } = req.params;
+    const buses = await BusService.getBusesByDestination(destino);
+    res.json(buses);
+  } catch (err) {
     res.status(500).json({ error: 'Error al filtrar buses por destino' });
   }
 };
 
-// Filtrar buses por precio
-export const getBusesByPrice = async (req: Request, res: Response) => {
+// Filtrar buses por rango de precio
+export const getBusesByPriceRange = async (req: Request, res: Response) => {
   try {
-    const { minPrice, maxPrice } = req.query;
-    const buses = await BusService.getBusesByPrice(Number(minPrice), Number(maxPrice));
-    res.json({ buses });
-  } catch (error) {
+    const min = Number(req.params.min);
+    const max = Number(req.params.max);
+    const buses = await BusService.getBusesByPrice(min, max);
+    res.json(buses);
+  } catch (err) {
     res.status(500).json({ error: 'Error al filtrar buses por precio' });
   }
 };
@@ -89,10 +92,10 @@ export const getBusesByPrice = async (req: Request, res: Response) => {
 // Filtrar buses por fecha de salida
 export const getBusesByDepartureTime = async (req: Request, res: Response) => {
   try {
-    const fecha_salida = new Date(req.query.fecha_salida as string);
-    const buses = await BusService.getBusesByDepartureTime(fecha_salida);
-    res.json({ buses });
-  } catch (error) {
+    const fecha = new Date(req.params.fecha);
+    const buses = await BusService.getBusesByDepartureTime(fecha);
+    res.json(buses);
+  } catch (err) {
     res.status(500).json({ error: 'Error al filtrar buses por fecha de salida' });
   }
 };
@@ -100,9 +103,10 @@ export const getBusesByDepartureTime = async (req: Request, res: Response) => {
 // Filtrar buses por tipo
 export const getBusesByType = async (req: Request, res: Response) => {
   try {
-    const buses = await BusService.getBusesByType(req.query.tipo_bus as string);
-    res.json({ buses });
-  } catch (error) {
+    const { tipo } = req.params;
+    const buses = await BusService.getBusesByType(tipo);
+    res.json(buses);
+  } catch (err) {
     res.status(500).json({ error: 'Error al filtrar buses por tipo' });
   }
 };

@@ -1,87 +1,52 @@
 import { Request, Response } from 'express';
-import Flight from '../models/FlightModel';
 import FlightService from '../services/FlightService';
 
 // Obtener todos los vuelos
-export const getFlights = async (req: Request, res: Response) => {
+export const getFlights = async (_req: Request, res: Response) => {
   try {
-    const flights = await Flight.find();
-    res.json({ vuelos: flights });
-  } catch (error) {
+    const flights = await FlightService.getAllFlights();
+    res.json(flights);
+  } catch {
     res.status(500).json({ error: 'Error al obtener los vuelos' });
   }
 };
 
 // Obtener un vuelo por ID
 export const getFlightById = async (req: Request, res: Response) => {
-  const { id } = req.params;
   try {
-    const flight = await FlightService.getFlightById(id);
-    const flightWithOpinions = await flight.populate('opiniones');  
-    res.json(flightWithOpinions);
-  } catch (error) {
-    res.status(500).json({ error: 'Error al obtener el vuelo' });
+    const flight = await FlightService.getFlightById(req.params.id);
+    res.json(flight);
+  } catch {
+    res.status(404).json({ error: 'Vuelo no encontrado' });
   }
 };
 
-// Crear un nuevo vuelo
+// Crear un nuevo vuelo (Admin)
 export const createFlight = async (req: Request, res: Response) => {
   try {
-    const { origen, destino, fecha_salida, fecha_llegada, precio, compania, duracion } = req.body;
-
-    const newFlight = new Flight({
-      origen,
-      destino,
-      fecha_salida,
-      fecha_llegada,
-      precio,
-      compania,
-      duracion
-    });
-
-    await newFlight.save();
-    res.status(201).json({ message: 'Vuelo creado exitosamente', vuelo: newFlight });
-  } catch (error) {
+    const newFlight = await FlightService.createFlight(req.body);
+    res.status(201).json(newFlight);
+  } catch {
     res.status(500).json({ error: 'Error al crear el vuelo' });
   }
 };
 
-// Actualizar un vuelo por ID
+// Actualizar un vuelo por ID (Admin)
 export const updateFlight = async (req: Request, res: Response) => {
   try {
-    const flight = await Flight.findById(req.params.id);
-    if (!flight) {
-      return res.status(404).json({ error: 'Vuelo no encontrado' });
-    }
-
-    const { origen, destino, fecha_salida, fecha_llegada, precio, compania, duracion } = req.body;
-
-    if (origen) flight.origen = origen;
-    if (destino) flight.destino = destino;
-    if (fecha_salida) flight.fecha_salida = fecha_salida;
-    if (fecha_llegada) flight.fecha_llegada = fecha_llegada;
-    if (precio) flight.precio = precio;
-    if (compania) flight.compania = compania;
-    if (duracion) flight.duracion = duracion;
-
-    await flight.save();
-    res.json({ message: 'Vuelo actualizado', vuelo: flight });
-  } catch (error) {
+    const updated = await FlightService.updateFlight(req.params.id, req.body);
+    res.json(updated);
+  } catch {
     res.status(500).json({ error: 'Error al actualizar el vuelo' });
   }
 };
 
-// Eliminar un vuelo por ID
+// Eliminar un vuelo por ID (Admin)
 export const deleteFlight = async (req: Request, res: Response) => {
   try {
-    const flight = await Flight.findById(req.params.id);
-    if (!flight) {
-      return res.status(404).json({ error: 'Vuelo no encontrado' });
-    }
-
-    await flight.remove();
+    await FlightService.deleteFlight(req.params.id);
     res.json({ message: 'Vuelo eliminado' });
-  } catch (error) {
+  } catch {
     res.status(500).json({ error: 'Error al eliminar el vuelo' });
   }
 };
@@ -89,10 +54,9 @@ export const deleteFlight = async (req: Request, res: Response) => {
 // Filtrar vuelos por origen
 export const getFlightsByOrigin = async (req: Request, res: Response) => {
   try {
-    const { origen } = req.query;
-    const flights = await Flight.find({ origen });
-    res.json({ vuelos: flights });
-  } catch (error) {
+    const flights = await FlightService.getFlightsByOrigin(req.params.origen);
+    res.json(flights);
+  } catch {
     res.status(500).json({ error: 'Error al filtrar vuelos por origen' });
   }
 };
@@ -100,23 +64,21 @@ export const getFlightsByOrigin = async (req: Request, res: Response) => {
 // Filtrar vuelos por destino
 export const getFlightsByDestination = async (req: Request, res: Response) => {
   try {
-    const { destino } = req.query;
-    const flights = await Flight.find({ destino });
-    res.json({ vuelos: flights });
-  } catch (error) {
+    const flights = await FlightService.getFlightsByDestination(req.params.destino);
+    res.json(flights);
+  } catch {
     res.status(500).json({ error: 'Error al filtrar vuelos por destino' });
   }
 };
 
-// Filtrar vuelos por precio
-export const getFlightsByPrice = async (req: Request, res: Response) => {
+// Filtrar vuelos por rango de precio
+export const getFlightsByPriceRange = async (req: Request, res: Response) => {
   try {
-    const { minPrice, maxPrice } = req.query;
-    const flights = await Flight.find({
-      precio: { $gte: minPrice, $lte: maxPrice }
-    });
-    res.json({ vuelos: flights });
-  } catch (error) {
+    const min = Number(req.params.min);
+    const max = Number(req.params.max);
+    const flights = await FlightService.getFlightsByPriceRange(min, max);
+    res.json(flights);
+  } catch {
     res.status(500).json({ error: 'Error al filtrar vuelos por precio' });
   }
 };
