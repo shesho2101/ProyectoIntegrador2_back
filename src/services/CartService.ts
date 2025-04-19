@@ -40,13 +40,13 @@ export const addToCart = async (cartData: any) => {
   }
 };
 
-export const obtenerCarritoPorUsuario = async (usuario_id: string) => {
+export const obtenerCarritoPorUsuario = async (userId: number) => {
   try {
-    const carrito = await Cart.findOne({ usuario_id });
+    const carrito = await Cart.findOne({ usuario_id: userId });
     if (!carrito) throw new Error('Carrito no encontrado');
     return carrito;
   } catch (error) {
-    throw new Error('Error al obtener el carrito: ');
+    throw new Error('Error al obtener el carrito');
   }
 };
 

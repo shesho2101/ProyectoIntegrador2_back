@@ -1,24 +1,13 @@
 import { Request, Response } from 'express';
-import bcrypt from 'bcryptjs';
-import jwt from 'jsonwebtoken';
-import User from '../models/UserModel';  
+import { registerUser, loginUser } from '../services/AuthService';  // Aquí estamos llamando al servicio
 
 // Registro de un nuevo usuario
 export const registerController = async (req: Request, res: Response) => {
-  const { nombre, email, password } = req.body;
+  const { nombre, email, password, rol } = req.body;
 
   try {
-    // Encriptar la contraseña antes de guardar
-    const hashedPassword = await bcrypt.hash(password, 10);
-
-    const user = await User.create({
-      nombre,
-      email,
-      password_hash: hashedPassword,
-    });
-
-    // Generar un token JWT
-    const token = jwt.sign({ id: user.id, email: user.email }, process.env.TOKEN_SECRET as string, { expiresIn: '1h' });
+    // Llamamos al servicio para registrar el usuario
+    const token = await registerUser(nombre, email, password, rol);
 
     res.status(201).json({ token });
   } catch (error) {
@@ -31,21 +20,8 @@ export const loginController = async (req: Request, res: Response) => {
   const { email, password } = req.body;
 
   try {
-    const user = await User.findOne({ where: { email } });
-
-    if (!user) {
-      return res.status(404).json({ error: 'Usuario no encontrado' });
-    }
-
-    // Comparar la contraseña con el hash
-    const isPasswordValid = await bcrypt.compare(password, user.password_hash);
-
-    if (!isPasswordValid) {
-      return res.status(401).json({ error: 'Contraseña incorrecta' });
-    }
-
-    // Generar el token JWT
-    const token = jwt.sign({ id: user.id, email: user.email }, process.env.TOKEN_SECRET as string, { expiresIn: '1h' });
+    // Llamamos al servicio para loguear al usuario
+    const token = await loginUser(email, password);
 
     res.status(200).json({ token });
   } catch (error) {

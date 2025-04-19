@@ -5,16 +5,18 @@ import {
   addFavorite,
   removeFavorite,
 } from '../controllers/FavoriteController';
+import { verifyToken } from '../middlewares/AuthMiddleware';
+import { verifyUser } from '../middlewares/CheckUserPermission';
 
 const router = Router();
 
 // Obtener todos los favoritos de un usuario
-router.get('/user/:userId', getFavoritesByUser);
+router.get('/user/:usuario_id', verifyToken, verifyUser, getFavoritesByUser);
 
 // Agregar un nuevo favorito
-router.post('/', addFavorite);
+router.post('/', verifyToken, addFavorite);
 
 // Eliminar un favorito por ID
-router.delete('/:id', removeFavorite);
+router.delete('/:id', verifyToken, removeFavorite);
 
 export default router;
