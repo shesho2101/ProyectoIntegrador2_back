@@ -23,4 +23,4 @@ Wayra es una plataforma web que tiene como objetivo facilitar y mejorar la exper
 - Interfaz web moderna y accesible
 
 
-## 🚧 Estado en Desarrollo
+## 🚧 Estado en Desarrollo.
