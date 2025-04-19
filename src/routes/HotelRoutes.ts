@@ -1,29 +1,33 @@
 import { Router } from 'express';
-import { getAllHotels, getHotelById, createHotel, updateHotel, deleteHotel, getHotelsByCity, getHotelsByPrice } from '../controllers/HotelController';
+import {
+  getAllHotels,
+  getHotelById,
+  createHotel,
+  updateHotel,
+  deleteHotel,
+  getHotelsByCity,
+  getHotelsByPriceRange
+} from '../controllers/HotelController';
 import { verifyToken } from '../middlewares/AuthMiddleware';
 import { verifyAdmin } from '../middlewares/VerifyAdminMiddleware';
 
 const router = Router();
 
-// Obtener todos los hoteles
+// Público: obtener todos los hoteles
 router.get('/', getAllHotels);
 
-// Obtener un hotel por ID
+// Público: obtener un hotel por ID
 router.get('/:id', getHotelById);
 
-// Crear un nuevo hotel (Solo Admin)
+// Admin: crear, actualizar y borrar hoteles
 router.post('/', verifyToken, verifyAdmin, createHotel);
-
-// Actualizar un hotel por ID (Solo Admin)
 router.put('/:id', verifyToken, verifyAdmin, updateHotel);
-
-// Eliminar un hotel por ID (Solo Admin)
 router.delete('/:id', verifyToken, verifyAdmin, deleteHotel);
 
-// Filtrar hoteles por ciudad
-router.get('/city', getHotelsByCity);
+// Público: filtrar hoteles por ciudad
+router.get('/city/:ciudad', getHotelsByCity);
 
-// Filtrar hoteles por precio
-router.get('/price', getHotelsByPrice);
+// Público: filtrar hoteles por rango de precio
+router.get('/price/:min/:max', getHotelsByPriceRange);
 
 export default router;

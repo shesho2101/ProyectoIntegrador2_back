@@ -1,152 +1,74 @@
-import Flight, { IFlight } from '../models/FlightModel';  
+// src/services/FlightService.ts
+import Flight, { IFlight } from '../models/FlightModel';
 
 class FlightService {
-  // Obtener todos los vuelos
-  public static async getAllFlights() {
+  // Todos los vuelos
+  public static async getAllFlights(): Promise<IFlight[]> {
     try {
-      const flights = await Flight.find();
-      return flights;
-    } catch (error) {
-      if (error instanceof Error) {
-        throw new Error(`Error al obtener los vuelos: ${error.message}`);
-      }
+      return await Flight.find();
+    } catch {
       throw new Error('Error al obtener los vuelos');
     }
   }
 
-  // Obtener un vuelo por ID
-  public static async getFlightById(id: string) {
-    try {
-      const flight = await Flight.findById(id);
-      if (!flight) {
-        throw new Error('Vuelo no encontrado');
-      }
-      return flight;
-    } catch (error) {
-      if (error instanceof Error) {
-        throw new Error(`Error al obtener el vuelo: ${error.message}`);
-      }
-      throw new Error('Error al obtener el vuelo');
-    }
+  // Un vuelo por ID
+  public static async getFlightById(id: string): Promise<IFlight> {
+    const f = await Flight.findById(id);
+    if (!f) throw new Error('Vuelo no encontrado');
+    return f;
   }
 
-  // Crear un nuevo vuelo
-  public static async createFlight(flightData: any) {
+  // Crear vuelo
+  public static async createFlight(data: Partial<IFlight>): Promise<IFlight> {
     try {
-      const newFlight = new Flight(flightData);
-      await newFlight.save();
-      return newFlight;
-    } catch (error) {
-      if (error instanceof Error) {
-        throw new Error(`Error al crear el vuelo: ${error.message}`);
-      }
+      const vuelo = new Flight(data);
+      await vuelo.save();
+      return vuelo;
+    } catch {
       throw new Error('Error al crear el vuelo');
     }
   }
 
-  // Actualizar un vuelo por ID
-  public static async updateFlight(id: string, flightData: Partial<IFlight>) {
-    try {
-      const flight = await Flight.findById(id);
-      if (!flight) {
-        throw new Error('Vuelo no encontrado');
-      }
-
-      for (const key in flightData) {
-        if (flightData.hasOwnProperty(key) && key in flight) {
-          flight[key as keyof IFlight] = flightData[key]!;  
-        }
-      }
-
-      await flight.save();
-      return flight;
-    } catch (error) {
-      if (error instanceof Error) {
-        throw new Error(`Error al actualizar el vuelo: ${error.message}`);
-      }
-      throw new Error('Error al actualizar el vuelo');
-    }
+  // Actualizar vuelo
+  public static async updateFlight(id: string, data: Partial<IFlight>): Promise<IFlight> {
+    const vuelo = await Flight.findById(id);
+    if (!vuelo) throw new Error('Vuelo no encontrado');
+    Object.assign(vuelo, data);
+    await vuelo.save();
+    return vuelo;
   }
 
-  // Eliminar un vuelo por ID
-  public static async deleteFlight(id: string) {
-    try {
-      const flight = await Flight.findById(id);
-      if (!flight) {
-        throw new Error('Vuelo no encontrado');
-      }
-      await flight.remove();
-      return { message: 'Vuelo eliminado' };
-    } catch (error) {
-      if (error instanceof Error) {
-        throw new Error(`Error al eliminar el vuelo: ${error.message}`);
-      }
-      throw new Error('Error al eliminar el vuelo');
-    }
+  // Borrar vuelo
+  public static async deleteFlight(id: string): Promise<void> {
+    const vuelo = await Flight.findById(id);
+    if (!vuelo) throw new Error('Vuelo no encontrado');
+    await vuelo.remove();
   }
 
-  // Filtrar vuelos por origen
-  public static async getFlightsByOrigin(origen: string) {
+  // Filtrar por origen
+  public static async getFlightsByOrigin(origen: string): Promise<IFlight[]> {
     try {
-      const flights = await Flight.find({ origen });
-      return flights;
-    } catch (error) {
-      if (error instanceof Error) {
-        throw new Error(`Error al filtrar vuelos por origen: ${error.message}`);
-      }
+      return await Flight.find({ origen });
+    } catch {
       throw new Error('Error al filtrar vuelos por origen');
     }
   }
 
-  // Filtrar vuelos por destino
-  public static async getFlightsByDestination(destino: string) {
+  // Filtrar por destino
+  public static async getFlightsByDestination(destino: string): Promise<IFlight[]> {
     try {
-      const flights = await Flight.find({ destino });
-      return flights;
-    } catch (error) {
-      if (error instanceof Error) {
-        throw new Error(`Error al filtrar vuelos por destino: ${error.message}`);
-      }
+      return await Flight.find({ destino });
+    } catch {
       throw new Error('Error al filtrar vuelos por destino');
     }
   }
 
-  // Filtrar vuelos por precio
-  public static async getFlightsByPrice(minPrice: number, maxPrice: number) {
+  // Filtrar por rango de precio
+  public static async getFlightsByPriceRange(min: number, max: number): Promise<IFlight[]> {
     try {
-      const flights = await Flight.find({ precio: { $gte: minPrice, $lte: maxPrice } });
-      return flights;
-    } catch (error) {
-      if (error instanceof Error) {
-        throw new Error(`Error al filtrar vuelos por precio: ${error.message}`);
-      }
+      return await Flight.find({ precio: { $gte: min, $lte: max } });
+    } catch {
       throw new Error('Error al filtrar vuelos por precio');
-    }
-  }
-
-  // Filtrar vuelos por fecha de salida
-  public static async getFlightsByDepartureTime(fecha_salida: Date) {
-    try {
-      const flights = await Flight.find({ fecha_salida: { $gte: fecha_salida } });
-      return flights;
-    } catch (error) {
-      if (error instanceof Error) {
-        throw new Error(`Error al filtrar vuelos por fecha de salida: ${error.message}`);
-      }
-      throw new Error('Error al filtrar vuelos por fecha de salida');
-    }
-  }
-
-  // Filtrar vuelos por tipo
-  public static async getFlightsByType(tipo_vuelo: string) {
-    try {
-      const flights = await Flight.find({ tipo_vuelo });
-      return flights;
-    } catch (error) {
-      if (error instanceof Error) {
-        throw new Error(`Error al filtrar vuelos por tipo: ${error.message}`);
-      }
-      throw new Error('Error al filtrar vuelos por tipo');
     }
   }
 }

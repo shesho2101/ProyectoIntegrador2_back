@@ -1,92 +1,65 @@
+// src/services/HotelService.ts
 import Hotel, { IHotel } from '../models/HotelModel';
 
 class HotelService {
-  // Obtener todos los hoteles
+  // Todos los hoteles
   public static async getAllHotels(): Promise<IHotel[]> {
     try {
-      const hotels = await Hotel.find();
-      return hotels;
-    } catch (error) {
-      throw new Error(`Error al obtener los hoteles`);
+      return await Hotel.find();
+    } catch {
+      throw new Error('Error al obtener todos los hoteles');
     }
   }
 
-  // Obtener un hotel por ID
-  public static async getHotelById(id: string): Promise<IHotel | null> {
-    try {
-      const hotel = await Hotel.findById(id);
-      if (!hotel) {
-        throw new Error('Hotel no encontrado');
-      }
-      return hotel;
-    } catch (error) {
-      throw new Error(`Error al obtener el hotel`);
-    }
+  // Hotel por ID
+  public static async getHotelById(id: string): Promise<IHotel> {
+    const h = await Hotel.findById(id);
+    if (!h) throw new Error('Hotel no encontrado');
+    return h;
   }
 
-  // Crear un nuevo hotel
-  public static async createHotel(hotelData: IHotel): Promise<IHotel> {
+  // Crear hotel
+  public static async createHotel(data: Partial<IHotel>): Promise<IHotel> {
     try {
-      const newHotel = new Hotel(hotelData);
-      await newHotel.save();
-      return newHotel;
-    } catch (error) {
-      throw new Error(`Error al crear el hotel`);
-    }
-  }
-
-  // Actualizar un hotel por ID
-  public static async updateHotel(id: string, hotelData: Partial<IHotel>): Promise<IHotel> {
-    try {
-      const hotel = await Hotel.findById(id);
-      if (!hotel) {
-        throw new Error('Hotel no encontrado');
-      }
-
-      for (const key in hotelData) {
-        if (hotelData.hasOwnProperty(key)) {
-          (hotel as any)[key] = hotelData[key]; 
-        }
-      }
-
+      const hotel = new Hotel(data);
       await hotel.save();
       return hotel;
-    } catch (error) {
-      throw new Error(`Error al actualizar el hotel`);
+    } catch {
+      throw new Error('Error al crear el hotel');
     }
   }
 
-  // Eliminar un hotel por ID
-  public static async deleteHotel(id: string): Promise<{ message: string }> {
-    try {
-      const hotel = await Hotel.findById(id);
-      if (!hotel) {
-        throw new Error('Hotel no encontrado');
-      }
-      await hotel.remove();
-      return { message: 'Hotel eliminado' };
-    } catch (error) {
-      throw new Error(`Error al eliminar el hotel`);
-    }
+  // Actualizar hotel
+  public static async updateHotel(id: string, data: Partial<IHotel>): Promise<IHotel> {
+    const hotel = await Hotel.findById(id);
+    if (!hotel) throw new Error('Hotel no encontrado');
+    Object.assign(hotel, data);
+    await hotel.save();
+    return hotel;
   }
 
-  // Filtrar hoteles por ciudad
+  // Eliminar hotel
+  public static async deleteHotel(id: string): Promise<void> {
+    const hotel = await Hotel.findById(id);
+    if (!hotel) throw new Error('Hotel no encontrado');
+    await hotel.remove();
+  }
+
+  // Filtrar por ciudad
   public static async getHotelsByCity(ciudad: string): Promise<IHotel[]> {
     try {
-      const hotels = await Hotel.find({ ciudad });
-      return hotels;
-    } catch (error) {
-      throw new Error(`Error al filtrar hoteles por ciudad`);
+      return await Hotel.find({ ciudad });
+    } catch {
+      throw new Error('Error al filtrar hoteles por ciudad');
     }
   }
 
-  // Filtrar hoteles por precio
-  public static async getHotelsByPrice(minPrice: number, maxPrice: number): Promise<IHotel[]> {
+  // Filtrar por rango de precio
+  public static async getHotelsByPriceRange(min: number, max: number): Promise<IHotel[]> {
     try {
-      const hotels = await Hotel.find({ precio: { $gte: minPrice, $lte: maxPrice } });
-      return hotels;
-    } catch (error) {
-      throw new Error(`Error al filtrar hoteles por precio`);
+      return await Hotel.find({ precio: { $gte: min, $lte: max } });
+    } catch {
+      throw new Error('Error al filtrar hoteles por precio');
     }
   }
 }

@@ -7,35 +7,27 @@ import {
   deleteFlight,
   getFlightsByOrigin,
   getFlightsByDestination,
-  getFlightsByPrice
+  getFlightsByPriceRange
 } from '../controllers/FlightController';
-import { verifyToken } from '../middlewares/AuthMiddleware';  // Para asegurar que el usuario esté logueado
-import { verifyAdmin } from '../middlewares/VerifyAdminMiddleware';  // Para asegurar que el usuario sea admin
+import { verifyToken } from '../middlewares/AuthMiddleware';
+import { verifyAdmin } from '../middlewares/VerifyAdminMiddleware';
 
 const router = Router();
 
-// Obtener todos los vuelos
-router.get('/', getFlights);  // Público
+// Público: todos los vuelos
+router.get('/', getFlights);
 
-// Obtener un vuelo por ID
-router.get('/:id', getFlightById);  // Público
+// Público: un vuelo por ID
+router.get('/:id', getFlightById);
 
-// Crear un nuevo vuelo (Solo Admin)
+// Solo Admin: crear, actualizar y borrar
 router.post('/', verifyToken, verifyAdmin, createFlight);
-
-// Actualizar un vuelo por ID (Solo Admin)
 router.put('/:id', verifyToken, verifyAdmin, updateFlight);
-
-// Eliminar un vuelo por ID (Solo Admin)
 router.delete('/:id', verifyToken, verifyAdmin, deleteFlight);
 
-// Filtrar vuelos por origen
-router.get('/origin', getFlightsByOrigin);  // Público
-
-// Filtrar vuelos por destino
-router.get('/destination', getFlightsByDestination);  // Público
-
-// Filtrar vuelos por precio
-router.get('/price', getFlightsByPrice);  // Público
+// Filtros públicos por parámetro en la URL
+router.get('/origin/:origen', getFlightsByOrigin);
+router.get('/destination/:destino', getFlightsByDestination);
+router.get('/price/:min/:max', getFlightsByPriceRange);
 
 export default router;
