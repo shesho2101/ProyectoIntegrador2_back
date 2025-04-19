@@ -1,127 +1,100 @@
-import Reservation from '../models/ReservationModel';
+// src/services/ReservationService.ts
+import Reservation from '../models/ReservationModel'; // Sequelize model
+import { Op } from 'sequelize';
 
 class ReservationService {
-  // Crear una nueva reserva
-  public static async createReservation(data: any) {
+  /** Crea una nueva reserva */
+  public static async createReservation(data: {
+    usuario_id: number;
+    tipo_reserva: 'hotel' | 'vuelo' | 'bus';
+    referencia_mongo_id: string;
+    fecha_reserva: Date;
+    estado?: 'pendiente' | 'confirmada' | 'cancelada';
+  }) {
     try {
-      const newReservation = await Reservation.create(data);
-      return newReservation;
-    } catch (error) {
+      return await Reservation.create({
+        usuario_id: data.usuario_id,
+        tipo_reserva: data.tipo_reserva,
+        referencia_mongo_id: data.referencia_mongo_id,
+        fecha_reserva: data.fecha_reserva,
+        estado: data.estado ?? 'pendiente'
+      });
+    } catch (err) {
       throw new Error('Error al crear la reserva');
     }
   }
 
-  // Obtener todas las reservas
+  /** Devuelve todas las reservas (solo admin) */
   public static async getAllReservations() {
     try {
-      const reservations = await Reservation.findAll();
-      return reservations;
-    } catch (error) {
+      return await Reservation.findAll();
+    } catch {
       throw new Error('Error al obtener todas las reservas');
     }
   }
 
-  // Obtener una reserva por ID
-  public static async getReservationById(id: string) {
-    try {
-      const reservation = await Reservation.findByPk(id);
-      if (!reservation) {
-        throw new Error('Reserva no encontrada');
-      }
-      return reservation;
-    } catch (error) {
-      throw new Error('Error al obtener la reserva');
-    }
+  /** Busca una reserva por su ID */
+  public static async getReservationById(id: number) {
+    const resv = await Reservation.findByPk(id);
+    if (!resv) throw new Error('Reserva no encontrada');
+    return resv;
   }
 
-  // Actualizar una reserva por ID
-  public static async updateReservation(id: string, data: any) {
-    try {
-      const reservation = await Reservation.findByPk(id);
-      if (!reservation) {
-        throw new Error('Reserva no encontrada');
-      }
-      await reservation.update(data);
-      return reservation;
-    } catch (error) {
-      throw new Error('Error al actualizar la reserva');
-    }
+  /** Actualiza una reserva por su ID */
+  public static async updateReservation(
+    id: number,
+    updates: Partial<{
+      tipo_reserva: 'hotel' | 'vuelo' | 'bus';
+      referencia_mongo_id: string;
+      fecha_reserva: Date;
+      estado: 'pendiente' | 'confirmada' | 'cancelada';
+    }>
+  ) {
+    const resv = await Reservation.findByPk(id);
+    if (!resv) throw new Error('Reserva no encontrada');
+    return await resv.update(updates);
   }
 
-  // Eliminar una reserva por ID
-  public static async deleteReservation(id: string) {
-    try {
-      const reservation = await Reservation.findByPk(id);
-      if (!reservation) {
-        throw new Error('Reserva no encontrada');
-      }
-      await reservation.destroy();
-      return { message: 'Reserva eliminada' };
-    } catch (error) {
-      throw new Error('Error al eliminar la reserva');
-    }
+  /** Elimina una reserva por su ID */
+  public static async deleteReservation(id: number) {
+    const resv = await Reservation.findByPk(id);
+    if (!resv) throw new Error('Reserva no encontrada');
+    await resv.destroy();
   }
 
-  // Filtrar reservas por estado
-  public static async getReservationsByStatus(estado: string) {
+  /** Obtiene todas las reservas de un usuario */
+  public static async getReservationsByUser(usuario_id: number) {
     try {
-      const reservations = await Reservation.findAll({ where: { estado } });
-      return reservations;
-    } catch (error) {
-      throw new Error('Error al obtener las reservas por estado');
-    }
-  }
-
-  // Filtrar reservas por usuario
-  public static async getReservationsByUser(userId: number) {
-    try {
-      const reservations = await Reservation.findAll({ where: { usuario_id: userId } });
-      return reservations;
-    } catch (error) {
-      throw new Error('Error al obtener las reservas por usuario');
-    }
-  }
-
-  // Filtrar reservas por tipo
-  public static async getReservationsByType(tipo_reserva: string) {
-    try {
-      const reservations = await Reservation.findAll({ where: { tipo_reserva } });
-      return reservations;
-    } catch (error) {
-      throw new Error('Error al obtener las reservas por tipo');
-    }
-  }
-
-  // Filtrar reservas por fecha de reserva
-  public static async getReservationsByDate(fecha_reserva: string) {
-    try {
-      const reservations = await Reservation.findAll({ where: { fecha_reserva } });
-      return reservations;
-    } catch (error) {
-      throw new Error('Error al obtener las reservas por fecha');
-    }
-  }
-
-  // Filtrar reservas por usuario y tipo
-  public static async getReservationsByUserAndType(usuario_id: string, tipo_reserva: string) {
-    try {
-      const reservations = await Reservation.findAll({
-        where: { usuario_id, tipo_reserva },
+      return await Reservation.findAll({
+        where: { usuario_id }
       });
-      return reservations;
-    } catch (error) {
-      throw new Error('Error al obtener las reservas por usuario y tipo');
+    } catch {
+      throw new Error('Error al obtener reservas por usuario');
     }
   }
 
-   // Obtener el historial de reservas de un usuario
-   public static async getReservationHistoryByUser(usuario_id: number) {
+  /** Obtiene reservas de un usuario filtradas por tipo */
+  public static async getReservationsByUserAndType(
+    usuario_id: number,
+    tipo_reserva: 'hotel' | 'vuelo' | 'bus'
+  ) {
+    try {
+      return await Reservation.findAll({
+        where: { usuario_id, tipo_reserva }
+      });
+    } catch {
+      throw new Error('Error al obtener reservas por usuario y tipo');
+    }
+  }
+
+  /** Historial de reservas de un usuario (orden descendente por fecha) */
+  public static async getReservationHistoryByUser(usuario_id: number) {
     try {
       return await Reservation.findAll({
         where: { usuario_id },
         order: [['fecha_reserva', 'DESC']]
       });
-    } catch (error) {
+    } catch {
       throw new Error('Error al obtener el historial de reservas');
     }
   }
