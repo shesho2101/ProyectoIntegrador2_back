@@ -27,7 +27,7 @@ Wayra es una plataforma web que tiene como objetivo facilitar y mejorar la exper
 
 El backend está desarrollado en Node.js con TypeScript, siguiendo una arquitectura modular que incluye controladores (controllers), middlewares, modelos, rutas (routers) y servicios (services).
 
-📁 Estructura del proyecto
+## 📁 Estructura del proyecto
 controllers/ – Lógica para manejar las solicitudes y respuestas HTTP.
 
 middlewares/ – Funciones intermedias para validar, autenticar o transformar datos.
@@ -38,17 +38,22 @@ routers/ – Definición de rutas y vinculación con los controladores.
 
 services/ – Lógica de negocio reutilizable y conexión con bases de datos u otros recursos.
 
-🚀 Instalación
+## 🚀 Instalación
+
 Clona el repositorio:
+
 git clone https://github.com/shesho2101/ProyectoIntegrador2_back.git
 
 Instala las dependencias:
-npm install
 
-🧪 Ejecución en entorno de desarrollo
-npm run dev
+**npm install**
+
+## 🧪 Ejecución en entorno de desarrollo
+
+**npm run dev**
+
 Este comando inicia el servidor en modo desarrollo utilizando ts-node-dev
 
-📦 Requisitos
+## 📦 Requisitos
 Node.js v16+
 npm v8+
