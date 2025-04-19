@@ -1,5 +1,16 @@
 import { Router } from 'express';
-import { getBuses, getBusById, createBus, updateBus, deleteBus, getBusesByOrigin, getBusesByDestination, getBusesByPrice, getBusesByDepartureTime, getBusesByType } from '../controllers/BusController';
+import {
+  getBuses,
+  getBusById,
+  createBus,
+  updateBus,
+  deleteBus,
+  getBusesByOrigin,
+  getBusesByDestination,
+  getBusesByPriceRange,
+  getBusesByDepartureTime,
+  getBusesByType
+} from '../controllers/BusController';
 import { verifyToken } from '../middlewares/AuthMiddleware';
 import { verifyAdmin } from '../middlewares/VerifyAdminMiddleware';
 
@@ -21,18 +32,18 @@ router.put('/:id', verifyToken, verifyAdmin, updateBus);
 router.delete('/:id', verifyToken, verifyAdmin, deleteBus);
 
 // Filtrar buses por origen
-router.get('/origin', getBusesByOrigin);
+router.get('/origin/:origen', getBusesByOrigin);
 
 // Filtrar buses por destino
-router.get('/destination', getBusesByDestination);
+router.get('/destination/:destino', getBusesByDestination);
 
-// Filtrar buses por precio
-router.get('/price', getBusesByPrice);
+// Filtrar buses por rango de precio
+router.get('/price/:min/:max', getBusesByPriceRange);
 
 // Filtrar buses por fecha de salida
-router.get('/departure-time', getBusesByDepartureTime);
+router.get('/departure-time/:fecha', getBusesByDepartureTime);
 
 // Filtrar buses por tipo
-router.get('/type', getBusesByType);
+router.get('/type/:tipo', getBusesByType);
 
 export default router;

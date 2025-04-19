@@ -1,4 +1,3 @@
-// src/routes/ReservationRoutes.ts
 import { Router } from 'express';
 import {
   createReservation,
@@ -6,50 +5,49 @@ import {
   getReservationById,
   updateReservation,
   deleteReservation,
-  getReservationsByStatus,
   getReservationsByUser,
-  getReservationsByType,
-  getReservationsByDate,
   getReservationsByUserAndType,
-  getReservationHistoryByUser,
+  getReservationHistoryByUser
 } from '../controllers/ReservationController';
 
 import { verifyToken } from '../middlewares/AuthMiddleware';
 import { verifyUser } from '../middlewares/CheckUserPermission';
+import { verifyAdmin } from '../middlewares/VerifyAdminMiddleware';
 
 const router = Router();
 
-// Crear una nueva reserva (usuario debe estar autenticado y ser el dueño)
+// Crear una nueva reserva (cualquiera autenticado)
 router.post('/', verifyToken, createReservation);
 
-// Obtener todas las reservas (solo admin luego puede ver todas)
-router.get('/', verifyToken, getAllReservations);
+// Listar TODAS las reservas (solo admin)
+router.get('/', verifyToken, verifyAdmin, getAllReservations);
 
-// Obtener una reserva por ID (debe hacerse la verificación en el controller para verificar que es suya)
+// Ver una reserva por ID (admin o dueño)
 router.get('/:id', verifyToken, getReservationById);
 
-// Actualizar una reserva por ID (con verificación en el controller)
+// Actualizar reserva por ID (admin o dueño)
 router.put('/:id', verifyToken, updateReservation);
 
-// Eliminar una reserva por ID (con verificación en el controller)
+// Eliminar reserva por ID (admin o dueño)
 router.delete('/:id', verifyToken, deleteReservation);
 
-// Filtrar reservas por estado (uso administrativo)
-router.get('/status/:estado', verifyToken, getReservationsByStatus);
-
-// Filtrar reservas por usuario (solo el usuario puede acceder)
+// Listar reservas de un usuario (solo ese usuario o admin)
 router.get('/user/:usuario_id', verifyToken, verifyUser, getReservationsByUser);
 
-// Filtrar reservas por tipo (público)
-router.get('/type/:tipo_reserva', verifyToken, getReservationsByType);
+// Filtrar reservas de un usuario por tipo (solo ese usuario o admin)
+router.get(
+  '/user/:usuario_id/type/:tipo_reserva',
+  verifyToken,
+  verifyUser,
+  getReservationsByUserAndType
+);
 
-// Filtrar reservas por fecha de reserva (público)
-router.get('/date/:fecha_reserva', verifyToken, getReservationsByDate);
-
-// Filtrar reservas por usuario y tipo (usuario autenticado)
-router.get('/user/:usuario_id/type/:tipo_reserva', verifyToken, verifyUser, getReservationsByUserAndType);
-
-// Historial de reservas del usuario
-router.get('/history/:usuario_id', verifyToken, verifyUser, getReservationHistoryByUser);
+// Historial completo de un usuario (solo ese usuario o admin)
+router.get(
+  '/history/:usuario_id',
+  verifyToken,
+  verifyUser,
+  getReservationHistoryByUser
+);
 
 export default router;
