@@ -6,10 +6,10 @@ dotenv.config();
 const sequelize = new Sequelize(
   process.env.MYSQL_DATABASE || 'railway',
   process.env.MYSQL_USER || 'root',
-  process.env.MYSQL_PASSWORD || 'RATqGFQsQYDCJKNZpOomnpdCWoabTVeO',
+  process.env.MYSQL_PASSWORD || 'jplJVrJiajSPNOyglrwpVDzNYfudYlOg',
   {
-    host: process.env.MYSQL_HOST || 'centerbeam.proxy.rlwy.net',
-    port: Number(process.env.MYSQL_PORT) || 40740,
+    host: process.env.MYSQL_HOST || 'interchange.proxy.rlwy.net',
+    port: Number(process.env.MYSQL_PORT) || 23068,
     dialect: 'mysql',
     logging: false,
   }

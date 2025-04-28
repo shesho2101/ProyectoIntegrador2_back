@@ -31,6 +31,7 @@ export const createHotel = async (req: Request, res: Response) => {
   }
 };
 
+
 // Actualizar hotel (Admin)
 export const updateHotel = async (req: Request, res: Response) => {
   try {
