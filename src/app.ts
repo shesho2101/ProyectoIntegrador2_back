@@ -21,9 +21,13 @@ const app = express();
 // Middlewares
 app.use(express.json());
 app.use(cors({
-  origin: process.env.CLIENT_ORIGIN || 'http://localhost:5173',
-  credentials: true,
-}));      
+  origin: [
+    'http://localhost:5173',
+    'https://wayra.up.railway.app'
+  ],
+  credentials: true
+}));
+     
 app.use(morgan('dev'));
 
 // Conexión a la base de datos
