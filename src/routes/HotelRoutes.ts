@@ -6,7 +6,8 @@ import {
   updateHotel,
   deleteHotel,
   getHotelsByCity,
-  getHotelsByPriceRange
+  getHotelsByPriceRange,
+  getUniqueCities
 } from '../controllers/HotelController';
 import { verifyToken } from '../middlewares/AuthMiddleware';
 import { verifyAdmin } from '../middlewares/VerifyAdminMiddleware';
@@ -29,5 +30,8 @@ router.get('/city/:ciudad', getHotelsByCity);
 
 // Público: filtrar hoteles por rango de precio
 router.get('/price/:min/:max', getHotelsByPriceRange);
+
+router.get('/ciudades/unicas', getUniqueCities);
+
 
 export default router;
