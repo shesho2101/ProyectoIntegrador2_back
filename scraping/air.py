@@ -4,10 +4,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import NoSuchElementException
-from urllib.parse import urlparse, parse_qs
-from datetime import datetime
 from pymongo import MongoClient
+from urllib.parse import urlparse, unquote
 import os, time
 
 # Cargar variables de entorno
@@ -29,17 +27,32 @@ wait = WebDriverWait(driver, 15)
 # Conexión a MongoDB
 mongo_uri = os.environ.get("MONGO_URI")
 client = MongoClient(mongo_uri)
-db = client["test"]  # Asegúrate que es la base correcta en Railway
+db = client["test"]
 hotels_col = db["hotels"]
 
 try:
-    url = ("https://www.airbnb.com.co/s/Bucaramanga--Santander--Colombia/homes?refinement_paths%5B%5D=%2Fhomes&flexible_trip_lengths%5B%5D=one_week&monthly_start_date=2025-06-01&monthly_length=3&monthly_end_date=2025-08-01&price_filter_input_type=2&channel=EXPLORE&acp_id=4d043215-74eb-4780-956b-7b6e282ac6dc&date_picker_type=calendar&source=structured_search_input_header&search_type=autocomplete_click&price_filter_num_nights=5&place_id=ChIJ7cBR93oVaI4RbMNIEVXkoHU&location_bb=QOVUhMKSMA9A4j8LwpJYHA%3D%3D&checkin=2025-05-10&checkout=2025-05-12")
+    url = ("https://www.airbnb.com.co/s/Cali/homes?flexible_trip_lengths%5B%5D=one_week&monthly_start_date=2025-06-01&monthly_length=3&monthly_end_date=2025-09-01&price_filter_input_type=2&channel=EXPLORE&refinement_paths%5B%5D=%2Fhomes&place_id=ChIJ8bNLzPCmMI4RaGGuUum1Dx8&date_picker_type=calendar&checkin=2025-05-10&checkout=2025-05-12&source=structured_search_input_header&search_type=AUTOSUGGEST")
     driver.get(url)
 
+    # Extraer solo la ciudad desde la URL
+    try:
+        parsed = urlparse(url)
+        path = parsed.path
+        parts = path.split("/")
+        if "s" in parts:
+            raw_city = parts[parts.index("s") + 1]
+            full_location = unquote(raw_city.replace("--", ", ").replace("-", " "))
+            ciudad_global = full_location.split(",")[0].strip()  # Solo ciudad
+        else:
+            ciudad_global = "Desconocida"
+    except:
+        ciudad_global = "Desconocida"
+
+    print(f"📍 Ciudad detectada desde URL: {ciudad_global}")
     print("🔎 Cargando resultados de Airbnb...")
-    for _ in range(5):
+    for _ in range(10):
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-        time.sleep(3)
+        time.sleep(4)
 
     cards = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, "[data-testid='card-container']")))
     print(f"📌 Se encontraron {len(cards)} alojamientos\n")
@@ -73,16 +86,31 @@ try:
             except:
                 img_url = None
 
+            # Facilidades
+            facilidades = []
+            try:
+                badges = card.find_elements(By.CSS_SELECTOR, "[data-testid='listing-card-feature-badge']")
+                facilidades = [b.text.strip() for b in badges if b.text.strip()]
+            except:
+                facilidades = []
+
+            print(f"🌍 Ciudad: {ciudad_global}")
+            print(f"🛏️ Facilidades: {facilidades}")
+
+            if price == 0 or not img_url:
+                print(f"⚠️ Omitido #{index} por datos inválidos (precio: {price}, img: {img_url})")
+                continue
+
             hotel = {
                 "nombre": title,
-                "ciudad": "Bucaramanga",
+                "ciudad": ciudad_global,
                 "precio": price,
                 "rating": rating,
                 "descripcion": description,
-                "ubicacion": "",
-                "facilidades": [],
+                "ubicacion": "No disponible",
+                "facilidades": facilidades,
                 "opiniones": [],
-                "imagenes": [img_url] if img_url else []
+                "imagenes": [img_url]
             }
 
             hotels_col.insert_one(hotel)

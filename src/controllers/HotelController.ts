@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import HotelService from '../services/HotelService';
+import Hotel from '../models/HotelModel';
 
 // Obtener todos los hoteles
 export const getAllHotels = async (_req: Request, res: Response) => {
@@ -71,5 +72,14 @@ export const getHotelsByPriceRange = async (req: Request, res: Response) => {
     res.json(hotels);
   } catch {
     res.status(500).json({ error: 'Error al filtrar hoteles por precio' });
+  }
+};
+
+export const getUniqueCities = async (req: Request, res: Response) => {
+  try {
+    const ciudades = await Hotel.distinct('ciudad');
+    res.status(200).json(ciudades.sort());
+  } catch (error) {
+    res.status(500).json({ message: 'Error al obtener las ciudades únicas' });
   }
 };
