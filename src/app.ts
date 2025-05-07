@@ -8,7 +8,6 @@ import authRoutes from './routes/AuthRoutes';
 import busRoutes from './routes/BusRoutes';  
 import hotelRoutes from './routes/HotelRoutes';  
 import flightRoutes from './routes/FlightRoutes';  
-import reservationRoutes from './routes/ReservationRoutes';
 import favoritesRoutes from './routes/FavoriteRoutes';
 import opinionsRoutes from './routes/OpinionRoutes';
 import cartRoutes from './routes/CartRoutes';
@@ -38,7 +37,6 @@ app.use('/api/auth', authRoutes);
 app.use('/api/buses', busRoutes);  
 app.use('/api/hotels', hotelRoutes);
 app.use('/api/flights', flightRoutes);
-app.use('/api/reservations', reservationRoutes);
 app.use('/api/favorites', favoritesRoutes);
 app.use('/api/opinions', opinionsRoutes);
 app.use('/api/cart', cartRoutes)
