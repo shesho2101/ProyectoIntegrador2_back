@@ -1,45 +1,19 @@
-import { DataTypes, Model } from 'sequelize';
-import sequelize from '../config/MySQLProvider'; 
+// src/models/ReservationModel.ts
+import mongoose, { Schema, Document } from 'mongoose';
 
-class Reservation extends Model {
-  public id!: number;
-  public usuario_id!: number;
-  public tipo_reserva!: string;
-  public referencia_mongo_id!: string;
-  public fecha_reserva!: Date;
-  public estado!: string;  
+export interface IReservation extends Document {
+  usuario: mongoose.Types.ObjectId;
+  hotel: mongoose.Types.ObjectId;
+  fecha_inicio: Date;
+  fecha_fin: Date;
 }
 
-Reservation.init(
-  {
-    usuario_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    tipo_reserva: {
-      type: DataTypes.ENUM('hotel', 'vuelo', 'bus'),
-      allowNull: false,
-    },
-    referencia_mongo_id: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    fecha_reserva: {
-      type: DataTypes.DATE,
-      allowNull: true,
-    },
-    estado: {
-      type: DataTypes.ENUM('pendiente', 'confirmada', 'cancelada'),
-      defaultValue: 'pendiente',
-      allowNull: false,
-    },
-  },
-  {
-    sequelize,
-    modelName: 'Reserva',
-    tableName: 'reservas',
-    timestamps: false,  
-  }
-);
+const ReservationSchema = new Schema<IReservation>({
+  usuario: { type: Schema.Types.ObjectId, ref: 'User', required: true },
+  hotel: { type: Schema.Types.ObjectId, ref: 'Hotel', required: true },
+  fecha_inicio: { type: Date, required: true },
+  fecha_fin: { type: Date, required: true },
+});
 
+const Reservation = mongoose.model<IReservation>('Reservation', ReservationSchema);
 export default Reservation;

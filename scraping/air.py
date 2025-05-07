@@ -1,127 +1,120 @@
-from dotenv import load_dotenv
+import time
+import random
+from datetime import datetime
 from selenium import webdriver
-from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from pymongo import MongoClient
-from urllib.parse import urlparse, unquote
-import os, time
 
-# Cargar variables de entorno
-load_dotenv()
-
-# Configurar Selenium
-chrome_options = Options()
-chrome_options.add_argument('--headless')
-chrome_options.add_argument('--no-sandbox')
-chrome_options.add_argument('--disable-dev-shm-usage')
-chrome_options.add_argument('--disable-gpu')
-chrome_options.add_argument('--window-size=1920,1080')
-chrome_options.add_argument('--disable-blink-features=AutomationControlled')
-chrome_options.add_argument('--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36')
-
-driver = webdriver.Chrome(options=chrome_options)
-wait = WebDriverWait(driver, 15)
-
-# Conexión a MongoDB
-mongo_uri = os.environ.get("MONGO_URI")
-client = MongoClient(mongo_uri)
+# --- Conexión MongoDB ---
+client = MongoClient("mongodb://mongo:rVZolHXXNtxThXLAqHAGmUdZsWXNpDRn@ballast.proxy.rlwy.net:34206")
 db = client["test"]
-hotels_col = db["hotels"]
+collection = db["hotels"]
+
+# --- Configurar navegador ---
+options = Options()
+options.add_argument("--start-maximized")
+options.add_argument("--disable-blink-features=AutomationControlled")
+options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36")
+driver = webdriver.Chrome(options=options)
+
+# --- Lista de ciudades/pueblos de Colombia ---
+ciudades_colombia = [
+    "Bogotá", "Medellín", "Cali", "Barranquilla", "Cartagena", "Bucaramanga",
+    "Santa Marta", "Cúcuta", "Pereira", "Manizales", "Villavicencio", "Neiva",
+    "Armenia", "Ibagué", "Montería", "Sincelejo", "Popayán", "Tunja",
+    "Riohacha", "Quibdó", "Yopal", "San Andrés", "Leticia", "Florencia"
+]
+
+checkin = "2026-06-15"
+checkout = "2026-06-17"
 
 try:
-    url = ("https://www.airbnb.com.co/s/Cali/homes?flexible_trip_lengths%5B%5D=one_week&monthly_start_date=2025-06-01&monthly_length=3&monthly_end_date=2025-09-01&price_filter_input_type=2&channel=EXPLORE&refinement_paths%5B%5D=%2Fhomes&place_id=ChIJ8bNLzPCmMI4RaGGuUum1Dx8&date_picker_type=calendar&checkin=2025-05-10&checkout=2025-05-12&source=structured_search_input_header&search_type=AUTOSUGGEST")
-    driver.get(url)
+    for ciudad in ciudades_colombia:
+        print(f"\n🌍 Scrapeando ciudad: {ciudad}")
+        ciudad_url = ciudad.replace(" ", "-")
+        search_url = f"https://www.airbnb.com.co/s/{ciudad_url}--Colombia/homes"
+        driver.get(search_url)
 
-    # Extraer solo la ciudad desde la URL
-    try:
-        parsed = urlparse(url)
-        path = parsed.path
-        parts = path.split("/")
-        if "s" in parts:
-            raw_city = parts[parts.index("s") + 1]
-            full_location = unquote(raw_city.replace("--", ", ").replace("-", " "))
-            ciudad_global = full_location.split(",")[0].strip()  # Solo ciudad
-        else:
-            ciudad_global = "Desconocida"
-    except:
-        ciudad_global = "Desconocida"
-
-    print(f"📍 Ciudad detectada desde URL: {ciudad_global}")
-    print("🔎 Cargando resultados de Airbnb...")
-    for _ in range(10):
-        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-        time.sleep(4)
-
-    cards = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, "[data-testid='card-container']")))
-    print(f"📌 Se encontraron {len(cards)} alojamientos\n")
-
-    for index, card in enumerate(cards, 1):
+        # Cierra pop-up de traducción si aparece
         try:
-            title = card.find_element(By.CSS_SELECTOR, "[data-testid='listing-card-name']").text.strip()
-            if not title:
-                continue
+            WebDriverWait(driver, 5).until(
+                EC.presence_of_element_located((By.XPATH, "//div[contains(text(),'Traducción activada')]"))
+            )
+            cerrar_btn = driver.find_element(By.XPATH, "//button[contains(@aria-label,'Cerrar')]")
+            cerrar_btn.click()
+            print("✅ Pop-up cerrado")
+        except TimeoutException:
+            pass
+
+        # Scroll para cargar más resultados
+        for _ in range(5):
+            driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+            time.sleep(random.uniform(2.0, 3.5))
+
+        alojamientos = driver.find_elements(By.XPATH, "//a[contains(@href,'/rooms/')]")
+        links = list({elem.get_attribute("href").split("?")[0] for elem in alojamientos})
+        print(f"📌 {len(links)} alojamientos encontrados en {ciudad}")
+
+        for link in links:
+            alojamiento_url = f"{link}?check_in={checkin}&check_out={checkout}&adults=1"
+            driver.get(alojamiento_url)
+            time.sleep(random.uniform(4.0, 6.0))
 
             try:
-                description = card.find_element(By.CSS_SELECTOR, "[data-testid='listing-card-title']").text.strip()
-            except:
-                description = "N/A"
+                # Cierra pop-up si reaparece
+                try:
+                    WebDriverWait(driver, 5).until(
+                        EC.presence_of_element_located((By.XPATH, "//div[contains(text(),'Traducción activada')]"))
+                    )
+                    cerrar_btn = driver.find_element(By.XPATH, "//button[contains(@aria-label,'Cerrar')]")
+                    cerrar_btn.click()
+                    print("✅ Pop-up cerrado nuevamente")
+                except TimeoutException:
+                    pass
 
-            try:
-                price_elem = card.find_element(By.CSS_SELECTOR, "div[style*='--pricing'] > div > span > div > span")
-                price_text = price_elem.text.strip().replace(" por noche", "").replace("$", "").replace(",", "")
-                price = float(price_text.split()[0]) if price_text else 0
-            except:
-                price = 0
+                # Título del alojamiento
+                titulo = driver.find_element(By.TAG_NAME, "h1").text
 
-            try:
-                rating_elem = card.find_element(By.XPATH, ".//span[contains(text(), 'Calificación promedio')]")
-                rating = float(rating_elem.text.replace("Calificación promedio: ", "").strip())
-            except:
-                rating = 1.0
+                # Precio del alojamiento
+                precio_span = None
+                clases_precio = ["umg93v9", "umuerxh"]
+                for clase in clases_precio:
+                    try:
+                        precio_span = driver.find_element(By.XPATH, f"//span[contains(@class, '{clase}')]")
+                        if precio_span:
+                            break
+                    except NoSuchElementException:
+                        continue
 
-            try:
-                img_url = card.find_element(By.TAG_NAME, "img").get_attribute("src")
-            except:
-                img_url = None
+                if not precio_span:
+                    raise Exception("No se encontró el precio")
 
-            # Facilidades
-            facilidades = []
-            try:
-                badges = card.find_elements(By.CSS_SELECTOR, "[data-testid='listing-card-feature-badge']")
-                facilidades = [b.text.strip() for b in badges if b.text.strip()]
-            except:
-                facilidades = []
+                precio = precio_span.text.strip().replace("\u202f", " ").replace(u'\xa0', ' ')
+                print(f"✅ {titulo} — {precio}")
 
-            print(f"🌍 Ciudad: {ciudad_global}")
-            print(f"🛏️ Facilidades: {facilidades}")
+                # Guardar en MongoDB
+                collection.insert_one({
+                    "titulo": titulo,
+                    "precio": precio,
+                    "url": link,
+                    "ciudad": ciudad,
+                    "check_in": checkin,
+                    "check_out": checkout,
+                    "fecha_scraping": datetime.now()
+                })
+                print(f"💾 Guardado en MongoDB: {titulo}")
 
-            if price == 0 or not img_url:
-                print(f"⚠️ Omitido #{index} por datos inválidos (precio: {price}, img: {img_url})")
-                continue
+            except Exception as e:
+                print(f"❌ Error procesando {link} — {str(e)}")
+            time.sleep(random.uniform(1.5, 2.5))  # pausa entre alojamientos
 
-            hotel = {
-                "nombre": title,
-                "ciudad": ciudad_global,
-                "precio": price,
-                "rating": rating,
-                "descripcion": description,
-                "ubicacion": "No disponible",
-                "facilidades": facilidades,
-                "opiniones": [],
-                "imagenes": [img_url]
-            }
-
-            hotels_col.insert_one(hotel)
-            print(f"✅ Guardado en MongoDB: {title}")
-
-        except Exception as e:
-            print(f"❌ Error procesando alojamiento #{index}: {e}")
-
-except Exception as e:
-    print(f"❌ Error general: {e}")
+except Exception as general_error:
+    print(f"⚠️ Error general: {general_error}")
 
 finally:
     driver.quit()
-    client.close()
+    print("\n🔚 Proceso de scraping finalizado.")
