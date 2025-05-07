@@ -1,120 +1,145 @@
-import time
-import random
-from datetime import datetime
+import time, re
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from pymongo import MongoClient
 
-# --- Conexión MongoDB ---
+# MongoDB
 client = MongoClient("mongodb://mongo:rVZolHXXNtxThXLAqHAGmUdZsWXNpDRn@ballast.proxy.rlwy.net:34206")
 db = client["test"]
 collection = db["hotels"]
 
-# --- Configurar navegador ---
+# Navegador
 options = Options()
 options.add_argument("--start-maximized")
-options.add_argument("--disable-blink-features=AutomationControlled")
-options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36")
 driver = webdriver.Chrome(options=options)
 
-# --- Lista de ciudades/pueblos de Colombia ---
-ciudades_colombia = [
-    "Bogotá", "Medellín", "Cali", "Barranquilla", "Cartagena", "Bucaramanga",
-    "Santa Marta", "Cúcuta", "Pereira", "Manizales", "Villavicencio", "Neiva",
-    "Armenia", "Ibagué", "Montería", "Sincelejo", "Popayán", "Tunja",
-    "Riohacha", "Quibdó", "Yopal", "San Andrés", "Leticia", "Florencia"
-]
-
-checkin = "2026-06-15"
-checkout = "2026-06-17"
+ciudades = [
+    "Bogotá", "Medellín", "Cali", "Barranquilla", "Cartagena", "Cúcuta", 
+    "Bucaramanga", "Pereira", "Manizales", "Santa Marta", "Ibagué", 
+    "Neiva", "Villavicencio", "Popayán", "Armenia", "Montería", 
+    "Sincelejo", "Valledupar", "Tunja", "Riohacha", "Risaralda", 
+    "San Andrés", "Quibdó", "Montería", "Chía", "Bello", "Rionegro"
+] 
 
 try:
-    for ciudad in ciudades_colombia:
-        print(f"\n🌍 Scrapeando ciudad: {ciudad}")
+    for ciudad in ciudades:
         ciudad_url = ciudad.replace(" ", "-")
-        search_url = f"https://www.airbnb.com.co/s/{ciudad_url}--Colombia/homes"
-        driver.get(search_url)
+        print(f"\n🔎 Buscando en {ciudad}")
+        driver.get(f"https://www.airbnb.com.co/s/{ciudad_url}--Colombia/homes")
+        time.sleep(3)
 
-        # Cierra pop-up de traducción si aparece
-        try:
-            WebDriverWait(driver, 5).until(
-                EC.presence_of_element_located((By.XPATH, "//div[contains(text(),'Traducción activada')]"))
-            )
-            cerrar_btn = driver.find_element(By.XPATH, "//button[contains(@aria-label,'Cerrar')]")
-            cerrar_btn.click()
-            print("✅ Pop-up cerrado")
-        except TimeoutException:
-            pass
-
-        # Scroll para cargar más resultados
-        for _ in range(5):
+        for _ in range(3):
             driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-            time.sleep(random.uniform(2.0, 3.5))
+            time.sleep(1.5)
 
         alojamientos = driver.find_elements(By.XPATH, "//a[contains(@href,'/rooms/')]")
-        links = list({elem.get_attribute("href").split("?")[0] for elem in alojamientos})
-        print(f"📌 {len(links)} alojamientos encontrados en {ciudad}")
+        links = list({a.get_attribute("href").split("?")[0] for a in alojamientos})
+        print(f"📌 {len(links)} alojamientos encontrados")
 
-        for link in links:
-            alojamiento_url = f"{link}?check_in={checkin}&check_out={checkout}&adults=1"
-            driver.get(alojamiento_url)
-            time.sleep(random.uniform(4.0, 6.0))
+        for link in links[:5]:
+            checkin = "2025-06-15"
+            checkout = "2025-06-17"
+            full_url = f"{link}?check_in={checkin}&check_out={checkout}&adults=1"
+            driver.get(full_url)
+            time.sleep(3)
 
             try:
-                # Cierra pop-up si reaparece
+                nombre = driver.find_element(By.TAG_NAME, "h1").text.strip()
+
+                # 🟡 EXTRAER PRECIO DE FORMA FIABLE
                 try:
-                    WebDriverWait(driver, 5).until(
-                        EC.presence_of_element_located((By.XPATH, "//div[contains(text(),'Traducción activada')]"))
-                    )
-                    cerrar_btn = driver.find_element(By.XPATH, "//button[contains(@aria-label,'Cerrar')]")
-                    cerrar_btn.click()
-                    print("✅ Pop-up cerrado nuevamente")
-                except TimeoutException:
-                    pass
+                    # Encuentra spans que contengan texto como $123,456 COP
+                    spans = driver.find_elements(By.TAG_NAME, "span")
+                    precio = None
+                    for span in spans:
+                        text = span.text.strip()
+                        if "$" in text and "COP" in text:
+                            match = re.search(r"\$([\d.,]+)", text)
+                            if match:
+                                precio_str = match.group(1).replace(".", "").replace(",", "")
+                                if precio_str.isdigit():
+                                    precio = int(precio_str)
+                                    break
 
-                # Título del alojamiento
-                titulo = driver.find_element(By.TAG_NAME, "h1").text
+                    if not precio or precio == 0:
+                        raise ValueError("No se pudo extraer un precio válido")
 
-                # Precio del alojamiento
-                precio_span = None
-                clases_precio = ["umg93v9", "umuerxh"]
-                for clase in clases_precio:
-                    try:
-                        precio_span = driver.find_element(By.XPATH, f"//span[contains(@class, '{clase}')]")
-                        if precio_span:
-                            break
-                    except NoSuchElementException:
-                        continue
+                except Exception as e:
+                    print(f"⚠️ No se encontró precio válido: {e}")
+                    continue
 
-                if not precio_span:
-                    raise Exception("No se encontró el precio")
+                # Rating
+                try:
+                    rating_text = driver.find_element(By.XPATH, "//span[contains(@class,'a8jt5op') and contains(text(),'Calificación de')]").text
+                    rating = float(rating_text.split()[2].replace(",", "."))
+                except Exception as e:
+                    print(f"⚠️ Error extrayendo rating: {e}")
+                    rating = 0.0
 
-                precio = precio_span.text.strip().replace("\u202f", " ").replace(u'\xa0', ' ')
-                print(f"✅ {titulo} — {precio}")
 
-                # Guardar en MongoDB
-                collection.insert_one({
-                    "titulo": titulo,
-                    "precio": precio,
-                    "url": link,
+                # Descripción
+                try:
+                    descripcion = driver.find_element(By.XPATH, "//div[contains(@data-section-id,'DESCRIPTION_DEFAULT')]").text
+                except:
+                    descripcion = ""
+
+                # Ubicación
+                try:
+                    ubicacion = driver.find_element(By.XPATH, "//a[contains(@href,'/maps')]").text
+                except:
+                    ubicacion = ciudad
+
+                # Facilidades - Lo que este lugar ofrece
+                facilidades = []
+                try:
+                    facilidades_elements = driver.find_elements(By.XPATH, "//div[@class='c16f2viy']//div[@class='_19xnuo97']//div[contains(@class,'iikjzje')]//div")
+                    facilidades = [el.text for el in facilidades_elements if el.text.strip()]
+                except Exception as e:
+                    print(f"⚠️ Error extrayendo facilidades: {e}")
+                    facilidades = []
+
+
+                # Opiniones
+                opiniones = []
+                try:
+                    opinion_elements = driver.find_elements(By.XPATH, "//div[@data-review-id]")
+                    for el in opinion_elements[:3]:  # Solo las primeras 3 reseñas
+                        opiniones.append({
+                            "texto": el.text,
+                            "autor": "",
+                            "fecha": "",
+                        })
+                except:
+                    opiniones = []
+
+                # Imágenes
+                imagenes = []
+                try:
+                    img_elements = driver.find_elements(By.XPATH, "//img[contains(@src,'/im/pictures')]")
+                    imagenes = list({img.get_attribute("src").split("?")[0] for img in img_elements if img.get_attribute("src")})
+                except:
+                    imagenes = []
+
+                doc = {
+                    "nombre": nombre,
                     "ciudad": ciudad,
-                    "check_in": checkin,
-                    "check_out": checkout,
-                    "fecha_scraping": datetime.now()
-                })
-                print(f"💾 Guardado en MongoDB: {titulo}")
+                    "precio": precio,
+                    "rating": rating,
+                    "descripcion": descripcion,
+                    "ubicacion": ubicacion,
+                    "facilidades": facilidades,
+                    "opiniones": opiniones,
+                    "imagenes": imagenes,
+                }
+
+                collection.insert_one(doc)
+                print(f"💾 Guardado en MongoDB: {nombre} — ${precio}")
 
             except Exception as e:
-                print(f"❌ Error procesando {link} — {str(e)}")
-            time.sleep(random.uniform(1.5, 2.5))  # pausa entre alojamientos
-
-except Exception as general_error:
-    print(f"⚠️ Error general: {general_error}")
+                print(f"❌ Error en {link}: {e}")
 
 finally:
     driver.quit()
-    print("\n🔚 Proceso de scraping finalizado.")
+    print("🔚 Proceso finalizado")
