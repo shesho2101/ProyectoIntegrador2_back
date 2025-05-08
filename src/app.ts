@@ -11,6 +11,8 @@ import flightRoutes from './routes/FlightRoutes';
 import favoritesRoutes from './routes/FavoriteRoutes';
 import opinionsRoutes from './routes/OpinionRoutes';
 import cartRoutes from './routes/CartRoutes';
+import reservationRoutes from './routes/ReservationRoutes';
+
 
 
 dotenv.config();
@@ -40,7 +42,7 @@ app.use('/api/flights', flightRoutes);
 app.use('/api/favorites', favoritesRoutes);
 app.use('/api/opinions', opinionsRoutes);
 app.use('/api/cart', cartRoutes)
-
+app.use('/api/reservations', reservationRoutes)
 
 // Middleware de manejo de errores
 app.use(errorHandler);
