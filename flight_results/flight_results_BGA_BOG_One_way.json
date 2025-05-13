@@ -1,0 +1,2751 @@
+{
+  "search_parameters": {
+    "departure": "BGA",
+    "destination": "BOG",
+    "departure_date": "2025-05-16",
+    "return_date": null,
+    "search_timestamp": "20250511_084949"
+  },
+  "flights": [
+    {
+      "airline": "Wingo",
+      "departure_time": "3:50 PM",
+      "arrival_time": "4:53 PM",
+      "duration": "1 hr 3 min",
+      "stops": "Nonstop",
+      "price": "COP 223,420",
+      "co2_emissions": "48 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "11:40 AM",
+      "arrival_time": "12:46 PM",
+      "duration": "1 hr 6 min",
+      "stops": "Nonstop",
+      "price": "COP 260,070",
+      "co2_emissions": "50 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "LATAMOperated by Latam Airlines Colombia",
+      "departure_time": "2:13 PM",
+      "arrival_time": "3:15 PM",
+      "duration": "1 hr 2 min",
+      "stops": "Nonstop",
+      "price": "COP 260,070",
+      "co2_emissions": "50 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "LATAMOperated by Latam Airlines Colombia",
+      "departure_time": "9:53 AM",
+      "arrival_time": "10:55 AM",
+      "duration": "1 hr 2 min",
+      "stops": "Nonstop",
+      "price": "COP 260,070",
+      "co2_emissions": "50 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "LATAMOperated by Latam Airlines Colombia",
+      "departure_time": "8:23 PM",
+      "arrival_time": "9:25 PM",
+      "duration": "1 hr 2 min",
+      "stops": "Nonstop",
+      "price": "COP 260,070",
+      "co2_emissions": "50 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "LATAMOperated by Latam Airlines Colombia",
+      "departure_time": "10:06 PM",
+      "arrival_time": "11:08 PM",
+      "duration": "1 hr 2 min",
+      "stops": "Nonstop",
+      "price": "COP 260,070",
+      "co2_emissions": "50 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "LATAMOperated by Latam Airlines Colombia",
+      "departure_time": "7:12 AM",
+      "arrival_time": "8:14 AM",
+      "duration": "1 hr 2 min",
+      "stops": "Nonstop",
+      "price": "COP 275,900",
+      "co2_emissions": "50 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "5:27 AM+1",
+      "duration": "7 hr",
+      "stops": "1 stop in MDE",
+      "price": "COP 283,670",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "6:10 AM+1",
+      "duration": "7 hr 43 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 283,670",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "6:29 AM+1",
+      "duration": "8 hr 2 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 283,670",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "7:00 AM+1",
+      "duration": "8 hr 33 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 283,670",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "7:13 AM+1",
+      "duration": "8 hr 46 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 283,670",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "2:51 PM",
+      "arrival_time": "3:59 PM",
+      "duration": "1 hr 8 min",
+      "stops": "Nonstop",
+      "price": "COP 292,800",
+      "co2_emissions": "50 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "6:00 AM",
+      "arrival_time": "7:01 AM",
+      "duration": "1 hr 1 min",
+      "stops": "Nonstop",
+      "price": "COP 294,110",
+      "co2_emissions": "50 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "6:43 AM",
+      "arrival_time": "7:44 AM",
+      "duration": "1 hr 1 min",
+      "stops": "Nonstop",
+      "price": "COP 294,110",
+      "co2_emissions": "50 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "7:45 AM",
+      "arrival_time": "8:40 AM",
+      "duration": "55 min",
+      "stops": "Nonstop",
+      "price": "COP 294,110",
+      "co2_emissions": "50 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:48 AM",
+      "arrival_time": "10:50 AM",
+      "duration": "1 hr 2 min",
+      "stops": "Nonstop",
+      "price": "COP 294,110",
+      "co2_emissions": "50 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "8:05 PM",
+      "arrival_time": "9:14 PM",
+      "duration": "1 hr 9 min",
+      "stops": "Nonstop",
+      "price": "COP 294,110",
+      "co2_emissions": "50 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "AviancaOperated by Clic for Avianca Express",
+      "departure_time": "9:41 PM",
+      "arrival_time": "10:54 PM",
+      "duration": "1 hr 13 min",
+      "stops": "Nonstop",
+      "price": "COP 294,110",
+      "co2_emissions": "42 kg CO2e",
+      "emissions_variation": "-16% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "8:00 AM+1",
+      "duration": "9 hr 33 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 396,720",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "8:54 AM+1",
+      "duration": "10 hr 27 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 396,720",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "9:52 AM+1",
+      "duration": "11 hr 25 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 396,720",
+      "co2_emissions": "95 kg CO2e",
+      "emissions_variation": "+90% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "10:14 AM+1",
+      "duration": "11 hr 47 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 396,720",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "12:25 PM+1",
+      "duration": "13 hr 58 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 396,720",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "2:07 PM+1",
+      "duration": "15 hr 40 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 396,720",
+      "co2_emissions": "95 kg CO2e",
+      "emissions_variation": "+90% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "2:20 PM+1",
+      "duration": "15 hr 53 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 396,720",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "3:10 PM+1",
+      "duration": "16 hr 43 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 396,720",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "4:44 PM+1",
+      "duration": "18 hr 17 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 396,720",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "5:06 PM+1",
+      "duration": "18 hr 39 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 396,720",
+      "co2_emissions": "83 kg CO2e",
+      "emissions_variation": "+66% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "6:26 PM+1",
+      "duration": "19 hr 59 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 396,720",
+      "co2_emissions": "95 kg CO2e",
+      "emissions_variation": "+90% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "6:48 PM+1",
+      "duration": "20 hr 21 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 396,720",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "7:55 PM+1",
+      "duration": "21 hr 28 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 396,720",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "8:55 PM+1",
+      "duration": "22 hr 28 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 396,720",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "9:52 PM+1",
+      "duration": "23 hr 25 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 396,720",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "10:35 PM+1",
+      "duration": "24 hr 8 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 396,720",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "6:25 AM+1",
+      "duration": "8 hr 29 min",
+      "stops": "1 stop in CTG",
+      "price": "COP 606,120",
+      "co2_emissions": "137 kg CO2e",
+      "emissions_variation": "+174% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "5:50 AM+2",
+      "duration": "31 hr 54 min",
+      "stops": "1 stop in CTG",
+      "price": "COP 694,720",
+      "co2_emissions": "137 kg CO2e",
+      "emissions_variation": "+174% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "5:50 AM+2",
+      "duration": "31 hr 23 min",
+      "stops": "2 stops in MDE, CTG",
+      "price": "COP 694,820",
+      "co2_emissions": "185 kg CO2e",
+      "emissions_variation": "+270% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "5:50 AM+2",
+      "duration": "31 hr 23 min",
+      "stops": "2 stops in MDE, CTG",
+      "price": "COP 694,820",
+      "co2_emissions": "185 kg CO2e",
+      "emissions_variation": "+270% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "5:50 AM+2",
+      "duration": "31 hr 23 min",
+      "stops": "2 stops in MDE, CTG",
+      "price": "COP 694,820",
+      "co2_emissions": "185 kg CO2e",
+      "emissions_variation": "+270% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "5:50 AM+2",
+      "duration": "31 hr 23 min",
+      "stops": "2 stops in MDE, CTG",
+      "price": "COP 718,320",
+      "co2_emissions": "185 kg CO2e",
+      "emissions_variation": "+270% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "5:50 AM+2",
+      "duration": "31 hr 23 min",
+      "stops": "2 stops in MDE, CTG",
+      "price": "COP 718,320",
+      "co2_emissions": "185 kg CO2e",
+      "emissions_variation": "+270% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "5:50 AM+2",
+      "duration": "31 hr 23 min",
+      "stops": "2 stops in MDE, CTG",
+      "price": "COP 718,320",
+      "co2_emissions": "185 kg CO2e",
+      "emissions_variation": "+270% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "5:50 AM+2",
+      "duration": "31 hr 23 min",
+      "stops": "2 stops in MDE, CTG",
+      "price": "COP 718,320",
+      "co2_emissions": "185 kg CO2e",
+      "emissions_variation": "+270% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "7:13 AM+2",
+      "duration": "32 hr 46 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 737,180",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "9:25 AM+2",
+      "duration": "34 hr 58 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 737,180",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "9:52 AM+2",
+      "duration": "35 hr 25 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 737,180",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "8:53 AM+1",
+      "duration": "10 hr 26 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "9:16 AM+1",
+      "duration": "10 hr 49 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "9:59 AM+1",
+      "duration": "11 hr 32 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "10:52 AM+1",
+      "duration": "12 hr 25 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "12:25 PM+1",
+      "duration": "13 hr 58 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "12:25 PM+1",
+      "duration": "13 hr 58 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "1:44 PM+1",
+      "duration": "15 hr 17 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "3:30 PM+1",
+      "duration": "17 hr 3 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "3:30 PM+1",
+      "duration": "17 hr 3 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "4:44 PM+1",
+      "duration": "18 hr 17 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "4:44 PM+1",
+      "duration": "18 hr 17 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "5:58 PM+1",
+      "duration": "19 hr 31 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "5:58 PM+1",
+      "duration": "19 hr 31 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "7:24 PM+1",
+      "duration": "20 hr 57 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "7:24 PM+1",
+      "duration": "20 hr 57 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "7:56 PM+1",
+      "duration": "21 hr 29 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "7:56 PM+1",
+      "duration": "21 hr 29 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "8:15 PM+1",
+      "duration": "21 hr 48 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "8:15 PM+1",
+      "duration": "21 hr 48 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "8:30 PM+1",
+      "duration": "22 hr 3 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "8:30 PM+1",
+      "duration": "22 hr 3 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "9:32 PM+1",
+      "duration": "23 hr 5 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "9:32 PM+1",
+      "duration": "23 hr 5 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "9:59 PM+1",
+      "duration": "23 hr 32 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "154 kg CO2e",
+      "emissions_variation": "+208% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "9:59 PM+1",
+      "duration": "23 hr 32 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "154 kg CO2e",
+      "emissions_variation": "+208% emissions"
+    },
+    {
+      "airline": "LATAMOperated by Latam Airlines Colombia",
+      "departure_time": "4:31 PM",
+      "arrival_time": "5:33 PM",
+      "duration": "1 hr 2 min",
+      "stops": "Nonstop",
+      "price": "COP 796,520",
+      "co2_emissions": "50 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "7:00 AM+1",
+      "duration": "9 hr 4 min",
+      "stops": "1 stop in CTG",
+      "price": "COP 810,800",
+      "co2_emissions": "137 kg CO2e",
+      "emissions_variation": "+174% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "7:38 AM+1",
+      "duration": "9 hr 42 min",
+      "stops": "1 stop in CTG",
+      "price": "COP 810,800",
+      "co2_emissions": "137 kg CO2e",
+      "emissions_variation": "+174% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "9:35 AM+1",
+      "duration": "11 hr 39 min",
+      "stops": "1 stop in CTG",
+      "price": "COP 810,800",
+      "co2_emissions": "137 kg CO2e",
+      "emissions_variation": "+174% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "10:14 AM+1",
+      "duration": "12 hr 18 min",
+      "stops": "2 stops in CTG, MDE",
+      "price": "COP 810,800",
+      "co2_emissions": "165 kg CO2e",
+      "emissions_variation": "+230% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "12:25 PM+1",
+      "duration": "14 hr 29 min",
+      "stops": "2 stops in CTG, MDE",
+      "price": "COP 810,800",
+      "co2_emissions": "165 kg CO2e",
+      "emissions_variation": "+230% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "2:07 PM+1",
+      "duration": "16 hr 11 min",
+      "stops": "2 stops in CTG, MDE",
+      "price": "COP 810,800",
+      "co2_emissions": "171 kg CO2e",
+      "emissions_variation": "+242% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "10:33 PM+1",
+      "duration": "24 hr 37 min",
+      "stops": "1 stop in CTG",
+      "price": "COP 834,300",
+      "co2_emissions": "137 kg CO2e",
+      "emissions_variation": "+174% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "5:27 AM+2",
+      "duration": "31 hr 31 min",
+      "stops": "2 stops in CTG, MDE",
+      "price": "COP 834,400",
+      "co2_emissions": "165 kg CO2e",
+      "emissions_variation": "+230% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "9:35 AM+1",
+      "duration": "11 hr 8 min",
+      "stops": "2 stops in MDE, CTG",
+      "price": "COP 834,400",
+      "co2_emissions": "185 kg CO2e",
+      "emissions_variation": "+270% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "11:47 AM+1",
+      "duration": "13 hr 51 min",
+      "stops": "1 stop in CTG",
+      "price": "COP 838,170",
+      "co2_emissions": "137 kg CO2e",
+      "emissions_variation": "+174% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "8:37 AM+1",
+      "duration": "10 hr 10 min",
+      "stops": "2 stops in MDE, BAQ",
+      "price": "COP 852,370",
+      "co2_emissions": "191 kg CO2e",
+      "emissions_variation": "+282% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "11:10 AM+1",
+      "duration": "12 hr 43 min",
+      "stops": "2 stops in MDE, BAQ",
+      "price": "COP 852,370",
+      "co2_emissions": "191 kg CO2e",
+      "emissions_variation": "+282% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "12:51 PM+1",
+      "duration": "14 hr 24 min",
+      "stops": "2 stops in MDE, BAQ",
+      "price": "COP 852,370",
+      "co2_emissions": "191 kg CO2e",
+      "emissions_variation": "+282% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "12:59 PM+1",
+      "duration": "15 hr 3 min",
+      "stops": "1 stop in CTG",
+      "price": "COP 861,670",
+      "co2_emissions": "137 kg CO2e",
+      "emissions_variation": "+174% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "2:12 PM+1",
+      "duration": "16 hr 16 min",
+      "stops": "1 stop in CTG",
+      "price": "COP 861,670",
+      "co2_emissions": "137 kg CO2e",
+      "emissions_variation": "+174% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "3:25 PM+1",
+      "duration": "17 hr 29 min",
+      "stops": "1 stop in CTG",
+      "price": "COP 861,670",
+      "co2_emissions": "137 kg CO2e",
+      "emissions_variation": "+174% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "4:07 PM+1",
+      "duration": "18 hr 11 min",
+      "stops": "1 stop in CTG",
+      "price": "COP 861,670",
+      "co2_emissions": "137 kg CO2e",
+      "emissions_variation": "+174% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "4:54 PM+1",
+      "duration": "18 hr 58 min",
+      "stops": "1 stop in CTG",
+      "price": "COP 861,670",
+      "co2_emissions": "137 kg CO2e",
+      "emissions_variation": "+174% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "7:51 PM+1",
+      "duration": "21 hr 55 min",
+      "stops": "1 stop in CTG",
+      "price": "COP 861,670",
+      "co2_emissions": "137 kg CO2e",
+      "emissions_variation": "+174% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "8:15 PM+1",
+      "duration": "22 hr 19 min",
+      "stops": "1 stop in CTG",
+      "price": "COP 861,670",
+      "co2_emissions": "137 kg CO2e",
+      "emissions_variation": "+174% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "8:34 PM+1",
+      "duration": "22 hr 38 min",
+      "stops": "1 stop in CTG",
+      "price": "COP 861,670",
+      "co2_emissions": "137 kg CO2e",
+      "emissions_variation": "+174% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "11:47 AM+1",
+      "duration": "13 hr 20 min",
+      "stops": "2 stops in MDE, CTG",
+      "price": "COP 861,770",
+      "co2_emissions": "185 kg CO2e",
+      "emissions_variation": "+270% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "12:59 PM+1",
+      "duration": "14 hr 32 min",
+      "stops": "2 stops in MDE, CTG",
+      "price": "COP 861,770",
+      "co2_emissions": "185 kg CO2e",
+      "emissions_variation": "+270% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "12:59 PM+1",
+      "duration": "14 hr 32 min",
+      "stops": "2 stops in MDE, CTG",
+      "price": "COP 861,770",
+      "co2_emissions": "185 kg CO2e",
+      "emissions_variation": "+270% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "2:12 PM+1",
+      "duration": "15 hr 45 min",
+      "stops": "2 stops in MDE, CTG",
+      "price": "COP 861,770",
+      "co2_emissions": "185 kg CO2e",
+      "emissions_variation": "+270% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "2:12 PM+1",
+      "duration": "15 hr 45 min",
+      "stops": "2 stops in MDE, CTG",
+      "price": "COP 861,770",
+      "co2_emissions": "185 kg CO2e",
+      "emissions_variation": "+270% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "6:58 PM+1",
+      "duration": "21 hr 2 min",
+      "stops": "1 stop in CTG",
+      "price": "COP 880,240",
+      "co2_emissions": "137 kg CO2e",
+      "emissions_variation": "+174% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "9:46 AM+1",
+      "duration": "11 hr 19 min",
+      "stops": "2 stops in MDE, BAQ",
+      "price": "COP 894,860",
+      "co2_emissions": "191 kg CO2e",
+      "emissions_variation": "+282% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "1:44 PM+1",
+      "duration": "15 hr 17 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 907,230",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca, COPAOperated by Taca International Airlines - Taca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "12:06 AM+2",
+      "duration": "25 hr 39 min",
+      "stops": "2 stops in MDE, PTY",
+      "price": "COP 1,509,230",
+      "co2_emissions": "217 kg CO2e",
+      "emissions_variation": "+334% emissions"
+    },
+    {
+      "airline": "Avianca, COPAOperated by Taca International Airlines - Taca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "12:06 AM+2",
+      "duration": "25 hr 39 min",
+      "stops": "2 stops in MDE, PTY",
+      "price": "COP 1,509,230",
+      "co2_emissions": "217 kg CO2e",
+      "emissions_variation": "+334% emissions"
+    },
+    {
+      "airline": "COPA",
+      "departure_time": "6:56 AM",
+      "arrival_time": "11:06 AM+1",
+      "duration": "28 hr 10 min",
+      "stops": "1 stop in PTY",
+      "price": "COP 3,226,090",
+      "co2_emissions": "188 kg CO2e",
+      "emissions_variation": "+276% emissions"
+    },
+    {
+      "airline": "COPA",
+      "departure_time": "6:56 AM",
+      "arrival_time": "1:29 PM+1",
+      "duration": "30 hr 33 min",
+      "stops": "1 stop in PTY",
+      "price": "COP 3,226,090",
+      "co2_emissions": "188 kg CO2e",
+      "emissions_variation": "+276% emissions"
+    },
+    {
+      "airline": "COPA",
+      "departure_time": "6:56 AM",
+      "arrival_time": "5:07 PM+1",
+      "duration": "34 hr 11 min",
+      "stops": "1 stop in PTY",
+      "price": "COP 3,226,090",
+      "co2_emissions": "185 kg CO2e",
+      "emissions_variation": "+270% emissions"
+    },
+    {
+      "airline": "COPA, Avianca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "3:05 AM+1",
+      "duration": "20 hr 9 min",
+      "stops": "2 stops in PTY, UIO",
+      "price": "COP 4,086,420",
+      "co2_emissions": "290 kg CO2e",
+      "emissions_variation": "+480% emissions"
+    },
+    {
+      "airline": "COPA, Avianca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "3:05 AM+1",
+      "duration": "20 hr 9 min",
+      "stops": "2 stops in PTY, UIO",
+      "price": "COP 4,086,420",
+      "co2_emissions": "290 kg CO2e",
+      "emissions_variation": "+480% emissions"
+    },
+    {
+      "airline": "COPA, Avianca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "3:05 AM+1",
+      "duration": "20 hr 9 min",
+      "stops": "2 stops in PTY, UIO",
+      "price": "COP 4,086,420",
+      "co2_emissions": "287 kg CO2e",
+      "emissions_variation": "+474% emissions"
+    },
+    {
+      "airline": "COPA, Avianca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "5:25 PM",
+      "duration": "10 hr 29 min",
+      "stops": "2 stops in PTY, UIO",
+      "price": "COP 4,165,700",
+      "co2_emissions": "290 kg CO2e",
+      "emissions_variation": "+480% emissions"
+    },
+    {
+      "airline": "COPA, Avianca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "3:10 AM+1",
+      "duration": "20 hr 14 min",
+      "stops": "2 stops in PTY, UIO",
+      "price": "COP 4,165,700",
+      "co2_emissions": "290 kg CO2e",
+      "emissions_variation": "+480% emissions"
+    },
+    {
+      "airline": "COPA, Avianca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "3:10 AM+1",
+      "duration": "20 hr 14 min",
+      "stops": "2 stops in PTY, UIO",
+      "price": "COP 4,165,700",
+      "co2_emissions": "287 kg CO2e",
+      "emissions_variation": "+474% emissions"
+    },
+    {
+      "airline": "COPA, Avianca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "3:10 AM+1",
+      "duration": "20 hr 14 min",
+      "stops": "2 stops in PTY, UIO",
+      "price": "COP 4,165,700",
+      "co2_emissions": "290 kg CO2e",
+      "emissions_variation": "+480% emissions"
+    },
+    {
+      "airline": "COPA, AviancaOperated by Avianca Ecuador S.a.",
+      "departure_time": "6:56 AM",
+      "arrival_time": "12:35 PM",
+      "duration": "5 hr 39 min",
+      "stops": "1 stop in PTY",
+      "price": "COP 4,205,680",
+      "co2_emissions": "183 kg CO2e",
+      "emissions_variation": "+266% emissions"
+    },
+    {
+      "airline": "COPA, Avianca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "6:55 PM",
+      "duration": "11 hr 59 min",
+      "stops": "1 stop in PTY",
+      "price": "COP 4,205,680",
+      "co2_emissions": "183 kg CO2e",
+      "emissions_variation": "+266% emissions"
+    },
+    {
+      "airline": "COPA, Avianca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "11:39 PM",
+      "duration": "16 hr 43 min",
+      "stops": "1 stop in PTY",
+      "price": "COP 4,205,680",
+      "co2_emissions": "183 kg CO2e",
+      "emissions_variation": "+266% emissions"
+    },
+    {
+      "airline": "COPA, Avianca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "5:00 AM+1",
+      "duration": "22 hr 4 min",
+      "stops": "1 stop in PTY",
+      "price": "COP 4,205,680",
+      "co2_emissions": "183 kg CO2e",
+      "emissions_variation": "+266% emissions"
+    },
+    {
+      "airline": "COPA, AviancaOperated by Taca International Airlines - Taca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "3:10 PM",
+      "duration": "8 hr 14 min",
+      "stops": "2 stops in PTY, MDE",
+      "price": "COP 4,229,280",
+      "co2_emissions": "209 kg CO2e",
+      "emissions_variation": "+318% emissions"
+    },
+    {
+      "airline": "COPA, AviancaOperated by Taca International Airlines - Taca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "4:59 PM",
+      "duration": "10 hr 3 min",
+      "stops": "2 stops in PTY, MDE",
+      "price": "COP 4,229,280",
+      "co2_emissions": "214 kg CO2e",
+      "emissions_variation": "+328% emissions"
+    },
+    {
+      "airline": "COPA, AviancaOperated by Taca International Airlines - Taca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "8:55 PM",
+      "duration": "13 hr 59 min",
+      "stops": "2 stops in PTY, MDE",
+      "price": "COP 4,229,280",
+      "co2_emissions": "209 kg CO2e",
+      "emissions_variation": "+318% emissions"
+    },
+    {
+      "airline": "COPA, AviancaOperated by Taca International Airlines - Taca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "8:55 PM",
+      "duration": "13 hr 59 min",
+      "stops": "2 stops in PTY, MDE",
+      "price": "COP 4,229,280",
+      "co2_emissions": "209 kg CO2e",
+      "emissions_variation": "+318% emissions"
+    },
+    {
+      "airline": "COPA, AviancaOperated by Taca International Airlines - Taca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "9:52 PM",
+      "duration": "14 hr 56 min",
+      "stops": "2 stops in PTY, MDE",
+      "price": "COP 4,229,280",
+      "co2_emissions": "209 kg CO2e",
+      "emissions_variation": "+318% emissions"
+    },
+    {
+      "airline": "COPA, AviancaOperated by Taca International Airlines - Taca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "9:52 PM",
+      "duration": "14 hr 56 min",
+      "stops": "2 stops in PTY, MDE",
+      "price": "COP 4,229,280",
+      "co2_emissions": "209 kg CO2e",
+      "emissions_variation": "+318% emissions"
+    },
+    {
+      "airline": "COPA, AviancaOperated by Taca International Airlines - Taca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "10:35 PM",
+      "duration": "15 hr 39 min",
+      "stops": "2 stops in PTY, MDE",
+      "price": "COP 4,229,280",
+      "co2_emissions": "209 kg CO2e",
+      "emissions_variation": "+318% emissions"
+    },
+    {
+      "airline": "COPA, AviancaOperated by Taca International Airlines - Taca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "5:27 AM+1",
+      "duration": "22 hr 31 min",
+      "stops": "2 stops in PTY, MDE",
+      "price": "COP 4,229,280",
+      "co2_emissions": "209 kg CO2e",
+      "emissions_variation": "+318% emissions"
+    },
+    {
+      "airline": "COPA, AviancaOperated by Taca International Airlines - Taca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "6:26 PM",
+      "duration": "11 hr 30 min",
+      "stops": "2 stops in PTY, MDE",
+      "price": "COP 4,275,930",
+      "co2_emissions": "209 kg CO2e",
+      "emissions_variation": "+318% emissions"
+    },
+    {
+      "airline": "COPA, AviancaOperated by Avianca Ecuador S.a.",
+      "departure_time": "6:56 AM",
+      "arrival_time": "6:25 PM",
+      "duration": "11 hr 29 min",
+      "stops": "2 stops in PTY, AUA",
+      "price": "COP 4,310,760",
+      "co2_emissions": "320 kg CO2e",
+      "emissions_variation": "+540% emissions"
+    },
+    {
+      "airline": "COPA, AviancaOperated by Taca International Airlines - Taca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "7:55 PM",
+      "duration": "12 hr 59 min",
+      "stops": "2 stops in PTY, MDE",
+      "price": "COP 4,341,300",
+      "co2_emissions": "209 kg CO2e",
+      "emissions_variation": "+318% emissions"
+    },
+    {
+      "airline": "COPA, AviancaOperated by Taca International Airlines - Taca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "7:55 PM",
+      "duration": "12 hr 59 min",
+      "stops": "2 stops in PTY, MDE",
+      "price": "COP 4,341,300",
+      "co2_emissions": "209 kg CO2e",
+      "emissions_variation": "+318% emissions"
+    },
+    {
+      "airline": "COPA, AviancaOperated by Avianca Costa Rica S.a.",
+      "departure_time": "6:56 AM",
+      "arrival_time": "6:14 PM",
+      "duration": "11 hr 18 min",
+      "stops": "2 stops in PTY, SJO",
+      "price": "COP 4,799,980",
+      "co2_emissions": "280 kg CO2e",
+      "emissions_variation": "+460% emissions"
+    },
+    {
+      "airline": "COPA, AviancaOperated by Avianca Costa Rica S.a., Avianca Costa Rica S.a.",
+      "departure_time": "6:56 AM",
+      "arrival_time": "7:59 PM",
+      "duration": "13 hr 3 min",
+      "stops": "2 stops in PTY, SJO",
+      "price": "COP 4,799,980",
+      "co2_emissions": "263 kg CO2e",
+      "emissions_variation": "+426% emissions"
+    },
+    {
+      "airline": "COPA, AviancaOperated by Taca International Airlines - Taca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "1:55 AM+1",
+      "duration": "18 hr 59 min",
+      "stops": "2 stops in PTY, SAL",
+      "price": "COP 4,898,340",
+      "co2_emissions": "377 kg CO2e",
+      "emissions_variation": "+654% emissions"
+    },
+    {
+      "airline": "COPA, AviancaOperated by Taca International Airlines - Taca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "1:55 AM+1",
+      "duration": "18 hr 59 min",
+      "stops": "2 stops in PTY, SAL",
+      "price": "COP 4,898,340",
+      "co2_emissions": "377 kg CO2e",
+      "emissions_variation": "+654% emissions"
+    },
+    {
+      "airline": "COPA",
+      "departure_time": "6:56 AM",
+      "arrival_time": "11:06 AM",
+      "duration": "4 hr 10 min",
+      "stops": "1 stop in PTY",
+      "price": "COP 6,519,520",
+      "co2_emissions": "203 kg CO2e",
+      "emissions_variation": "+306% emissions"
+    },
+    {
+      "airline": "COPA",
+      "departure_time": "6:56 AM",
+      "arrival_time": "1:29 PM",
+      "duration": "6 hr 33 min",
+      "stops": "1 stop in PTY",
+      "price": "COP 6,519,520",
+      "co2_emissions": "203 kg CO2e",
+      "emissions_variation": "+306% emissions"
+    },
+    {
+      "airline": "COPA",
+      "departure_time": "6:56 AM",
+      "arrival_time": "12:06 AM+1",
+      "duration": "17 hr 10 min",
+      "stops": "1 stop in PTY",
+      "price": "COP 6,519,520",
+      "co2_emissions": "203 kg CO2e",
+      "emissions_variation": "+306% emissions"
+    },
+    {
+      "airline": "Wingo",
+      "departure_time": "3:50 PM",
+      "arrival_time": "4:53 PM",
+      "duration": "1 hr 3 min",
+      "stops": "Nonstop",
+      "price": "COP 223,420",
+      "co2_emissions": "48 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "11:40 AM",
+      "arrival_time": "12:46 PM",
+      "duration": "1 hr 6 min",
+      "stops": "Nonstop",
+      "price": "COP 260,070",
+      "co2_emissions": "50 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "LATAMOperated by Latam Airlines Colombia",
+      "departure_time": "2:13 PM",
+      "arrival_time": "3:15 PM",
+      "duration": "1 hr 2 min",
+      "stops": "Nonstop",
+      "price": "COP 260,070",
+      "co2_emissions": "50 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "LATAMOperated by Latam Airlines Colombia",
+      "departure_time": "9:53 AM",
+      "arrival_time": "10:55 AM",
+      "duration": "1 hr 2 min",
+      "stops": "Nonstop",
+      "price": "COP 260,070",
+      "co2_emissions": "50 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "LATAMOperated by Latam Airlines Colombia",
+      "departure_time": "8:23 PM",
+      "arrival_time": "9:25 PM",
+      "duration": "1 hr 2 min",
+      "stops": "Nonstop",
+      "price": "COP 260,070",
+      "co2_emissions": "50 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "LATAMOperated by Latam Airlines Colombia",
+      "departure_time": "10:06 PM",
+      "arrival_time": "11:08 PM",
+      "duration": "1 hr 2 min",
+      "stops": "Nonstop",
+      "price": "COP 260,070",
+      "co2_emissions": "50 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "LATAMOperated by Latam Airlines Colombia",
+      "departure_time": "7:12 AM",
+      "arrival_time": "8:14 AM",
+      "duration": "1 hr 2 min",
+      "stops": "Nonstop",
+      "price": "COP 275,900",
+      "co2_emissions": "50 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "5:27 AM+1",
+      "duration": "7 hr",
+      "stops": "1 stop in MDE",
+      "price": "COP 283,670",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "6:10 AM+1",
+      "duration": "7 hr 43 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 283,670",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "6:29 AM+1",
+      "duration": "8 hr 2 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 283,670",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "7:00 AM+1",
+      "duration": "8 hr 33 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 283,670",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "7:13 AM+1",
+      "duration": "8 hr 46 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 283,670",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "2:51 PM",
+      "arrival_time": "3:59 PM",
+      "duration": "1 hr 8 min",
+      "stops": "Nonstop",
+      "price": "COP 292,800",
+      "co2_emissions": "50 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "6:00 AM",
+      "arrival_time": "7:01 AM",
+      "duration": "1 hr 1 min",
+      "stops": "Nonstop",
+      "price": "COP 294,110",
+      "co2_emissions": "50 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "6:43 AM",
+      "arrival_time": "7:44 AM",
+      "duration": "1 hr 1 min",
+      "stops": "Nonstop",
+      "price": "COP 294,110",
+      "co2_emissions": "50 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "7:45 AM",
+      "arrival_time": "8:40 AM",
+      "duration": "55 min",
+      "stops": "Nonstop",
+      "price": "COP 294,110",
+      "co2_emissions": "50 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:48 AM",
+      "arrival_time": "10:50 AM",
+      "duration": "1 hr 2 min",
+      "stops": "Nonstop",
+      "price": "COP 294,110",
+      "co2_emissions": "50 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "8:05 PM",
+      "arrival_time": "9:14 PM",
+      "duration": "1 hr 9 min",
+      "stops": "Nonstop",
+      "price": "COP 294,110",
+      "co2_emissions": "50 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "AviancaOperated by Clic for Avianca Express",
+      "departure_time": "9:41 PM",
+      "arrival_time": "10:54 PM",
+      "duration": "1 hr 13 min",
+      "stops": "Nonstop",
+      "price": "COP 294,110",
+      "co2_emissions": "42 kg CO2e",
+      "emissions_variation": "-16% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "8:00 AM+1",
+      "duration": "9 hr 33 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 396,720",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "8:54 AM+1",
+      "duration": "10 hr 27 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 396,720",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "9:52 AM+1",
+      "duration": "11 hr 25 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 396,720",
+      "co2_emissions": "95 kg CO2e",
+      "emissions_variation": "+90% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "10:14 AM+1",
+      "duration": "11 hr 47 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 396,720",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "12:25 PM+1",
+      "duration": "13 hr 58 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 396,720",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "2:07 PM+1",
+      "duration": "15 hr 40 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 396,720",
+      "co2_emissions": "95 kg CO2e",
+      "emissions_variation": "+90% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "2:20 PM+1",
+      "duration": "15 hr 53 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 396,720",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "3:10 PM+1",
+      "duration": "16 hr 43 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 396,720",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "4:44 PM+1",
+      "duration": "18 hr 17 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 396,720",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "5:06 PM+1",
+      "duration": "18 hr 39 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 396,720",
+      "co2_emissions": "83 kg CO2e",
+      "emissions_variation": "+66% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "6:26 PM+1",
+      "duration": "19 hr 59 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 396,720",
+      "co2_emissions": "95 kg CO2e",
+      "emissions_variation": "+90% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "6:48 PM+1",
+      "duration": "20 hr 21 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 396,720",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "7:55 PM+1",
+      "duration": "21 hr 28 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 396,720",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "8:55 PM+1",
+      "duration": "22 hr 28 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 396,720",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "9:52 PM+1",
+      "duration": "23 hr 25 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 396,720",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "10:35 PM+1",
+      "duration": "24 hr 8 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 396,720",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "6:25 AM+1",
+      "duration": "8 hr 29 min",
+      "stops": "1 stop in CTG",
+      "price": "COP 606,120",
+      "co2_emissions": "137 kg CO2e",
+      "emissions_variation": "+174% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "5:50 AM+2",
+      "duration": "31 hr 54 min",
+      "stops": "1 stop in CTG",
+      "price": "COP 694,720",
+      "co2_emissions": "137 kg CO2e",
+      "emissions_variation": "+174% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "5:50 AM+2",
+      "duration": "31 hr 23 min",
+      "stops": "2 stops in MDE, CTG",
+      "price": "COP 694,820",
+      "co2_emissions": "185 kg CO2e",
+      "emissions_variation": "+270% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "5:50 AM+2",
+      "duration": "31 hr 23 min",
+      "stops": "2 stops in MDE, CTG",
+      "price": "COP 694,820",
+      "co2_emissions": "185 kg CO2e",
+      "emissions_variation": "+270% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "5:50 AM+2",
+      "duration": "31 hr 23 min",
+      "stops": "2 stops in MDE, CTG",
+      "price": "COP 694,820",
+      "co2_emissions": "185 kg CO2e",
+      "emissions_variation": "+270% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "5:50 AM+2",
+      "duration": "31 hr 23 min",
+      "stops": "2 stops in MDE, CTG",
+      "price": "COP 718,320",
+      "co2_emissions": "185 kg CO2e",
+      "emissions_variation": "+270% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "5:50 AM+2",
+      "duration": "31 hr 23 min",
+      "stops": "2 stops in MDE, CTG",
+      "price": "COP 718,320",
+      "co2_emissions": "185 kg CO2e",
+      "emissions_variation": "+270% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "5:50 AM+2",
+      "duration": "31 hr 23 min",
+      "stops": "2 stops in MDE, CTG",
+      "price": "COP 718,320",
+      "co2_emissions": "185 kg CO2e",
+      "emissions_variation": "+270% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "5:50 AM+2",
+      "duration": "31 hr 23 min",
+      "stops": "2 stops in MDE, CTG",
+      "price": "COP 718,320",
+      "co2_emissions": "185 kg CO2e",
+      "emissions_variation": "+270% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "7:13 AM+2",
+      "duration": "32 hr 46 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 737,180",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "9:25 AM+2",
+      "duration": "34 hr 58 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 737,180",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "9:52 AM+2",
+      "duration": "35 hr 25 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 737,180",
+      "co2_emissions": "90 kg CO2e",
+      "emissions_variation": "+80% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "8:53 AM+1",
+      "duration": "10 hr 26 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "9:16 AM+1",
+      "duration": "10 hr 49 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "9:59 AM+1",
+      "duration": "11 hr 32 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "10:52 AM+1",
+      "duration": "12 hr 25 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "12:25 PM+1",
+      "duration": "13 hr 58 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "12:25 PM+1",
+      "duration": "13 hr 58 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "1:44 PM+1",
+      "duration": "15 hr 17 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "3:30 PM+1",
+      "duration": "17 hr 3 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "3:30 PM+1",
+      "duration": "17 hr 3 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "4:44 PM+1",
+      "duration": "18 hr 17 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "4:44 PM+1",
+      "duration": "18 hr 17 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "5:58 PM+1",
+      "duration": "19 hr 31 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "5:58 PM+1",
+      "duration": "19 hr 31 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "7:24 PM+1",
+      "duration": "20 hr 57 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "7:24 PM+1",
+      "duration": "20 hr 57 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "7:56 PM+1",
+      "duration": "21 hr 29 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "7:56 PM+1",
+      "duration": "21 hr 29 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "8:15 PM+1",
+      "duration": "21 hr 48 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "8:15 PM+1",
+      "duration": "21 hr 48 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "8:30 PM+1",
+      "duration": "22 hr 3 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "8:30 PM+1",
+      "duration": "22 hr 3 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "9:32 PM+1",
+      "duration": "23 hr 5 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "9:32 PM+1",
+      "duration": "23 hr 5 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "9:59 PM+1",
+      "duration": "23 hr 32 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "154 kg CO2e",
+      "emissions_variation": "+208% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "9:59 PM+1",
+      "duration": "23 hr 32 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 763,240",
+      "co2_emissions": "154 kg CO2e",
+      "emissions_variation": "+208% emissions"
+    },
+    {
+      "airline": "LATAMOperated by Latam Airlines Colombia",
+      "departure_time": "4:31 PM",
+      "arrival_time": "5:33 PM",
+      "duration": "1 hr 2 min",
+      "stops": "Nonstop",
+      "price": "COP 796,520",
+      "co2_emissions": "50 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "7:00 AM+1",
+      "duration": "9 hr 4 min",
+      "stops": "1 stop in CTG",
+      "price": "COP 810,800",
+      "co2_emissions": "137 kg CO2e",
+      "emissions_variation": "+174% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "7:38 AM+1",
+      "duration": "9 hr 42 min",
+      "stops": "1 stop in CTG",
+      "price": "COP 810,800",
+      "co2_emissions": "137 kg CO2e",
+      "emissions_variation": "+174% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "9:35 AM+1",
+      "duration": "11 hr 39 min",
+      "stops": "1 stop in CTG",
+      "price": "COP 810,800",
+      "co2_emissions": "137 kg CO2e",
+      "emissions_variation": "+174% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "10:14 AM+1",
+      "duration": "12 hr 18 min",
+      "stops": "2 stops in CTG, MDE",
+      "price": "COP 810,800",
+      "co2_emissions": "165 kg CO2e",
+      "emissions_variation": "+230% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "12:25 PM+1",
+      "duration": "14 hr 29 min",
+      "stops": "2 stops in CTG, MDE",
+      "price": "COP 810,800",
+      "co2_emissions": "165 kg CO2e",
+      "emissions_variation": "+230% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "2:07 PM+1",
+      "duration": "16 hr 11 min",
+      "stops": "2 stops in CTG, MDE",
+      "price": "COP 810,800",
+      "co2_emissions": "171 kg CO2e",
+      "emissions_variation": "+242% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "10:33 PM+1",
+      "duration": "24 hr 37 min",
+      "stops": "1 stop in CTG",
+      "price": "COP 834,300",
+      "co2_emissions": "137 kg CO2e",
+      "emissions_variation": "+174% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "5:27 AM+2",
+      "duration": "31 hr 31 min",
+      "stops": "2 stops in CTG, MDE",
+      "price": "COP 834,400",
+      "co2_emissions": "165 kg CO2e",
+      "emissions_variation": "+230% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "9:35 AM+1",
+      "duration": "11 hr 8 min",
+      "stops": "2 stops in MDE, CTG",
+      "price": "COP 834,400",
+      "co2_emissions": "185 kg CO2e",
+      "emissions_variation": "+270% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "11:47 AM+1",
+      "duration": "13 hr 51 min",
+      "stops": "1 stop in CTG",
+      "price": "COP 838,170",
+      "co2_emissions": "137 kg CO2e",
+      "emissions_variation": "+174% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "8:37 AM+1",
+      "duration": "10 hr 10 min",
+      "stops": "2 stops in MDE, BAQ",
+      "price": "COP 852,370",
+      "co2_emissions": "191 kg CO2e",
+      "emissions_variation": "+282% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "11:10 AM+1",
+      "duration": "12 hr 43 min",
+      "stops": "2 stops in MDE, BAQ",
+      "price": "COP 852,370",
+      "co2_emissions": "191 kg CO2e",
+      "emissions_variation": "+282% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "12:51 PM+1",
+      "duration": "14 hr 24 min",
+      "stops": "2 stops in MDE, BAQ",
+      "price": "COP 852,370",
+      "co2_emissions": "191 kg CO2e",
+      "emissions_variation": "+282% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "12:59 PM+1",
+      "duration": "15 hr 3 min",
+      "stops": "1 stop in CTG",
+      "price": "COP 861,670",
+      "co2_emissions": "137 kg CO2e",
+      "emissions_variation": "+174% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "2:12 PM+1",
+      "duration": "16 hr 16 min",
+      "stops": "1 stop in CTG",
+      "price": "COP 861,670",
+      "co2_emissions": "137 kg CO2e",
+      "emissions_variation": "+174% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "3:25 PM+1",
+      "duration": "17 hr 29 min",
+      "stops": "1 stop in CTG",
+      "price": "COP 861,670",
+      "co2_emissions": "137 kg CO2e",
+      "emissions_variation": "+174% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "4:07 PM+1",
+      "duration": "18 hr 11 min",
+      "stops": "1 stop in CTG",
+      "price": "COP 861,670",
+      "co2_emissions": "137 kg CO2e",
+      "emissions_variation": "+174% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "4:54 PM+1",
+      "duration": "18 hr 58 min",
+      "stops": "1 stop in CTG",
+      "price": "COP 861,670",
+      "co2_emissions": "137 kg CO2e",
+      "emissions_variation": "+174% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "7:51 PM+1",
+      "duration": "21 hr 55 min",
+      "stops": "1 stop in CTG",
+      "price": "COP 861,670",
+      "co2_emissions": "137 kg CO2e",
+      "emissions_variation": "+174% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "8:15 PM+1",
+      "duration": "22 hr 19 min",
+      "stops": "1 stop in CTG",
+      "price": "COP 861,670",
+      "co2_emissions": "137 kg CO2e",
+      "emissions_variation": "+174% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "8:34 PM+1",
+      "duration": "22 hr 38 min",
+      "stops": "1 stop in CTG",
+      "price": "COP 861,670",
+      "co2_emissions": "137 kg CO2e",
+      "emissions_variation": "+174% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "11:47 AM+1",
+      "duration": "13 hr 20 min",
+      "stops": "2 stops in MDE, CTG",
+      "price": "COP 861,770",
+      "co2_emissions": "185 kg CO2e",
+      "emissions_variation": "+270% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "12:59 PM+1",
+      "duration": "14 hr 32 min",
+      "stops": "2 stops in MDE, CTG",
+      "price": "COP 861,770",
+      "co2_emissions": "185 kg CO2e",
+      "emissions_variation": "+270% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "12:59 PM+1",
+      "duration": "14 hr 32 min",
+      "stops": "2 stops in MDE, CTG",
+      "price": "COP 861,770",
+      "co2_emissions": "185 kg CO2e",
+      "emissions_variation": "+270% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "2:12 PM+1",
+      "duration": "15 hr 45 min",
+      "stops": "2 stops in MDE, CTG",
+      "price": "COP 861,770",
+      "co2_emissions": "185 kg CO2e",
+      "emissions_variation": "+270% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "2:12 PM+1",
+      "duration": "15 hr 45 min",
+      "stops": "2 stops in MDE, CTG",
+      "price": "COP 861,770",
+      "co2_emissions": "185 kg CO2e",
+      "emissions_variation": "+270% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:56 PM",
+      "arrival_time": "6:58 PM+1",
+      "duration": "21 hr 2 min",
+      "stops": "1 stop in CTG",
+      "price": "COP 880,240",
+      "co2_emissions": "137 kg CO2e",
+      "emissions_variation": "+174% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "9:46 AM+1",
+      "duration": "11 hr 19 min",
+      "stops": "2 stops in MDE, BAQ",
+      "price": "COP 894,860",
+      "co2_emissions": "191 kg CO2e",
+      "emissions_variation": "+282% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "1:44 PM+1",
+      "duration": "15 hr 17 min",
+      "stops": "2 stops in MDE, CLO",
+      "price": "COP 907,230",
+      "co2_emissions": "147 kg CO2e",
+      "emissions_variation": "+194% emissions"
+    },
+    {
+      "airline": "Avianca, COPAOperated by Taca International Airlines - Taca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "12:06 AM+2",
+      "duration": "25 hr 39 min",
+      "stops": "2 stops in MDE, PTY",
+      "price": "COP 1,509,230",
+      "co2_emissions": "217 kg CO2e",
+      "emissions_variation": "+334% emissions"
+    },
+    {
+      "airline": "Avianca, COPAOperated by Taca International Airlines - Taca",
+      "departure_time": "10:27 PM",
+      "arrival_time": "12:06 AM+2",
+      "duration": "25 hr 39 min",
+      "stops": "2 stops in MDE, PTY",
+      "price": "COP 1,509,230",
+      "co2_emissions": "217 kg CO2e",
+      "emissions_variation": "+334% emissions"
+    },
+    {
+      "airline": "COPA",
+      "departure_time": "6:56 AM",
+      "arrival_time": "11:06 AM+1",
+      "duration": "28 hr 10 min",
+      "stops": "1 stop in PTY",
+      "price": "COP 3,226,090",
+      "co2_emissions": "188 kg CO2e",
+      "emissions_variation": "+276% emissions"
+    },
+    {
+      "airline": "COPA",
+      "departure_time": "6:56 AM",
+      "arrival_time": "1:29 PM+1",
+      "duration": "30 hr 33 min",
+      "stops": "1 stop in PTY",
+      "price": "COP 3,226,090",
+      "co2_emissions": "188 kg CO2e",
+      "emissions_variation": "+276% emissions"
+    },
+    {
+      "airline": "COPA",
+      "departure_time": "6:56 AM",
+      "arrival_time": "5:07 PM+1",
+      "duration": "34 hr 11 min",
+      "stops": "1 stop in PTY",
+      "price": "COP 3,226,090",
+      "co2_emissions": "185 kg CO2e",
+      "emissions_variation": "+270% emissions"
+    },
+    {
+      "airline": "COPA, Avianca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "3:05 AM+1",
+      "duration": "20 hr 9 min",
+      "stops": "2 stops in PTY, UIO",
+      "price": "COP 4,086,420",
+      "co2_emissions": "290 kg CO2e",
+      "emissions_variation": "+480% emissions"
+    },
+    {
+      "airline": "COPA, Avianca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "3:05 AM+1",
+      "duration": "20 hr 9 min",
+      "stops": "2 stops in PTY, UIO",
+      "price": "COP 4,086,420",
+      "co2_emissions": "290 kg CO2e",
+      "emissions_variation": "+480% emissions"
+    },
+    {
+      "airline": "COPA, Avianca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "3:05 AM+1",
+      "duration": "20 hr 9 min",
+      "stops": "2 stops in PTY, UIO",
+      "price": "COP 4,086,420",
+      "co2_emissions": "287 kg CO2e",
+      "emissions_variation": "+474% emissions"
+    },
+    {
+      "airline": "COPA, Avianca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "5:25 PM",
+      "duration": "10 hr 29 min",
+      "stops": "2 stops in PTY, UIO",
+      "price": "COP 4,165,700",
+      "co2_emissions": "290 kg CO2e",
+      "emissions_variation": "+480% emissions"
+    },
+    {
+      "airline": "COPA, Avianca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "3:10 AM+1",
+      "duration": "20 hr 14 min",
+      "stops": "2 stops in PTY, UIO",
+      "price": "COP 4,165,700",
+      "co2_emissions": "290 kg CO2e",
+      "emissions_variation": "+480% emissions"
+    },
+    {
+      "airline": "COPA, Avianca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "3:10 AM+1",
+      "duration": "20 hr 14 min",
+      "stops": "2 stops in PTY, UIO",
+      "price": "COP 4,165,700",
+      "co2_emissions": "287 kg CO2e",
+      "emissions_variation": "+474% emissions"
+    },
+    {
+      "airline": "COPA, Avianca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "3:10 AM+1",
+      "duration": "20 hr 14 min",
+      "stops": "2 stops in PTY, UIO",
+      "price": "COP 4,165,700",
+      "co2_emissions": "290 kg CO2e",
+      "emissions_variation": "+480% emissions"
+    },
+    {
+      "airline": "COPA, AviancaOperated by Avianca Ecuador S.a.",
+      "departure_time": "6:56 AM",
+      "arrival_time": "12:35 PM",
+      "duration": "5 hr 39 min",
+      "stops": "1 stop in PTY",
+      "price": "COP 4,205,680",
+      "co2_emissions": "183 kg CO2e",
+      "emissions_variation": "+266% emissions"
+    },
+    {
+      "airline": "COPA, Avianca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "6:55 PM",
+      "duration": "11 hr 59 min",
+      "stops": "1 stop in PTY",
+      "price": "COP 4,205,680",
+      "co2_emissions": "183 kg CO2e",
+      "emissions_variation": "+266% emissions"
+    },
+    {
+      "airline": "COPA, Avianca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "11:39 PM",
+      "duration": "16 hr 43 min",
+      "stops": "1 stop in PTY",
+      "price": "COP 4,205,680",
+      "co2_emissions": "183 kg CO2e",
+      "emissions_variation": "+266% emissions"
+    },
+    {
+      "airline": "COPA, Avianca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "5:00 AM+1",
+      "duration": "22 hr 4 min",
+      "stops": "1 stop in PTY",
+      "price": "COP 4,205,680",
+      "co2_emissions": "183 kg CO2e",
+      "emissions_variation": "+266% emissions"
+    },
+    {
+      "airline": "COPA, AviancaOperated by Taca International Airlines - Taca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "3:10 PM",
+      "duration": "8 hr 14 min",
+      "stops": "2 stops in PTY, MDE",
+      "price": "COP 4,229,280",
+      "co2_emissions": "209 kg CO2e",
+      "emissions_variation": "+318% emissions"
+    },
+    {
+      "airline": "COPA, AviancaOperated by Taca International Airlines - Taca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "4:59 PM",
+      "duration": "10 hr 3 min",
+      "stops": "2 stops in PTY, MDE",
+      "price": "COP 4,229,280",
+      "co2_emissions": "214 kg CO2e",
+      "emissions_variation": "+328% emissions"
+    },
+    {
+      "airline": "COPA, AviancaOperated by Taca International Airlines - Taca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "8:55 PM",
+      "duration": "13 hr 59 min",
+      "stops": "2 stops in PTY, MDE",
+      "price": "COP 4,229,280",
+      "co2_emissions": "209 kg CO2e",
+      "emissions_variation": "+318% emissions"
+    },
+    {
+      "airline": "COPA, AviancaOperated by Taca International Airlines - Taca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "8:55 PM",
+      "duration": "13 hr 59 min",
+      "stops": "2 stops in PTY, MDE",
+      "price": "COP 4,229,280",
+      "co2_emissions": "209 kg CO2e",
+      "emissions_variation": "+318% emissions"
+    },
+    {
+      "airline": "COPA, AviancaOperated by Taca International Airlines - Taca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "9:52 PM",
+      "duration": "14 hr 56 min",
+      "stops": "2 stops in PTY, MDE",
+      "price": "COP 4,229,280",
+      "co2_emissions": "209 kg CO2e",
+      "emissions_variation": "+318% emissions"
+    },
+    {
+      "airline": "COPA, AviancaOperated by Taca International Airlines - Taca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "9:52 PM",
+      "duration": "14 hr 56 min",
+      "stops": "2 stops in PTY, MDE",
+      "price": "COP 4,229,280",
+      "co2_emissions": "209 kg CO2e",
+      "emissions_variation": "+318% emissions"
+    },
+    {
+      "airline": "COPA, AviancaOperated by Taca International Airlines - Taca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "10:35 PM",
+      "duration": "15 hr 39 min",
+      "stops": "2 stops in PTY, MDE",
+      "price": "COP 4,229,280",
+      "co2_emissions": "209 kg CO2e",
+      "emissions_variation": "+318% emissions"
+    },
+    {
+      "airline": "COPA, AviancaOperated by Taca International Airlines - Taca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "5:27 AM+1",
+      "duration": "22 hr 31 min",
+      "stops": "2 stops in PTY, MDE",
+      "price": "COP 4,229,280",
+      "co2_emissions": "209 kg CO2e",
+      "emissions_variation": "+318% emissions"
+    },
+    {
+      "airline": "COPA, AviancaOperated by Taca International Airlines - Taca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "6:26 PM",
+      "duration": "11 hr 30 min",
+      "stops": "2 stops in PTY, MDE",
+      "price": "COP 4,275,930",
+      "co2_emissions": "209 kg CO2e",
+      "emissions_variation": "+318% emissions"
+    },
+    {
+      "airline": "COPA, AviancaOperated by Avianca Ecuador S.a.",
+      "departure_time": "6:56 AM",
+      "arrival_time": "6:25 PM",
+      "duration": "11 hr 29 min",
+      "stops": "2 stops in PTY, AUA",
+      "price": "COP 4,310,760",
+      "co2_emissions": "320 kg CO2e",
+      "emissions_variation": "+540% emissions"
+    },
+    {
+      "airline": "COPA, AviancaOperated by Taca International Airlines - Taca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "7:55 PM",
+      "duration": "12 hr 59 min",
+      "stops": "2 stops in PTY, MDE",
+      "price": "COP 4,341,300",
+      "co2_emissions": "209 kg CO2e",
+      "emissions_variation": "+318% emissions"
+    },
+    {
+      "airline": "COPA, AviancaOperated by Taca International Airlines - Taca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "7:55 PM",
+      "duration": "12 hr 59 min",
+      "stops": "2 stops in PTY, MDE",
+      "price": "COP 4,341,300",
+      "co2_emissions": "209 kg CO2e",
+      "emissions_variation": "+318% emissions"
+    },
+    {
+      "airline": "COPA, AviancaOperated by Avianca Costa Rica S.a.",
+      "departure_time": "6:56 AM",
+      "arrival_time": "6:14 PM",
+      "duration": "11 hr 18 min",
+      "stops": "2 stops in PTY, SJO",
+      "price": "COP 4,799,980",
+      "co2_emissions": "280 kg CO2e",
+      "emissions_variation": "+460% emissions"
+    },
+    {
+      "airline": "COPA, AviancaOperated by Avianca Costa Rica S.a., Avianca Costa Rica S.a.",
+      "departure_time": "6:56 AM",
+      "arrival_time": "7:59 PM",
+      "duration": "13 hr 3 min",
+      "stops": "2 stops in PTY, SJO",
+      "price": "COP 4,799,980",
+      "co2_emissions": "263 kg CO2e",
+      "emissions_variation": "+426% emissions"
+    },
+    {
+      "airline": "COPA, AviancaOperated by Taca International Airlines - Taca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "1:55 AM+1",
+      "duration": "18 hr 59 min",
+      "stops": "2 stops in PTY, SAL",
+      "price": "COP 4,898,340",
+      "co2_emissions": "377 kg CO2e",
+      "emissions_variation": "+654% emissions"
+    },
+    {
+      "airline": "COPA, AviancaOperated by Taca International Airlines - Taca",
+      "departure_time": "6:56 AM",
+      "arrival_time": "1:55 AM+1",
+      "duration": "18 hr 59 min",
+      "stops": "2 stops in PTY, SAL",
+      "price": "COP 4,898,340",
+      "co2_emissions": "377 kg CO2e",
+      "emissions_variation": "+654% emissions"
+    },
+    {
+      "airline": "COPA",
+      "departure_time": "6:56 AM",
+      "arrival_time": "11:06 AM",
+      "duration": "4 hr 10 min",
+      "stops": "1 stop in PTY",
+      "price": "COP 6,519,520",
+      "co2_emissions": "203 kg CO2e",
+      "emissions_variation": "+306% emissions"
+    },
+    {
+      "airline": "COPA",
+      "departure_time": "6:56 AM",
+      "arrival_time": "1:29 PM",
+      "duration": "6 hr 33 min",
+      "stops": "1 stop in PTY",
+      "price": "COP 6,519,520",
+      "co2_emissions": "203 kg CO2e",
+      "emissions_variation": "+306% emissions"
+    },
+    {
+      "airline": "COPA",
+      "departure_time": "6:56 AM",
+      "arrival_time": "12:06 AM+1",
+      "duration": "17 hr 10 min",
+      "stops": "1 stop in PTY",
+      "price": "COP 6,519,520",
+      "co2_emissions": "203 kg CO2e",
+      "emissions_variation": "+306% emissions"
+    }
+  ]
+}

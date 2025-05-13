@@ -1,0 +1,291 @@
+{
+  "search_parameters": {
+    "departure": "BOG",
+    "destination": "BGA",
+    "departure_date": "2025-05-16",
+    "return_date": null,
+    "search_timestamp": "20250511_092529"
+  },
+  "flights": [
+    {
+      "airline": "Avianca",
+      "departure_time": "4:59 PM",
+      "arrival_time": "11:05 PM",
+      "duration": "6 hr 6 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 551,980",
+      "co2_emissions": "95 kg CO2e",
+      "emissions_variation": "N/A"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "4:59 PM",
+      "arrival_time": "10:43 PM",
+      "duration": "5 hr 44 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 565,780",
+      "co2_emissions": "95 kg CO2e",
+      "emissions_variation": "N/A"
+    },
+    {
+      "airline": "AviancaOperated by Clic for Avianca Express",
+      "departure_time": "4:59 PM",
+      "arrival_time": "9:14 PM",
+      "duration": "4 hr 15 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 675,030",
+      "co2_emissions": "86 kg CO2e",
+      "emissions_variation": "N/A"
+    },
+    {
+      "airline": "Clic, Avianca",
+      "departure_time": "7:00 AM",
+      "arrival_time": "2:00 PM",
+      "duration": "7 hr",
+      "stops": "1 stop in BOG",
+      "price": "COP 696,680",
+      "co2_emissions": "–Unknown emissions",
+      "emissions_variation": "N/A"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "4:59 PM",
+      "arrival_time": "7:08 AM+1",
+      "duration": "14 hr 9 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 772,600",
+      "co2_emissions": "95 kg CO2e",
+      "emissions_variation": "N/A"
+    },
+    {
+      "airline": "Clic, Avianca",
+      "departure_time": "5:30 PM",
+      "arrival_time": "11:05 PM",
+      "duration": "5 hr 35 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 815,210",
+      "co2_emissions": "85 kg CO2e",
+      "emissions_variation": "N/A"
+    },
+    {
+      "airline": "Clic, Avianca",
+      "departure_time": "5:30 PM",
+      "arrival_time": "10:43 PM",
+      "duration": "5 hr 13 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 829,010",
+      "co2_emissions": "85 kg CO2e",
+      "emissions_variation": "N/A"
+    },
+    {
+      "airline": "AviancaOperated by Clic for Avianca Express",
+      "departure_time": "7:57 AM",
+      "arrival_time": "11:00 AM",
+      "duration": "3 hr 3 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 837,220",
+      "co2_emissions": "86 kg CO2e",
+      "emissions_variation": "N/A"
+    },
+    {
+      "airline": "AviancaOperated by Clic for Avianca Express",
+      "departure_time": "7:57 AM",
+      "arrival_time": "2:00 PM",
+      "duration": "6 hr 3 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 853,050",
+      "co2_emissions": "86 kg CO2e",
+      "emissions_variation": "N/A"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "4:59 PM",
+      "arrival_time": "9:47 PM",
+      "duration": "4 hr 48 min",
+      "stops": "2 stops in BOG, MDE",
+      "price": "COP 893,510",
+      "co2_emissions": "139 kg CO2e",
+      "emissions_variation": "N/A"
+    },
+    {
+      "airline": "AviancaOperated by Clic for Avianca Express, Clic for Avianca Express",
+      "departure_time": "7:57 AM",
+      "arrival_time": "9:14 PM",
+      "duration": "13 hr 17 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 1,213,970",
+      "co2_emissions": "77 kg CO2e",
+      "emissions_variation": "N/A"
+    },
+    {
+      "airline": "AviancaOperated by Clic for Avianca Express",
+      "departure_time": "7:57 AM",
+      "arrival_time": "7:25 PM",
+      "duration": "11 hr 28 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 1,223,490",
+      "co2_emissions": "86 kg CO2e",
+      "emissions_variation": "N/A"
+    },
+    {
+      "airline": "Clic, Avianca",
+      "departure_time": "7:00 AM",
+      "arrival_time": "6:15 PM",
+      "duration": "11 hr 15 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 1,245,740",
+      "co2_emissions": "–Unknown emissions",
+      "emissions_variation": "N/A"
+    },
+    {
+      "airline": "AviancaOperated by Clic for Avianca Express",
+      "departure_time": "7:57 AM",
+      "arrival_time": "6:15 PM",
+      "duration": "10 hr 18 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 1,390,210",
+      "co2_emissions": "86 kg CO2e",
+      "emissions_variation": "N/A"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "4:59 PM",
+      "arrival_time": "11:05 PM",
+      "duration": "6 hr 6 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 551,980",
+      "co2_emissions": "95 kg CO2e",
+      "emissions_variation": "N/A"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "4:59 PM",
+      "arrival_time": "10:43 PM",
+      "duration": "5 hr 44 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 565,780",
+      "co2_emissions": "95 kg CO2e",
+      "emissions_variation": "N/A"
+    },
+    {
+      "airline": "AviancaOperated by Clic for Avianca Express",
+      "departure_time": "4:59 PM",
+      "arrival_time": "9:14 PM",
+      "duration": "4 hr 15 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 675,030",
+      "co2_emissions": "86 kg CO2e",
+      "emissions_variation": "N/A"
+    },
+    {
+      "airline": "Clic, Avianca",
+      "departure_time": "7:00 AM",
+      "arrival_time": "2:00 PM",
+      "duration": "7 hr",
+      "stops": "1 stop in BOG",
+      "price": "COP 696,680",
+      "co2_emissions": "–Unknown emissions",
+      "emissions_variation": "N/A"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "4:59 PM",
+      "arrival_time": "7:08 AM+1",
+      "duration": "14 hr 9 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 772,600",
+      "co2_emissions": "95 kg CO2e",
+      "emissions_variation": "N/A"
+    },
+    {
+      "airline": "Clic, Avianca",
+      "departure_time": "5:30 PM",
+      "arrival_time": "11:05 PM",
+      "duration": "5 hr 35 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 815,210",
+      "co2_emissions": "85 kg CO2e",
+      "emissions_variation": "N/A"
+    },
+    {
+      "airline": "Clic, Avianca",
+      "departure_time": "5:30 PM",
+      "arrival_time": "10:43 PM",
+      "duration": "5 hr 13 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 829,010",
+      "co2_emissions": "85 kg CO2e",
+      "emissions_variation": "N/A"
+    },
+    {
+      "airline": "AviancaOperated by Clic for Avianca Express",
+      "departure_time": "7:57 AM",
+      "arrival_time": "11:00 AM",
+      "duration": "3 hr 3 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 837,220",
+      "co2_emissions": "86 kg CO2e",
+      "emissions_variation": "N/A"
+    },
+    {
+      "airline": "AviancaOperated by Clic for Avianca Express",
+      "departure_time": "7:57 AM",
+      "arrival_time": "2:00 PM",
+      "duration": "6 hr 3 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 853,050",
+      "co2_emissions": "86 kg CO2e",
+      "emissions_variation": "N/A"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "4:59 PM",
+      "arrival_time": "9:47 PM",
+      "duration": "4 hr 48 min",
+      "stops": "2 stops in BOG, MDE",
+      "price": "COP 893,510",
+      "co2_emissions": "139 kg CO2e",
+      "emissions_variation": "N/A"
+    },
+    {
+      "airline": "AviancaOperated by Clic for Avianca Express, Clic for Avianca Express",
+      "departure_time": "7:57 AM",
+      "arrival_time": "9:14 PM",
+      "duration": "13 hr 17 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 1,213,970",
+      "co2_emissions": "77 kg CO2e",
+      "emissions_variation": "N/A"
+    },
+    {
+      "airline": "AviancaOperated by Clic for Avianca Express",
+      "departure_time": "7:57 AM",
+      "arrival_time": "7:25 PM",
+      "duration": "11 hr 28 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 1,223,490",
+      "co2_emissions": "86 kg CO2e",
+      "emissions_variation": "N/A"
+    },
+    {
+      "airline": "Clic, Avianca",
+      "departure_time": "7:00 AM",
+      "arrival_time": "6:15 PM",
+      "duration": "11 hr 15 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 1,245,740",
+      "co2_emissions": "–Unknown emissions",
+      "emissions_variation": "N/A"
+    },
+    {
+      "airline": "AviancaOperated by Clic for Avianca Express",
+      "departure_time": "7:57 AM",
+      "arrival_time": "6:15 PM",
+      "duration": "10 hr 18 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 1,390,210",
+      "co2_emissions": "86 kg CO2e",
+      "emissions_variation": "N/A"
+    }
+  ]
+}
