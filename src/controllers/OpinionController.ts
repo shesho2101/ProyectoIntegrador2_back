@@ -1,10 +1,9 @@
 // src/controllers/OpinionController.ts
 import { Request, Response } from 'express';
-import * as OpinionService from '../services/OpinionService';
-import Opinion from '../models/OpinionModel';
-import Hotel from '../models/HotelModel';
-import Flight from '../models/FlightModel';
 import Bus from '../models/BusModel';
+import Hotel from '../models/HotelModel';
+import Opinion from '../models/OpinionModel';
+import * as OpinionService from '../services/OpinionService';
 
 // Crear una nueva opinión
 export const createOpinion = async (req: Request, res: Response) => {
@@ -34,14 +33,7 @@ export const createOpinion = async (req: Request, res: Response) => {
         return res.status(404).json({ error: 'Hotel no encontrado' });
       }
       hotel.opiniones.push(newOpinion);
-      await hotel.save();
-    } else if (tipo_opinion === 'vuelo') {
-      const vuelo = await Flight.findById(referencia_mongo_id);
-      if (!vuelo) {
-        return res.status(404).json({ error: 'Vuelo no encontrado' });
-      }
-      vuelo.opiniones.push(newOpinion);
-      await vuelo.save();
+      await hotel.save(); 
     } else if (tipo_opinion === 'bus') {
       const bus = await Bus.findById(referencia_mongo_id);
       if (!bus) {

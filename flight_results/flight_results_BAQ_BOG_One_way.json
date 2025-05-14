@@ -1,0 +1,91 @@
+{
+  "search_parameters": {
+    "departure": "BAQ",
+    "destination": "BOG",
+    "departure_date": "2025-05-16",
+    "return_date": null,
+    "search_timestamp": "20250511_172710"
+  },
+  "flights": [
+    {
+      "airline": "Avianca",
+      "departure_time": "4:59 PM",
+      "arrival_time": "5:54 PM",
+      "duration": "55 min",
+      "stops": "Nonstop",
+      "price": "COP 281,370",
+      "co2_emissions": "47 kg CO2e",
+      "emissions_variation": "-6% emissions"
+    },
+    {
+      "airline": "ClicAvianca",
+      "departure_time": "7:00 AM",
+      "arrival_time": "8:10 AM",
+      "duration": "1 hr 10 min",
+      "stops": "Nonstop",
+      "price": "COP 444,280",
+      "co2_emissions": "–Unknown emissions",
+      "emissions_variation": "N/A"
+    },
+    {
+      "airline": "ClicAvianca",
+      "departure_time": "5:30 PM",
+      "arrival_time": "6:40 PM",
+      "duration": "1 hr 10 min",
+      "stops": "Nonstop",
+      "price": "COP 544,600",
+      "co2_emissions": "37 kg CO2e",
+      "emissions_variation": "-26% emissions"
+    },
+    {
+      "airline": "AviancaOperated by Clic for Avianca Express",
+      "departure_time": "7:57 AM",
+      "arrival_time": "8:58 AM",
+      "duration": "1 hr 1 min",
+      "stops": "Nonstop",
+      "price": "COP 692,280",
+      "co2_emissions": "38 kg CO2e",
+      "emissions_variation": "-24% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "4:59 PM",
+      "arrival_time": "5:54 PM",
+      "duration": "55 min",
+      "stops": "Nonstop",
+      "price": "COP 281,370",
+      "co2_emissions": "47 kg CO2e",
+      "emissions_variation": "-6% emissions"
+    },
+    {
+      "airline": "ClicAvianca",
+      "departure_time": "7:00 AM",
+      "arrival_time": "8:10 AM",
+      "duration": "1 hr 10 min",
+      "stops": "Nonstop",
+      "price": "COP 444,280",
+      "co2_emissions": "–Unknown emissions",
+      "emissions_variation": "N/A"
+    },
+    {
+      "airline": "ClicAvianca",
+      "departure_time": "5:30 PM",
+      "arrival_time": "6:40 PM",
+      "duration": "1 hr 10 min",
+      "stops": "Nonstop",
+      "price": "COP 544,600",
+      "co2_emissions": "37 kg CO2e",
+      "emissions_variation": "-26% emissions"
+    },
+    {
+      "airline": "AviancaOperated by Clic for Avianca Express",
+      "departure_time": "7:57 AM",
+      "arrival_time": "8:58 AM",
+      "duration": "1 hr 1 min",
+      "stops": "Nonstop",
+      "price": "COP 692,280",
+      "co2_emissions": "38 kg CO2e",
+      "emissions_variation": "-24% emissions"
+    }
+  ]
+}

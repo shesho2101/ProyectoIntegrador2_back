@@ -1,0 +1,791 @@
+{
+  "search_parameters": {
+    "departure": "CLO",
+    "destination": "BGA",
+    "departure_date": "2025-05-16",
+    "return_date": "2025-05-20",
+    "search_timestamp": "20250511_174839"
+  },
+  "flights": [
+    {
+      "airline": "LATAMOperated by Latam Airlines Colombia, Latam Airlines Colombia",
+      "departure_time": "5:02 AM",
+      "arrival_time": "9:21 AM",
+      "duration": "4 hr 19 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 512,640",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "5:41 AM",
+      "arrival_time": "9:08 AM",
+      "duration": "3 hr 27 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 512,640",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "7:52 AM",
+      "arrival_time": "11:00 AM",
+      "duration": "3 hr 8 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 512,640",
+      "co2_emissions": "105 kg CO2e",
+      "emissions_variation": "+11% emissions"
+    },
+    {
+      "airline": "LATAMOperated by Latam Airlines Colombia, Latam Airlines Colombia",
+      "departure_time": "8:03 AM",
+      "arrival_time": "1:35 PM",
+      "duration": "5 hr 32 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 512,640",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "4:24 AM",
+      "arrival_time": "9:08 AM",
+      "duration": "4 hr 44 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 512,640",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "5:41 AM",
+      "arrival_time": "11:00 AM",
+      "duration": "5 hr 19 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 512,640",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "6:23 AM",
+      "arrival_time": "11:00 AM",
+      "duration": "4 hr 37 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 512,640",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "6:51 AM",
+      "arrival_time": "11:00 AM",
+      "duration": "4 hr 9 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 512,640",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "4:30 PM",
+      "arrival_time": "9:47 PM",
+      "duration": "5 hr 17 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 512,640",
+      "co2_emissions": "96 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "6:30 PM",
+      "arrival_time": "9:47 PM",
+      "duration": "3 hr 17 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 512,640",
+      "co2_emissions": "96 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "6:50 PM",
+      "arrival_time": "11:05 PM",
+      "duration": "4 hr 15 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 512,640",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "7:24 PM",
+      "arrival_time": "11:05 PM",
+      "duration": "3 hr 41 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 512,640",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "6:51 AM",
+      "arrival_time": "2:00 PM",
+      "duration": "7 hr 9 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 529,900",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "7:52 AM",
+      "arrival_time": "2:00 PM",
+      "duration": "6 hr 8 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 529,900",
+      "co2_emissions": "105 kg CO2e",
+      "emissions_variation": "+11% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "7:24 PM",
+      "arrival_time": "10:43 PM",
+      "duration": "3 hr 19 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 529,900",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "3:41 PM",
+      "arrival_time": "11:05 PM",
+      "duration": "7 hr 24 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 596,180",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "LATAMOperated by Latam Airlines Colombia, Latam Airlines Colombia",
+      "departure_time": "9:09 AM",
+      "arrival_time": "1:35 PM",
+      "duration": "4 hr 26 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 635,690",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "8:15 AM",
+      "arrival_time": "2:00 PM",
+      "duration": "5 hr 45 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 689,830",
+      "co2_emissions": "105 kg CO2e",
+      "emissions_variation": "+11% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:51 AM",
+      "arrival_time": "2:00 PM",
+      "duration": "4 hr 9 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 689,830",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "6:50 PM",
+      "arrival_time": "10:43 PM",
+      "duration": "3 hr 53 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 689,830",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "12:42 PM",
+      "arrival_time": "7:25 PM",
+      "duration": "6 hr 43 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 770,520",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:51 AM",
+      "arrival_time": "11:05 PM",
+      "duration": "13 hr 14 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 773,240",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:41 AM",
+      "arrival_time": "11:05 PM",
+      "duration": "12 hr 24 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 773,240",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "11:23 AM",
+      "arrival_time": "11:05 PM",
+      "duration": "11 hr 42 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 773,240",
+      "co2_emissions": "105 kg CO2e",
+      "emissions_variation": "+11% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "12:42 PM",
+      "arrival_time": "11:05 PM",
+      "duration": "10 hr 23 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 773,240",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "8:27 PM",
+      "arrival_time": "7:08 AM+1",
+      "duration": "10 hr 41 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 773,240",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "8:55 PM",
+      "arrival_time": "7:08 AM+1",
+      "duration": "10 hr 13 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 773,240",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "8:55 PM",
+      "arrival_time": "9:08 AM+1",
+      "duration": "12 hr 13 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 773,240",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:57 PM",
+      "arrival_time": "7:08 AM+1",
+      "duration": "9 hr 11 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 773,240",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:57 PM",
+      "arrival_time": "9:08 AM+1",
+      "duration": "11 hr 11 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 773,240",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:41 AM",
+      "arrival_time": "2:00 PM",
+      "duration": "3 hr 19 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 814,660",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "12:42 PM",
+      "arrival_time": "6:15 PM",
+      "duration": "5 hr 33 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 814,660",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "LATAMOperated by Latam Airlines Colombia, Latam Airlines Colombia",
+      "departure_time": "2:42 PM",
+      "arrival_time": "7:47 PM",
+      "duration": "5 hr 5 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 816,330",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "LATAMOperated by Latam Airlines Colombia, Latam Airlines Colombia",
+      "departure_time": "3:37 PM",
+      "arrival_time": "7:47 PM",
+      "duration": "4 hr 10 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 816,330",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "LATAMOperated by Latam Airlines Colombia, Latam Airlines Colombia",
+      "departure_time": "3:37 PM",
+      "arrival_time": "9:33 PM",
+      "duration": "5 hr 56 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 816,330",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "6:51 AM",
+      "arrival_time": "7:25 PM",
+      "duration": "12 hr 34 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 908,070",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "7:52 AM",
+      "arrival_time": "7:25 PM",
+      "duration": "11 hr 33 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 908,070",
+      "co2_emissions": "105 kg CO2e",
+      "emissions_variation": "+11% emissions"
+    },
+    {
+      "airline": "AviancaOperated by Clic for Avianca Express",
+      "departure_time": "3:41 PM",
+      "arrival_time": "9:14 PM",
+      "duration": "5 hr 33 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 976,030",
+      "co2_emissions": "88 kg CO2e",
+      "emissions_variation": "-7% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "3:41 PM",
+      "arrival_time": "7:25 PM",
+      "duration": "3 hr 44 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 1,193,200",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "LATAMOperated by Latam Airlines Colombia, Latam Airlines Colombia",
+      "departure_time": "5:02 AM",
+      "arrival_time": "9:21 AM",
+      "duration": "4 hr 19 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 512,640",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "5:41 AM",
+      "arrival_time": "9:08 AM",
+      "duration": "3 hr 27 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 512,640",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "7:52 AM",
+      "arrival_time": "11:00 AM",
+      "duration": "3 hr 8 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 512,640",
+      "co2_emissions": "105 kg CO2e",
+      "emissions_variation": "+11% emissions"
+    },
+    {
+      "airline": "LATAMOperated by Latam Airlines Colombia, Latam Airlines Colombia",
+      "departure_time": "8:03 AM",
+      "arrival_time": "1:35 PM",
+      "duration": "5 hr 32 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 512,640",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "4:24 AM",
+      "arrival_time": "9:08 AM",
+      "duration": "4 hr 44 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 512,640",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "5:41 AM",
+      "arrival_time": "11:00 AM",
+      "duration": "5 hr 19 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 512,640",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "6:23 AM",
+      "arrival_time": "11:00 AM",
+      "duration": "4 hr 37 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 512,640",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "6:51 AM",
+      "arrival_time": "11:00 AM",
+      "duration": "4 hr 9 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 512,640",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "4:30 PM",
+      "arrival_time": "9:47 PM",
+      "duration": "5 hr 17 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 512,640",
+      "co2_emissions": "96 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "6:30 PM",
+      "arrival_time": "9:47 PM",
+      "duration": "3 hr 17 min",
+      "stops": "1 stop in MDE",
+      "price": "COP 512,640",
+      "co2_emissions": "96 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "6:50 PM",
+      "arrival_time": "11:05 PM",
+      "duration": "4 hr 15 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 512,640",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "7:24 PM",
+      "arrival_time": "11:05 PM",
+      "duration": "3 hr 41 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 512,640",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "6:51 AM",
+      "arrival_time": "2:00 PM",
+      "duration": "7 hr 9 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 529,900",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "7:52 AM",
+      "arrival_time": "2:00 PM",
+      "duration": "6 hr 8 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 529,900",
+      "co2_emissions": "105 kg CO2e",
+      "emissions_variation": "+11% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "7:24 PM",
+      "arrival_time": "10:43 PM",
+      "duration": "3 hr 19 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 529,900",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "3:41 PM",
+      "arrival_time": "11:05 PM",
+      "duration": "7 hr 24 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 596,180",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "LATAMOperated by Latam Airlines Colombia, Latam Airlines Colombia",
+      "departure_time": "9:09 AM",
+      "arrival_time": "1:35 PM",
+      "duration": "4 hr 26 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 635,690",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "8:15 AM",
+      "arrival_time": "2:00 PM",
+      "duration": "5 hr 45 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 689,830",
+      "co2_emissions": "105 kg CO2e",
+      "emissions_variation": "+11% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:51 AM",
+      "arrival_time": "2:00 PM",
+      "duration": "4 hr 9 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 689,830",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "6:50 PM",
+      "arrival_time": "10:43 PM",
+      "duration": "3 hr 53 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 689,830",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "12:42 PM",
+      "arrival_time": "7:25 PM",
+      "duration": "6 hr 43 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 770,520",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:51 AM",
+      "arrival_time": "11:05 PM",
+      "duration": "13 hr 14 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 773,240",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:41 AM",
+      "arrival_time": "11:05 PM",
+      "duration": "12 hr 24 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 773,240",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "11:23 AM",
+      "arrival_time": "11:05 PM",
+      "duration": "11 hr 42 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 773,240",
+      "co2_emissions": "105 kg CO2e",
+      "emissions_variation": "+11% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "12:42 PM",
+      "arrival_time": "11:05 PM",
+      "duration": "10 hr 23 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 773,240",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "8:27 PM",
+      "arrival_time": "7:08 AM+1",
+      "duration": "10 hr 41 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 773,240",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "8:55 PM",
+      "arrival_time": "7:08 AM+1",
+      "duration": "10 hr 13 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 773,240",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "8:55 PM",
+      "arrival_time": "9:08 AM+1",
+      "duration": "12 hr 13 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 773,240",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:57 PM",
+      "arrival_time": "7:08 AM+1",
+      "duration": "9 hr 11 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 773,240",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "9:57 PM",
+      "arrival_time": "9:08 AM+1",
+      "duration": "11 hr 11 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 773,240",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "10:41 AM",
+      "arrival_time": "2:00 PM",
+      "duration": "3 hr 19 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 814,660",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "12:42 PM",
+      "arrival_time": "6:15 PM",
+      "duration": "5 hr 33 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 814,660",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "LATAMOperated by Latam Airlines Colombia, Latam Airlines Colombia",
+      "departure_time": "2:42 PM",
+      "arrival_time": "7:47 PM",
+      "duration": "5 hr 5 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 816,330",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "LATAMOperated by Latam Airlines Colombia, Latam Airlines Colombia",
+      "departure_time": "3:37 PM",
+      "arrival_time": "7:47 PM",
+      "duration": "4 hr 10 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 816,330",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "LATAMOperated by Latam Airlines Colombia, Latam Airlines Colombia",
+      "departure_time": "3:37 PM",
+      "arrival_time": "9:33 PM",
+      "duration": "5 hr 56 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 816,330",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "6:51 AM",
+      "arrival_time": "7:25 PM",
+      "duration": "12 hr 34 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 908,070",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "7:52 AM",
+      "arrival_time": "7:25 PM",
+      "duration": "11 hr 33 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 908,070",
+      "co2_emissions": "105 kg CO2e",
+      "emissions_variation": "+11% emissions"
+    },
+    {
+      "airline": "AviancaOperated by Clic for Avianca Express",
+      "departure_time": "3:41 PM",
+      "arrival_time": "9:14 PM",
+      "duration": "5 hr 33 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 976,030",
+      "co2_emissions": "88 kg CO2e",
+      "emissions_variation": "-7% emissions"
+    },
+    {
+      "airline": "Avianca",
+      "departure_time": "3:41 PM",
+      "arrival_time": "7:25 PM",
+      "duration": "3 hr 44 min",
+      "stops": "1 stop in BOG",
+      "price": "COP 1,193,200",
+      "co2_emissions": "97 kg CO2e",
+      "emissions_variation": "Avg emissions"
+    }
+  ]
+}
