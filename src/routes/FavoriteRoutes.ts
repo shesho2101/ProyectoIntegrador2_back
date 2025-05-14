@@ -1,4 +1,3 @@
-// src/routes/FavoriteRoutes.ts
 import { Router } from 'express';
 import {
   getFavoritesByUser,
