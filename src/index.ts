@@ -1,6 +1,9 @@
 // index.ts - Inicio del servidor
+import cors from 'cors';
 import app from './app';
+
 import connectMongo from './config/MongoProvider';
+app.use(cors());
 
 const PORT = process.env.PORT || 3002;
 

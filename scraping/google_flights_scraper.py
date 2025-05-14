@@ -188,11 +188,11 @@ async def main():
     """Main function to demonstrate usage"""
     scraper = FlightScraper()
     params = SearchParameters(
-        departure="CTG",
-        destination="CLO",
+        departure="CLO",
+        destination="MDE",
         departure_date="2025-05-16",
-        return_date="2025-05-20",  # Optional, can be None
-        ticket_type="Round <trip",  # "One way" or "Round trip"
+        # return_date="2025-05-20",  # Optional, can be None
+        ticket_type="One way",  # "One way" or "Round trip"
     )
 
     try:

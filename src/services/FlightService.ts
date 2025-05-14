@@ -1,76 +1,57 @@
-// src/services/FlightService.ts
-import Flight, { IFlight } from '../models/FlightModel';
+// ✅ services/FlightService.ts
+import FlightModel from '../models/FlightModel';
 
-class FlightService {
-  // Todos los vuelos
-  public static async getAllFlights(): Promise<IFlight[]> {
-    try {
-      return await Flight.find();
-    } catch {
-      throw new Error('Error al obtener los vuelos');
-    }
+// Mapeo de nombres de ciudades a códigos IATA
+const ciudades: Record<string, string> = {
+  Bucaramanga: "BGA",
+  Medellin: "MDE",
+  Bogota: "BOG",
+  Cartagena: "CTG",
+  Barranquilla: "BAQ",
+  Cali: "CLO",
+  Pereira: "PEI",
+};
+
+export const getFilteredFlightsService = async (filters: any, page: number, limit: number) => {
+  const query: any = {};
+
+  // Tipo de vuelo
+  if (filters.tipoVuelo === 'ida') {
+    query['search_parameters.return_date'] = null;
+  } else if (filters.tipoVuelo === 'ida-vuelta') {
+    query['search_parameters.return_date'] = { $ne: null };
   }
 
-  // Un vuelo por ID
-  public static async getFlightById(id: string): Promise<IFlight> {
-    const f = await Flight.findById(id);
-    if (!f) throw new Error('Vuelo no encontrado');
-    return f;
+  // Origen y destino con mapeo a códigos IATA
+  if (filters.origen && ciudades[filters.origen]) {
+    query['search_parameters.departure'] = ciudades[filters.origen];
   }
 
-  // Crear vuelo
-  public static async createFlight(data: Partial<IFlight>): Promise<IFlight> {
-    try {
-      const vuelo = new Flight(data);
-      await vuelo.save();
-      return vuelo;
-    } catch {
-      throw new Error('Error al crear el vuelo');
-    }
+  if (filters.destino && ciudades[filters.destino]) {
+    query['search_parameters.destination'] = ciudades[filters.destino];
   }
 
-  // Actualizar vuelo
-  public static async updateFlight(id: string, data: Partial<IFlight>): Promise<IFlight> {
-    const vuelo = await Flight.findById(id);
-    if (!vuelo) throw new Error('Vuelo no encontrado');
-    Object.assign(vuelo, data);
-    await vuelo.save();
-    return vuelo;
+  // Fecha de salida
+  if (filters.salida) {
+    query['search_parameters.departure_date'] = filters.salida;
   }
 
-  // Borrar vuelo
-  public static async deleteFlight(id: string): Promise<void> {
-    const vuelo = await Flight.findById(id);
-    if (!vuelo) throw new Error('Vuelo no encontrado');
-    await vuelo.remove();
-  }
+  console.log('Query enviada a MongoDB:', query);
 
-  // Filtrar por origen
-  public static async getFlightsByOrigin(origen: string): Promise<IFlight[]> {
-    try {
-      return await Flight.find({ origen });
-    } catch {
-      throw new Error('Error al filtrar vuelos por origen');
-    }
-  }
+  const skip = (page - 1) * limit;
+  const vuelos = await FlightModel.find(query).skip(skip).limit(limit);
+  const total = await FlightModel.countDocuments(query);
 
-  // Filtrar por destino
-  public static async getFlightsByDestination(destino: string): Promise<IFlight[]> {
-    try {
-      return await Flight.find({ destino });
-    } catch {
-      throw new Error('Error al filtrar vuelos por destino');
-    }
-  }
+  return {
+    resultados: vuelos,
+    total,
+    page,
+    limit,
+    totalPages: Math.ceil(total / limit),
+  };
+};
 
-  // Filtrar por rango de precio
-  public static async getFlightsByPriceRange(min: number, max: number): Promise<IFlight[]> {
-    try {
-      return await Flight.find({ precio: { $gte: min, $lte: max } });
-    } catch {
-      throw new Error('Error al filtrar vuelos por precio');
-    }
-  }
-}
-
-export default FlightService;
+export const getAllFlightsService = async () => {
+  const vuelos = await FlightModel.find(); // trae todos
+  return vuelos;
+};
