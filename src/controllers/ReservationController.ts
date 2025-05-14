@@ -35,8 +35,13 @@ export const createReservation = async (req: AuthRequest, res: Response) => {
 export const getUserReservations = async (req: AuthRequest, res: Response) => {
   if (!req.user) return res.status(401).json({ message: "No autorizado" });
 
-  const reservas = await Reservation.find({ usuario_id: req.user.id }).populate("hotel_id");
-  res.json(reservas);
+  try {
+    const reservas = await Reservation.find({ usuario_id: req.user.id })
+      .populate("hotel_id");  // Populate para traer la información del hotel
+    res.json(reservas);
+  } catch (error) {
+    res.status(500).json({ message: "Error al obtener las reservas" });
+  }
 };
 
 export const getAllReservations = async (req: AuthRequest, res: Response) => {
@@ -44,6 +49,12 @@ export const getAllReservations = async (req: AuthRequest, res: Response) => {
     return res.status(403).json({ message: "Acceso restringido" });
   }
 
-  const reservas = await Reservation.find().populate("hotel_id").populate("usuario_id");
-  res.json(reservas);
+  try {
+    const reservas = await Reservation.find()
+      .populate("hotel_id")
+      .populate("usuario_id"); // Asegúrate de que también puedes obtener la información del usuario
+    res.json(reservas);
+  } catch (error) {
+    res.status(500).json({ message: "Error al obtener todas las reservas" });
+  }
 };

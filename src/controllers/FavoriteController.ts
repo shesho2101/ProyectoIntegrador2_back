@@ -1,4 +1,3 @@
-// src/controllers/FavoriteController.ts
 import { Request, Response } from 'express';
 import FavoriteService from '../services/FavoriteService';
 import { AuthRequest } from '../middlewares/AuthMiddleware';
