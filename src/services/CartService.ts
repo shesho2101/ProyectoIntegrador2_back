@@ -1,7 +1,6 @@
+import Bus from '../models/BusModel';
 import Cart from '../models/CartModel';
 import Hotel from '../models/HotelModel';
-import Bus from '../models/BusModel';
-import Flight from '../models/FlightModel';
 
 export const addToCart = async (cartData: any) => {
   const { usuario_id, producto_id, tipo_producto, cantidad } = cartData;
@@ -18,10 +17,8 @@ export const addToCart = async (cartData: any) => {
       product = await Hotel.findById(producto_id);
     } else if (tipo_producto === 'bus') {
       product = await Bus.findById(producto_id);
-    } else if (tipo_producto === 'vuelo') {
-      product = await Flight.findById(producto_id);
-    }
-
+    } 
+    
     if (!product) {
       throw new Error('Producto no encontrado');
     }
@@ -101,9 +98,7 @@ export const actualizarCantidad = async (usuario_id: string, producto_id: string
       product = await Hotel.findById(producto.producto_id);
     } else if (producto.tipo_producto === 'bus') {
       product = await Bus.findById(producto.producto_id);
-    } else if (producto.tipo_producto === 'vuelo') {
-      product = await Flight.findById(producto.producto_id);
-    }
+    } 
 
     if (!product) {
       throw new Error('Producto no encontrado');

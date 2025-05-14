@@ -13,8 +13,6 @@ import opinionsRoutes from './routes/OpinionRoutes';
 import cartRoutes from './routes/CartRoutes';
 import reservationRoutes from './routes/ReservationRoutes';
 
-
-
 dotenv.config();
 
 const app = express();

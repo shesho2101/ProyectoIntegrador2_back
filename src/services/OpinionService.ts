@@ -1,7 +1,6 @@
-import Opinion from '../models/OpinionModel';
-import Hotel from '../models/HotelModel';
 import Bus from '../models/BusModel';
-import Flight from '../models/FlightModel';
+import Hotel from '../models/HotelModel';
+import Opinion from '../models/OpinionModel';
 
 // Crear una nueva opinión
 export const createOpinion = async (opinionData: any) => {
@@ -14,8 +13,6 @@ export const createOpinion = async (opinionData: any) => {
       entity = await Hotel.findById(opinionData.referencia_mongo_id);
     } else if (opinionData.tipo_opinion === 'bus') {
       entity = await Bus.findById(opinionData.referencia_mongo_id);
-    } else if (opinionData.tipo_opinion === 'vuelo') {
-      entity = await Flight.findById(opinionData.referencia_mongo_id);
     }
 
     if (entity) {
