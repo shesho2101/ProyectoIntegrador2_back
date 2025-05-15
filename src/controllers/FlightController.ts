@@ -1,7 +1,5 @@
-// ✅ controllers/flightController.ts
 import { Request, Response } from 'express';
-import { getFilteredFlightsService} from '../services/FlightService';
-import { getAllFlightsService } from '../services/FlightService';
+import { getFilteredFlightsService, getAllFlightsService } from '../services/FlightService';
 
 export const getFilteredFlights = async (req: Request, res: Response) => {
   try {
@@ -9,9 +7,14 @@ export const getFilteredFlights = async (req: Request, res: Response) => {
     const page = Number(req.query.page) || 1;
     const limit = Number(req.query.limit) || 9;
 
-    const filtros = { tipoVuelo, origen, destino, salida };
-    const vuelos = await getFilteredFlightsService(filtros, page, limit);
+    // Limpieza de filtros
+    const filtros: any = {};
+    if (tipoVuelo) filtros.tipoVuelo = tipoVuelo;
+    if (origen) filtros.origen = origen;
+    if (destino) filtros.destino = destino;
+    if (salida) filtros.salida = salida;
 
+    const vuelos = await getFilteredFlightsService(filtros, page, limit);
     res.status(200).json(vuelos);
   } catch (error) {
     console.error('Error al obtener vuelos filtrados:', error);
