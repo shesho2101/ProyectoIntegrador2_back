@@ -5,7 +5,16 @@ import BusService from '../services/BusService';
 export const getBuses = async (req: Request, res: Response) => {
   try {
     const buses = await BusService.getAllBuses();
-    res.json({ buses });
+
+    const busesFormateados = buses.map(bus => ({
+      ...bus.toObject(),
+      fecha_salida: bus.fecha_salida ? bus.fecha_salida.toISOString() : null,
+      fecha_llegada: bus.fecha_llegada ? bus.fecha_llegada.toISOString() : null,
+      duracion: typeof bus.duracion === 'number' ? bus.duracion : 0,
+      precio: typeof bus.precio === 'number' ? bus.precio : 0,
+    }));
+
+    res.json({ buses: busesFormateados });
   } catch (error) {
     res.status(500).json({ error: 'Error al obtener los buses' });
   }
