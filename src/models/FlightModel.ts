@@ -11,7 +11,5 @@ const flightSchema = new mongoose.Schema({
   flights: [mongoose.Schema.Types.Mixed],
 });
 
-// 👇 Asegúrate de pasar explícitamente el nombre 'flights' como tercer argumento
 const FlightModel = mongoose.model('FlightSearch', flightSchema, 'flights');
-
 export default FlightModel;

@@ -1,4 +1,3 @@
-// ✅ services/FlightService.ts
 import FlightModel from '../models/FlightModel';
 
 // Mapeo de nombres de ciudades a códigos IATA
@@ -23,20 +22,30 @@ export const getFilteredFlightsService = async (filters: any, page: number, limi
   }
 
   // Origen y destino con mapeo a códigos IATA
-  if (filters.origen && ciudades[filters.origen]) {
-    query['search_parameters.departure'] = ciudades[filters.origen];
+  const normalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+
+  if (filters.origen && ciudades[normalize(filters.origen)]) {
+    query['search_parameters.departure'] = ciudades[normalize(filters.origen)];
   }
 
-  if (filters.destino && ciudades[filters.destino]) {
-    query['search_parameters.destination'] = ciudades[filters.destino];
+  if (filters.destino && ciudades[normalize(filters.destino)]) {
+    query['search_parameters.destination'] = ciudades[normalize(filters.destino)];
   }
 
-  // Fecha de salida
+  // Fecha de salida exacta
   if (filters.salida) {
     query['search_parameters.departure_date'] = filters.salida;
+    // Si usas Date en Mongo, reemplaza lo anterior por esto:
+    /*
+    const start = new Date(filters.salida);
+    const end = new Date(filters.salida);
+    end.setDate(end.getDate() + 1);
+    query['search_parameters.departure_date'] = {
+      $gte: start.toISOString(),
+      $lt: end.toISOString()
+    };
+    */
   }
-
-  console.log('Query enviada a MongoDB:', query);
 
   const skip = (page - 1) * limit;
   const vuelos = await FlightModel.find(query).skip(skip).limit(limit);
@@ -52,6 +61,6 @@ export const getFilteredFlightsService = async (filters: any, page: number, limi
 };
 
 export const getAllFlightsService = async () => {
-  const vuelos = await FlightModel.find(); // trae todos
+  const vuelos = await FlightModel.find();
   return vuelos;
 };
