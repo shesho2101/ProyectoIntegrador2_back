@@ -3,6 +3,7 @@ import {
   getFavoritesByUser,
   addFavorite,
   removeFavorite,
+  getFavoriteDetail,
 } from '../controllers/FavoriteController';
 import { verifyToken } from '../middlewares/AuthMiddleware';
 import { verifyUser } from '../middlewares/CheckUserPermission';
@@ -17,5 +18,8 @@ router.post('/', verifyToken, addFavorite);
 
 // Eliminar un favorito por ID
 router.delete('/:id', verifyToken, removeFavorite);
+
+router.get('/detalle/:referencia_mongo_id', verifyToken, getFavoriteDetail);  // <-- ruta nueva
+
 
 export default router;

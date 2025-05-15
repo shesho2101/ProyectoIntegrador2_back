@@ -1,5 +1,9 @@
 // src/services/FavoriteService.ts
+import Bus from '../models/BusModel';
 import Favorite from '../models/FavoriteModel';
+import Hotel from '../models/HotelModel';
+import Flight from '../models/FlightModel';
+
 
 class FavoriteService {
   // Obtener todos los favoritos de un usuario
@@ -36,6 +40,23 @@ class FavoriteService {
     } catch (error) {
       throw new Error('Error al eliminar el favorito: ');
     }
+  }
+
+  // Nueva función para buscar favorito por referencia_mongo_id y traer datos completos
+  public static async getFavoriteDetailByReferencia(referenciaId: string) {
+    const fav = await Favorite.findOne({ where: { referencia_mongo_id: referenciaId } });
+    if (!fav) throw new Error('Favorito no encontrado');
+
+    let detalles = null;
+    if (fav.tipo_favorito === 'hotel') {
+      detalles = await Hotel.findById(referenciaId).lean();
+    } else if (fav.tipo_favorito === 'vuelo') {
+      detalles = await Flight.findById(referenciaId).lean();
+    } else if (fav.tipo_favorito === 'bus') {
+      detalles = await Bus.findById(referenciaId).lean();
+    }
+
+    return { ...fav.toJSON(), detalles };
   }
 }
 

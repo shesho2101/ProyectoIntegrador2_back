@@ -48,3 +48,17 @@ export const removeFavorite = async (req: Request, res: Response) => {
     res.status(500).json({ error: `Error al eliminar el favorito` });
   }
 };
+
+export const getFavoriteDetail = async (req: AuthRequest, res: Response) => {
+  try {
+    const { referencia_mongo_id } = req.params;
+    if (!referencia_mongo_id) {
+      return res.status(400).json({ message: 'Falta el parámetro referencia_mongo_id' });
+    }
+
+    const favoriteDetail = await FavoriteService.getFavoriteDetailByReferencia(referencia_mongo_id);
+    res.json(favoriteDetail);
+  } catch (error) {
+    res.status(500).json({ error: 'Error al obtener detalle del favorito' });
+  }
+};
